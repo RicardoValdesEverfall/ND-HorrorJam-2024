@@ -9668,7 +9668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f19d9143a39eb3b46bc4563e9889cfbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 0e72ae8c9c66a0348acb901d4f315946, type: 2}
+  m_Material: {fileID: 2100000, guid: 500e733574922d04ea961553b1b26a63, type: 2}
   m_DrawDistance: 1000
   m_FadeScale: 0.9
   m_StartAngleFade: 180
@@ -18912,7 +18912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f19d9143a39eb3b46bc4563e9889cfbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 7220018d89408d34482a642a7132e904, type: 2}
+  m_Material: {fileID: 2100000, guid: 500e733574922d04ea961553b1b26a63, type: 2}
   m_DrawDistance: 1000
   m_FadeScale: 0.9
   m_StartAngleFade: 180
@@ -19052,7 +19052,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f19d9143a39eb3b46bc4563e9889cfbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: f3fc9802aa4d4a043bffa1b94c25bb7e, type: 2}
+  m_Material: {fileID: 2100000, guid: 500e733574922d04ea961553b1b26a63, type: 2}
   m_DrawDistance: 1000
   m_FadeScale: 1
   m_StartAngleFade: 180
@@ -22532,11 +22532,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointsOfInterest: []
-  lookAtPlayerRatio: 1
-  stareBackFactor: 0
+  lookAtPlayerRatio: 0.855
+  stareBackFactor: 1
   noticePlayerDistance: 0
   personalSpaceDistance: 0
-  minLookTime: 79.7
+  minLookTime: 40.1
   maxLookTime: 100
   thirdPersonPlayerEyeCenter: {fileID: 794092011}
   keepTargetEvenWhenLost: 1
@@ -24825,7 +24825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f19d9143a39eb3b46bc4563e9889cfbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 257991514fc1d6643af1d090a815b71d, type: 2}
+  m_Material: {fileID: 2100000, guid: 500e733574922d04ea961553b1b26a63, type: 2}
   m_DrawDistance: 1000
   m_FadeScale: 0.9
   m_StartAngleFade: 180
@@ -34439,7 +34439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f19d9143a39eb3b46bc4563e9889cfbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 059fc4fd227c36347b4d4e76b8348eb0, type: 2}
+  m_Material: {fileID: 2100000, guid: 500e733574922d04ea961553b1b26a63, type: 2}
   m_DrawDistance: 1000
   m_FadeScale: 0.9
   m_StartAngleFade: 180
@@ -40180,7 +40180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f19d9143a39eb3b46bc4563e9889cfbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 059fc4fd227c36347b4d4e76b8348eb0, type: 2}
+  m_Material: {fileID: 2100000, guid: 500e733574922d04ea961553b1b26a63, type: 2}
   m_DrawDistance: 1000
   m_FadeScale: 0.9
   m_StartAngleFade: 180
@@ -44888,6 +44888,7 @@ MonoBehaviour:
   FpsScript: {fileID: 0}
   Fov: 60
   Zoom_Fov: 35
+  is_clicking: 0
 --- !u!1 &233853151986344518
 GameObject:
   m_ObjectHideFlags: 0
