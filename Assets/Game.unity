@@ -427,7 +427,6 @@ GameObject:
   - component: {fileID: 22345875}
   - component: {fileID: 22345874}
   - component: {fileID: 22345872}
-  - component: {fileID: 22345873}
   m_Layer: 0
   m_Name: Bed_Bedroom_Cover1_LOD4
   m_TagString: Untagged
@@ -477,18 +476,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &22345873
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 22345871}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9644d6fcb1eeb240b57eee03bdf63ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &22345874
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1019,7 +1006,6 @@ GameObject:
   - component: {fileID: 63991570}
   - component: {fileID: 63991569}
   - component: {fileID: 63991567}
-  - component: {fileID: 63991568}
   m_Layer: 0
   m_Name: Bed_Bedroom_Pillow1_LOD2
   m_TagString: Untagged
@@ -1069,18 +1055,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &63991568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 63991566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9644d6fcb1eeb240b57eee03bdf63ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &63991569
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2082,7 +2056,6 @@ GameObject:
   - component: {fileID: 104546948}
   - component: {fileID: 104546947}
   - component: {fileID: 104546945}
-  - component: {fileID: 104546946}
   m_Layer: 0
   m_Name: Bed_Bedroom_Cover2_LOD3
   m_TagString: Untagged
@@ -2132,18 +2105,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &104546946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 104546944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9644d6fcb1eeb240b57eee03bdf63ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &104546947
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2876,7 +2837,6 @@ GameObject:
   - component: {fileID: 136586854}
   - component: {fileID: 136586853}
   - component: {fileID: 136586851}
-  - component: {fileID: 136586852}
   m_Layer: 0
   m_Name: Bed_Bedroom_Cover4_Border_LOD4
   m_TagString: Untagged
@@ -2926,18 +2886,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &136586852
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 136586850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9644d6fcb1eeb240b57eee03bdf63ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &136586853
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4253,21 +4201,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -236.15385}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!115 &211733187
-MonoScript:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  serializedVersion: 7
-  m_DefaultReferences: {}
-  m_Icon: {fileID: 0}
-  m_Type: 2
-  m_ExecutionOrder: 0
-  m_ClassName: SceneObjectIDMapSceneAsset
-  m_Namespace: UnityEngine.Experimental.Rendering.HDPipeline
-  m_AssemblyName: 
 --- !u!1001 &214456598
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7027,7 +6960,6 @@ GameObject:
   - component: {fileID: 297101544}
   - component: {fileID: 297101543}
   - component: {fileID: 297101541}
-  - component: {fileID: 297101542}
   m_Layer: 0
   m_Name: Bed_Bedroom_Cover4_Border_LOD1
   m_TagString: Untagged
@@ -7077,18 +7009,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &297101542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 297101540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9644d6fcb1eeb240b57eee03bdf63ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &297101543
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7549,7 +7469,6 @@ GameObject:
   - component: {fileID: 317825049}
   - component: {fileID: 317825048}
   - component: {fileID: 317825046}
-  - component: {fileID: 317825047}
   m_Layer: 0
   m_Name: Bed_Bedroom_Cover1_LOD2
   m_TagString: Untagged
@@ -7599,18 +7518,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &317825047
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 317825045}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9644d6fcb1eeb240b57eee03bdf63ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &317825048
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -8235,7 +8142,6 @@ GameObject:
   - component: {fileID: 357760643}
   - component: {fileID: 357760642}
   - component: {fileID: 357760640}
-  - component: {fileID: 357760641}
   m_Layer: 0
   m_Name: Bed_Bedroom_Pillow1_LOD4
   m_TagString: Untagged
@@ -8285,18 +8191,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &357760641
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 357760639}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9644d6fcb1eeb240b57eee03bdf63ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &357760642
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -9693,7 +9587,6 @@ GameObject:
   - component: {fileID: 410831036}
   - component: {fileID: 410831035}
   - component: {fileID: 410831033}
-  - component: {fileID: 410831034}
   m_Layer: 0
   m_Name: Bed_Bedroom_Pillow1_LOD3
   m_TagString: Untagged
@@ -9743,18 +9636,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &410831034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 410831032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9644d6fcb1eeb240b57eee03bdf63ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &410831035
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -10261,7 +10142,6 @@ GameObject:
   - component: {fileID: 425509172}
   - component: {fileID: 425509171}
   - component: {fileID: 425509169}
-  - component: {fileID: 425509170}
   m_Layer: 0
   m_Name: Bed_Bedroom_Pillow4_LOD2
   m_TagString: Untagged
@@ -10311,18 +10191,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &425509170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 425509168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9644d6fcb1eeb240b57eee03bdf63ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &425509171
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -10521,7 +10389,6 @@ GameObject:
   - component: {fileID: 437493512}
   - component: {fileID: 437493511}
   - component: {fileID: 437493509}
-  - component: {fileID: 437493510}
   m_Layer: 0
   m_Name: Bed_Bedroom_Cover2_LOD1
   m_TagString: Untagged
@@ -10571,18 +10438,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &437493510
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 437493508}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9644d6fcb1eeb240b57eee03bdf63ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &437493511
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -10691,7 +10546,6 @@ GameObject:
   - component: {fileID: 449044226}
   - component: {fileID: 449044225}
   - component: {fileID: 449044223}
-  - component: {fileID: 449044224}
   m_Layer: 0
   m_Name: Bed_Bedroom_Pillow3_LOD4
   m_TagString: Untagged
@@ -10741,18 +10595,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &449044224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 449044222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9644d6fcb1eeb240b57eee03bdf63ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &449044225
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -10787,7 +10629,6 @@ GameObject:
   - component: {fileID: 453750293}
   - component: {fileID: 453750292}
   - component: {fileID: 453750290}
-  - component: {fileID: 453750291}
   m_Layer: 0
   m_Name: Bed_Bedroom_Pillow3_LOD3
   m_TagString: Untagged
@@ -10837,18 +10678,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &453750291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 453750289}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9644d6fcb1eeb240b57eee03bdf63ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &453750292
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -11251,7 +11080,6 @@ GameObject:
   - component: {fileID: 469746417}
   - component: {fileID: 469746416}
   - component: {fileID: 469746414}
-  - component: {fileID: 469746415}
   m_Layer: 0
   m_Name: Bed_Bedroom_Cover4_LOD4
   m_TagString: Untagged
@@ -11301,18 +11129,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &469746415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 469746413}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9644d6fcb1eeb240b57eee03bdf63ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &469746416
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -11459,7 +11275,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 495894444}
-  - component: {fileID: 495894443}
   m_Layer: 0
   m_Name: '!ftraceLightmaps'
   m_TagString: Untagged
@@ -11467,18 +11282,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &495894443
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 495894442}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7fa80e7116296f4eb4f49ec1544ee22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &495894444
 Transform:
   m_ObjectHideFlags: 1
@@ -11672,7 +11475,6 @@ GameObject:
   - component: {fileID: 501638233}
   - component: {fileID: 501638232}
   - component: {fileID: 501638230}
-  - component: {fileID: 501638231}
   m_Layer: 0
   m_Name: Bed_Bedroom_Pillow4_LOD4
   m_TagString: Untagged
@@ -11722,18 +11524,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &501638231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 501638229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9644d6fcb1eeb240b57eee03bdf63ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &501638232
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -15699,7 +15489,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 671204658}
-  - component: {fileID: 671204657}
   m_Layer: 0
   m_Name: SceneIDMap
   m_TagString: Untagged
@@ -15707,18 +15496,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &671204657
-MonoBehaviour:
-  m_ObjectHideFlags: 19
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 671204656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1670232217}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &671204658
 Transform:
   m_ObjectHideFlags: 19
@@ -17494,7 +17271,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 764516714}
-  - component: {fileID: 764516713}
   m_Layer: 0
   m_Name: SceneIDMap
   m_TagString: Untagged
@@ -17502,18 +17278,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &764516713
-MonoBehaviour:
-  m_ObjectHideFlags: 19
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 764516712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 211733187}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &764516714
 Transform:
   m_ObjectHideFlags: 19
@@ -17881,10 +17645,10 @@ GameObject:
   m_Component:
   - component: {fileID: 794092011}
   - component: {fileID: 794092010}
-  - component: {fileID: 794092009}
   - component: {fileID: 794092008}
   - component: {fileID: 794092007}
   - component: {fileID: 794092012}
+  - component: {fileID: 794092013}
   m_Layer: 0
   m_Name: Player Camera
   m_TagString: MainCamera
@@ -18029,14 +17793,6 @@ Behaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 794092005}
   m_Enabled: 1
---- !u!81 &794092009
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 794092005}
-  m_Enabled: 1
 --- !u!20 &794092010
 Camera:
   m_ObjectHideFlags: 0
@@ -18124,6 +17880,19 @@ MonoBehaviour:
   normalFOV: 60
   maxZoomFOV: 30
   zoomSpeed: 2
+--- !u!114 &794092013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794092005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!4 &802640114 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2408543892404665496, guid: 9b80abc98bb828b468c98ceb03b87d88, type: 3}
@@ -18160,7 +17929,6 @@ GameObject:
   - component: {fileID: 817778370}
   - component: {fileID: 817778369}
   - component: {fileID: 817778367}
-  - component: {fileID: 817778368}
   m_Layer: 0
   m_Name: Bed_Bedroom_Pillow4_LOD1
   m_TagString: Untagged
@@ -18210,18 +17978,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &817778368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 817778366}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9644d6fcb1eeb240b57eee03bdf63ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &817778369
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -18344,7 +18100,6 @@ GameObject:
   - component: {fileID: 824372691}
   - component: {fileID: 824372690}
   - component: {fileID: 824372688}
-  - component: {fileID: 824372689}
   m_Layer: 0
   m_Name: Bed_Bedroom_Cover1_LOD1
   m_TagString: Untagged
@@ -18394,18 +18149,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &824372689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 824372687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9644d6fcb1eeb240b57eee03bdf63ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &824372690
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -20308,7 +20051,6 @@ GameObject:
   - component: {fileID: 949199969}
   - component: {fileID: 949199968}
   - component: {fileID: 949199966}
-  - component: {fileID: 949199967}
   m_Layer: 0
   m_Name: Bed_Bedroom_Pillow1_LOD1
   m_TagString: Untagged
@@ -20358,18 +20100,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &949199967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 949199965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9644d6fcb1eeb240b57eee03bdf63ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &949199968
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -22671,7 +22401,6 @@ GameObject:
   - component: {fileID: 1022746029}
   - component: {fileID: 1022746028}
   - component: {fileID: 1022746026}
-  - component: {fileID: 1022746027}
   m_Layer: 0
   m_Name: Bed_Bedroom_Pillow2_LOD4
   m_TagString: Untagged
@@ -22721,18 +22450,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1022746027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1022746025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9644d6fcb1eeb240b57eee03bdf63ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &1022746028
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -22863,7 +22580,6 @@ GameObject:
   - component: {fileID: 1041288262}
   - component: {fileID: 1041288261}
   - component: {fileID: 1041288259}
-  - component: {fileID: 1041288260}
   m_Layer: 0
   m_Name: Bed_Bedroom_Cover3_LOD2
   m_TagString: Untagged
@@ -22913,18 +22629,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1041288260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1041288258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9644d6fcb1eeb240b57eee03bdf63ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &1041288261
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -23085,7 +22789,6 @@ GameObject:
   - component: {fileID: 1059137770}
   - component: {fileID: 1059137769}
   - component: {fileID: 1059137767}
-  - component: {fileID: 1059137768}
   m_Layer: 0
   m_Name: Bed_Bedroom_Cover4_Border_LOD2
   m_TagString: Untagged
@@ -23135,18 +22838,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1059137768
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1059137766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9644d6fcb1eeb240b57eee03bdf63ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &1059137769
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -23784,7 +23475,6 @@ GameObject:
   - component: {fileID: 1087895020}
   - component: {fileID: 1087895019}
   - component: {fileID: 1087895017}
-  - component: {fileID: 1087895018}
   m_Layer: 0
   m_Name: Bed_Bedroom_Cover4_LOD2
   m_TagString: Untagged
@@ -23834,18 +23524,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1087895018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1087895016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9644d6fcb1eeb240b57eee03bdf63ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &1087895019
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -23895,7 +23573,6 @@ GameObject:
   - component: {fileID: 1094373365}
   - component: {fileID: 1094373364}
   - component: {fileID: 1094373362}
-  - component: {fileID: 1094373363}
   m_Layer: 0
   m_Name: Bed_Bedroom_Cover2_LOD2
   m_TagString: Untagged
@@ -23945,18 +23622,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1094373363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1094373361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9644d6fcb1eeb240b57eee03bdf63ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &1094373364
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -24366,7 +24031,6 @@ GameObject:
   - component: {fileID: 1114559547}
   - component: {fileID: 1114559546}
   - component: {fileID: 1114559544}
-  - component: {fileID: 1114559545}
   m_Layer: 0
   m_Name: Bed_Bedroom_Pillow3_LOD2
   m_TagString: Untagged
@@ -24416,18 +24080,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1114559545
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1114559543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9644d6fcb1eeb240b57eee03bdf63ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &1114559546
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -24515,7 +24167,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6253348007168574900, guid: 7af8b14f9d4628b469bd3d535316b2e9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -25461,7 +25114,6 @@ GameObject:
   - component: {fileID: 1209163543}
   - component: {fileID: 1209163542}
   - component: {fileID: 1209163540}
-  - component: {fileID: 1209163541}
   m_Layer: 0
   m_Name: Bed_Bedroom_Pillow4_LOD3
   m_TagString: Untagged
@@ -25511,18 +25163,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1209163541
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1209163539}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9644d6fcb1eeb240b57eee03bdf63ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &1209163542
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -26257,7 +25897,6 @@ GameObject:
   - component: {fileID: 1246758328}
   - component: {fileID: 1246758327}
   - component: {fileID: 1246758325}
-  - component: {fileID: 1246758326}
   m_Layer: 0
   m_Name: Bed_Bedroom_Cover3_LOD4
   m_TagString: Untagged
@@ -26307,18 +25946,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1246758326
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1246758324}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9644d6fcb1eeb240b57eee03bdf63ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &1246758327
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -28149,7 +27776,6 @@ GameObject:
   - component: {fileID: 1307203684}
   - component: {fileID: 1307203683}
   - component: {fileID: 1307203681}
-  - component: {fileID: 1307203682}
   m_Layer: 0
   m_Name: Bed_Bedroom_Pillow2_LOD3
   m_TagString: Untagged
@@ -28199,18 +27825,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1307203682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1307203680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9644d6fcb1eeb240b57eee03bdf63ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &1307203683
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -30002,7 +29616,6 @@ GameObject:
   - component: {fileID: 1411953958}
   - component: {fileID: 1411953957}
   - component: {fileID: 1411953955}
-  - component: {fileID: 1411953956}
   m_Layer: 0
   m_Name: Bed_Bedroom_Pillow2_LOD1
   m_TagString: Untagged
@@ -30052,18 +29665,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1411953956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1411953954}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9644d6fcb1eeb240b57eee03bdf63ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &1411953957
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -31361,7 +30962,6 @@ GameObject:
   - component: {fileID: 1478156555}
   - component: {fileID: 1478156554}
   - component: {fileID: 1478156552}
-  - component: {fileID: 1478156553}
   m_Layer: 0
   m_Name: Bed_Bedroom_Cover3_LOD1
   m_TagString: Untagged
@@ -31411,18 +31011,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1478156553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1478156551}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9644d6fcb1eeb240b57eee03bdf63ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &1478156554
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -31457,7 +31045,6 @@ GameObject:
   - component: {fileID: 1478607558}
   - component: {fileID: 1478607557}
   - component: {fileID: 1478607555}
-  - component: {fileID: 1478607556}
   m_Layer: 0
   m_Name: Bed_Bedroom_Cover1_LOD3
   m_TagString: Untagged
@@ -31507,18 +31094,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1478607556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1478607554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9644d6fcb1eeb240b57eee03bdf63ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &1478607557
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -33223,7 +32798,6 @@ GameObject:
   - component: {fileID: 1488084228}
   - component: {fileID: 1488084227}
   - component: {fileID: 1488084225}
-  - component: {fileID: 1488084226}
   m_Layer: 0
   m_Name: Bed_Bedroom_Cover4_LOD1
   m_TagString: Untagged
@@ -33273,18 +32847,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1488084226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1488084224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9644d6fcb1eeb240b57eee03bdf63ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &1488084227
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -34768,7 +34330,6 @@ GameObject:
   - component: {fileID: 1544254681}
   - component: {fileID: 1544254680}
   - component: {fileID: 1544254678}
-  - component: {fileID: 1544254679}
   m_Layer: 0
   m_Name: Bed_Bedroom_Cover3_LOD3
   m_TagString: Untagged
@@ -34818,18 +34379,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1544254679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1544254677}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9644d6fcb1eeb240b57eee03bdf63ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &1544254680
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -35566,7 +35115,6 @@ GameObject:
   - component: {fileID: 1568679275}
   - component: {fileID: 1568679274}
   - component: {fileID: 1568679272}
-  - component: {fileID: 1568679273}
   m_Layer: 0
   m_Name: Bed_Bedroom_Pillow2_LOD2
   m_TagString: Untagged
@@ -35616,18 +35164,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1568679273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1568679271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9644d6fcb1eeb240b57eee03bdf63ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &1568679274
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -35744,7 +35280,6 @@ GameObject:
   - component: {fileID: 1579735149}
   - component: {fileID: 1579735148}
   - component: {fileID: 1579735146}
-  - component: {fileID: 1579735147}
   m_Layer: 0
   m_Name: Bed_Bedroom_Cover4_LOD3
   m_TagString: Untagged
@@ -35794,18 +35329,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1579735147
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1579735145}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9644d6fcb1eeb240b57eee03bdf63ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &1579735148
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -35838,7 +35361,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1580487040}
-  - component: {fileID: 1580487039}
   m_Layer: 0
   m_Name: SceneIDMap
   m_TagString: Untagged
@@ -35846,18 +35368,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1580487039
-MonoBehaviour:
-  m_ObjectHideFlags: 19
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1580487038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1586029640}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1580487040
 Transform:
   m_ObjectHideFlags: 19
@@ -35878,21 +35388,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5552657296486257971, guid: 4437e099dac93db4aba516d7542b2636, type: 3}
   m_PrefabInstance: {fileID: 2015232848}
   m_PrefabAsset: {fileID: 0}
---- !u!115 &1586029640
-MonoScript:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  serializedVersion: 7
-  m_DefaultReferences: {}
-  m_Icon: {fileID: 0}
-  m_Type: 2
-  m_ExecutionOrder: 0
-  m_ClassName: SceneObjectIDMapSceneAsset
-  m_Namespace: UnityEngine.Rendering.HighDefinition
-  m_AssemblyName: 
 --- !u!1 &1588900783
 GameObject:
   m_ObjectHideFlags: 0
@@ -36554,7 +36049,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1619395987}
-  - component: {fileID: 1619395986}
   m_Layer: 0
   m_Name: SceneIDMap
   m_TagString: Untagged
@@ -36562,19 +36056,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1619395986
-MonoBehaviour:
-  m_ObjectHideFlags: 19
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1619395985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 2023679059}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Entries: []
 --- !u!4 &1619395987
 Transform:
   m_ObjectHideFlags: 19
@@ -37072,21 +36553,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!115 &1670232217
-MonoScript:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  serializedVersion: 7
-  m_DefaultReferences: {}
-  m_Icon: {fileID: 0}
-  m_Type: 2
-  m_ExecutionOrder: 0
-  m_ClassName: SceneObjectIDMapSceneAsset
-  m_Namespace: UnityEngine.Rendering.HighDefinition
-  m_AssemblyName: 
 --- !u!1 &1671619281
 GameObject:
   m_ObjectHideFlags: 0
@@ -37420,7 +36886,6 @@ GameObject:
   - component: {fileID: 1689912427}
   - component: {fileID: 1689912426}
   - component: {fileID: 1689912424}
-  - component: {fileID: 1689912425}
   m_Layer: 0
   m_Name: Bed_Bedroom_Cover2_LOD4
   m_TagString: Untagged
@@ -37470,18 +36935,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1689912425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1689912423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9644d6fcb1eeb240b57eee03bdf63ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &1689912426
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -40917,7 +40370,6 @@ GameObject:
   - component: {fileID: 1925345828}
   - component: {fileID: 1925345827}
   - component: {fileID: 1925345825}
-  - component: {fileID: 1925345826}
   m_Layer: 0
   m_Name: Bed_Bedroom_Pillow3_LOD1
   m_TagString: Untagged
@@ -40967,18 +40419,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1925345826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1925345824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9644d6fcb1eeb240b57eee03bdf63ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &1925345827
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -42256,7 +41696,6 @@ GameObject:
   - component: {fileID: 2011944688}
   - component: {fileID: 2011944687}
   - component: {fileID: 2011944685}
-  - component: {fileID: 2011944686}
   m_Layer: 0
   m_Name: Bed_Bedroom_Cover4_Border_LOD3
   m_TagString: Untagged
@@ -42306,18 +41745,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2011944686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2011944684}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9644d6fcb1eeb240b57eee03bdf63ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &2011944687
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -42860,21 +42287,6 @@ Transform:
   - {fileID: 5006512735144401631}
   m_Father: {fileID: 17122464}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!115 &2023679059
-MonoScript:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  serializedVersion: 7
-  m_DefaultReferences: {}
-  m_Icon: {fileID: 0}
-  m_Type: 0
-  m_ExecutionOrder: 0
-  m_ClassName: SceneObjectIDMapSceneAsset
-  m_Namespace: UnityEngine.Rendering.HighDefinition
-  m_AssemblyName: Unity.RenderPipelines.HighDefinition.Runtime
 --- !u!1001 &2026190451
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44771,10 +44183,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4288335233026574}
   - component: {fileID: 20724644341043030}
-  - component: {fileID: 81419975664926064}
   - component: {fileID: 124044488310351570}
   - component: {fileID: 1266495225}
-  - component: {fileID: 124044488310351571}
+  - component: {fileID: 124044488310351572}
   m_Layer: 0
   m_Name: Render
   m_TagString: MainCamera
@@ -44857,14 +44268,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1276267935198967178}
   m_Mesh: {fileID: 2663367732231141525, guid: a97df78225316404c8a451cfc9976337, type: 3}
---- !u!81 &81419975664926064
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1264834561749428}
-  m_Enabled: 1
 --- !u!124 &124044488310351570
 Behaviour:
   m_ObjectHideFlags: 0
@@ -44873,7 +44276,7 @@ Behaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264834561749428}
   m_Enabled: 1
---- !u!114 &124044488310351571
+--- !u!114 &124044488310351572
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44882,13 +44285,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1264834561749428}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27719a9c56c710346b6f28331d504dad, type: 3}
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FpsScript: {fileID: 0}
-  Fov: 60
-  Zoom_Fov: 35
-  is_clicking: 0
+  attenuationObject: {fileID: 0}
 --- !u!1 &233853151986344518
 GameObject:
   m_ObjectHideFlags: 0
