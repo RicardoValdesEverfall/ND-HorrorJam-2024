@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: ../../FMOD/Horror Jam 2024/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638512332894189134
+  lastModified: 638512976588646107
   FileSizes:
   - Name: Desktop
     Value: 816
@@ -35,7 +35,7 @@ MonoBehaviour:
   Name: Intensity
   StudioPath: 
   Min: 0
-  Max: 1
+  Max: 3
   Default: 0
   ID:
     data1: 2262688161
@@ -59,10 +59,10 @@ MonoBehaviour:
   Path: ../../FMOD/Horror Jam 2024/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638512332894179814
+  lastModified: 638512976588593460
   FileSizes:
   - Name: Desktop
-    Value: 2891136
+    Value: 5765152
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -86,7 +86,7 @@ MonoBehaviour:
   - {fileID: -950790069101998386}
   StringsBanks:
   - {fileID: -7463760165945998154}
-  cacheTime: 638512332894189134
+  cacheTime: 638512976588646107
   cacheVersion: 131617
 --- !u!114 &497702741550303958
 MonoBehaviour:
@@ -115,4 +115,4 @@ MonoBehaviour:
   - {fileID: -5300093886541687817}
   MinDistance: 1
   MaxDistance: 20
-  Length: 220000
+  Length: 120000
