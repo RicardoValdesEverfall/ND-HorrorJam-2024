@@ -7,7 +7,7 @@ public class UIManager : MonoBehaviour
 {
     public Transform lookAtTarget;
     public Vector3 lookAtPosition;
-    public float lerpSpeed = 1f;
+    public float lerpSpeed = 1.5f;
 
     private Animator director;
 
@@ -26,8 +26,16 @@ public class UIManager : MonoBehaviour
     public void Play()
     {
         StartCoroutine(LerpToPosition());
+    }
 
-        director.Play("FadeOut", 0);
+    public void Settings(bool showMenu)
+    {
+        director.SetBool("ShowSettingsMenu", showMenu);
+    }
+
+    public void Exit()
+    {
+        Application.Quit();
     }
 
     private IEnumerator LerpToPosition()
@@ -46,6 +54,8 @@ public class UIManager : MonoBehaviour
 
         // Ensure reaching the exact target position
         lookAtTarget.position = target;
+
+        director.Play("FadeOut", 0);
     }
 
     public void StartNewGame()
