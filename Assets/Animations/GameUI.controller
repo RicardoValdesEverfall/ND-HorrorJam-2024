@@ -33,7 +33,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ChoiceSelectionC
+  m_Name: OptionC
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -59,7 +59,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ChoiceSelectionD
+  m_Name: OptionD
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -149,13 +149,13 @@ AnimatorStateMachine:
     m_Position: {x: 520, y: 100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 9143551720385106747}
-    m_Position: {x: 555, y: 165, z: 0}
+    m_Position: {x: 270, y: 320, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6356117531925067575}
-    m_Position: {x: 590, y: 230, z: 0}
+    m_Position: {x: 270, y: 380, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4272450990741577401}
-    m_Position: {x: 625, y: 295, z: 0}
+    m_Position: {x: 270, y: 440, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -225,7 +225,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ChoiceSelectionB
+  m_Name: OptionB
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
