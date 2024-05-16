@@ -1,25 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5786441120262605551
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: ../ND-Horror-Jam-FMOD/Horror Jam 2024/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 638514736219155614
-  FileSizes:
-  - Name: Desktop
-    Value: 2891104
-  Exists: 1
 --- !u!114 &-5300093886541687817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35,7 +15,7 @@ MonoBehaviour:
   Name: Intensity
   StudioPath: 
   Min: 0
-  Max: 1
+  Max: 3
   Default: 0
   ID:
     data1: 2262688161
@@ -44,7 +24,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-3272259547076828572
+--- !u!114 &-1962345078002328381
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -54,15 +34,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
+  m_Name: bank:/Master.bank
   m_EditorClassIdentifier: 
-  Path: ../ND-Horror-Jam-FMOD/Horror Jam 2024/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638514736219165612
+  Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638514747218145818
   FileSizes:
   - Name: Desktop
-    Value: 816
+    Value: 5765152
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -77,16 +57,16 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -3272259547076828572}
-  - {fileID: -5786441120262605551}
+  - {fileID: 4516577583775730784}
+  - {fileID: -1962345078002328381}
   EditorEvents:
   - {fileID: 497702741550303958}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -5786441120262605551}
+  - {fileID: -1962345078002328381}
   StringsBanks:
-  - {fileID: -3272259547076828572}
-  cacheTime: 638514736219165612
+  - {fileID: 4516577583775730784}
+  cacheTime: 638514747218155821
   cacheVersion: 131617
 --- !u!114 &497702741550303958
 MonoBehaviour:
@@ -107,7 +87,7 @@ MonoBehaviour:
     Data3: -1480654946
     Data4: 1528953223
   Banks:
-  - {fileID: -5786441120262605551}
+  - {fileID: -1962345078002328381}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -115,4 +95,24 @@ MonoBehaviour:
   - {fileID: -5300093886541687817}
   MinDistance: 1
   MaxDistance: 20
-  Length: 220000
+  Length: 120000
+--- !u!114 &4516577583775730784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638514747218155821
+  FileSizes:
+  - Name: Desktop
+    Value: 816
+  Exists: 1

@@ -453,8 +453,8 @@ MonoBehaviour:
   switchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: ../ND-Horror-Jam-FMOD/Horror Jam 2024/Horror Jam 2024.fspro
-  sourceBankPath: ../ND-Horror-Jam-FMOD/Horror Jam 2024/Build
+  sourceProjectPath: Assets/Audio/Horror Jam 2024/Horror Jam 2024.fspro
+  sourceBankPath: Assets/Audio/Horror Jam 2024/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
