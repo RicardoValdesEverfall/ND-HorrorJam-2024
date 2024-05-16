@@ -24,6 +24,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-2414358341656770065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/HH Footsteps Steel
+  m_EditorClassIdentifier: 
+  Path: event:/HH Footsteps Steel
+  Guid:
+    Data1: -2040578875
+    Data2: 1100679903
+    Data3: 2084029884
+    Data4: -580880377
+  Banks:
+  - {fileID: -1962345078002328381}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 519
 --- !u!114 &-1962345078002328381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39,10 +66,10 @@ MonoBehaviour:
   Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638514747218145818
+  lastModified: 638514970719268866
   FileSizes:
   - Name: Desktop
-    Value: 5765152
+    Value: 5899936
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -61,12 +88,13 @@ MonoBehaviour:
   - {fileID: -1962345078002328381}
   EditorEvents:
   - {fileID: 497702741550303958}
+  - {fileID: -2414358341656770065}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1962345078002328381}
   StringsBanks:
   - {fileID: 4516577583775730784}
-  cacheTime: 638514747218155821
+  cacheTime: 638514970719290832
   cacheVersion: 131617
 --- !u!114 &497702741550303958
 MonoBehaviour:
@@ -111,8 +139,8 @@ MonoBehaviour:
   Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638514747218155821
+  lastModified: 638514970719290832
   FileSizes:
   - Name: Desktop
-    Value: 816
+    Value: 878
   Exists: 1
