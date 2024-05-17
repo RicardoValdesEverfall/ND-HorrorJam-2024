@@ -24,6 +24,30 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-2645205391559556720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Doors open close/Door Number
+  m_EditorClassIdentifier: 
+  Name: Door Number
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 3563324352
+    data2: 2410510040
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-2432792390956199157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,11 +90,40 @@ MonoBehaviour:
   Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638515326838528630
+  lastModified: 638515378627315585
   FileSizes:
   - Name: Desktop
-    Value: 6040608
+    Value: 6366816
   Exists: 1
+--- !u!114 &-753032071440960869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Doors open close
+  m_EditorClassIdentifier: 
+  Path: event:/Doors open close
+  Guid:
+    Data1: 291065343
+    Data2: 1149754959
+    Data3: 1940757400
+    Data4: -1165590045
+  Banks:
+  - {fileID: -1962345078002328381}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 6802027841193274940}
+  - {fileID: -2645205391559556720}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6191
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,12 +142,13 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: 497702741550303958}
   - {fileID: 8181326263909051833}
+  - {fileID: -753032071440960869}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1962345078002328381}
   StringsBanks:
   - {fileID: 4516577583775730784}
-  cacheTime: 638515326838528630
+  cacheTime: 638515378627333630
   cacheVersion: 131617
 --- !u!114 &497702741550303958
 MonoBehaviour:
@@ -139,10 +193,36 @@ MonoBehaviour:
   Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638515326838528630
+  lastModified: 638515378627333630
   FileSizes:
   - Name: Desktop
-    Value: 944
+    Value: 1072
+  Exists: 1
+--- !u!114 &6802027841193274940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Doors open close/OpenClose
+  m_EditorClassIdentifier: 
+  Name: OpenClose
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1096349250
+    data2: 1553148318
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Open
+  - Close
   Exists: 1
 --- !u!114 &8181326263909051833
 MonoBehaviour:
