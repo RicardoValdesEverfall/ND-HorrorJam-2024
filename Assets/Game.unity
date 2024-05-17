@@ -1498,6 +1498,9 @@ MonoBehaviour:
   PlayerCamera: {fileID: 409514977}
   SkipIcon: {fileID: 1989743036}
   timeToFirstInteraction: 0
+  choicesArray: []
+  textBoxes: []
+  currentDialogueID: 
   acceptInput: 0
   skippable: 0
 --- !u!95 &72827896
@@ -10229,6 +10232,7 @@ GameObject:
   - component: {fileID: 409514980}
   - component: {fileID: 409514979}
   - component: {fileID: 409514978}
+  - component: {fileID: 409514985}
   m_Layer: 0
   m_Name: PlayerCamera
   m_TagString: MainCamera
@@ -10506,6 +10510,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 2.732, y: -2.407, z: 0.015}
+--- !u!114 &409514985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409514977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1343720844
+      Data2: 1218052330
+      Data3: -323257166
+      Data4: -6040720
+    Path: event:/Background randomn noises
+  Event: 
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &410831032
 GameObject:
   m_ObjectHideFlags: 0
