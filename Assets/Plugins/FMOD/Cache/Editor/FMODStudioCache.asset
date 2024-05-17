@@ -24,7 +24,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-2414358341656770065
+--- !u!114 &-2432792390956199157
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -33,24 +33,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/HH Footsteps Steel
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/HH Footsteps on materials/Walking Material
   m_EditorClassIdentifier: 
-  Path: event:/HH Footsteps Steel
-  Guid:
-    Data1: -2040578875
-    Data2: 1100679903
-    Data3: 2084029884
-    Data4: -580880377
-  Banks:
-  - {fileID: -1962345078002328381}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 514
+  Name: Walking Material
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 3359854330
+    data2: 1598953865
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Wood
+  - Metal
+  - Puddle
+  Exists: 1
 --- !u!114 &-1962345078002328381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,10 +66,10 @@ MonoBehaviour:
   Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638514974278577622
+  lastModified: 638515493261406619
   FileSizes:
   - Name: Desktop
-    Value: 5899936
+    Value: 6040416
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -88,13 +88,13 @@ MonoBehaviour:
   - {fileID: -1962345078002328381}
   EditorEvents:
   - {fileID: 497702741550303958}
-  - {fileID: -2414358341656770065}
+  - {fileID: 8181326263909051833}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1962345078002328381}
   StringsBanks:
   - {fileID: 4516577583775730784}
-  cacheTime: 638514974278593445
+  cacheTime: 638515493261467597
   cacheVersion: 131617
 --- !u!114 &497702741550303958
 MonoBehaviour:
@@ -139,8 +139,36 @@ MonoBehaviour:
   Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638514974278593445
+  lastModified: 638515493261467597
   FileSizes:
   - Name: Desktop
-    Value: 878
+    Value: 944
   Exists: 1
+--- !u!114 &8181326263909051833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/HH Footsteps on materials
+  m_EditorClassIdentifier: 
+  Path: event:/HH Footsteps on materials
+  Guid:
+    Data1: -2040578875
+    Data2: 1100679903
+    Data3: 2084029884
+    Data4: -580880377
+  Banks:
+  - {fileID: -1962345078002328381}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -2432792390956199157}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 862
