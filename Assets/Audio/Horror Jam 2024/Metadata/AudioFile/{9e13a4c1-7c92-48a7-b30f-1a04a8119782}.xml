@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{9e13a4c1-7c92-48a7-b30f-1a04a8119782}">
+		<property name="assetPath">
+			<value>WHSH_Deep Slow Eerie Hollow Whoosh 01.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>192</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>13.146791666666667</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{c1ad0b6f-4f83-40c9-9894-1c44a6b26a69}</destination>
+		</relationship>
+	</object>
+</objects>

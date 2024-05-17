@@ -1,6 +1,26 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8377279604627004063
+--- !u!114 &-7737973920812750127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638515835277670032
+  FileSizes:
+  - Name: Desktop
+    Value: 1186
+  Exists: 1
+--- !u!114 &-6756886540871322886
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -24,7 +44,105 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-7156586954251868964
+--- !u!114 &-6738821550683406101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638515835277647338
+  FileSizes:
+  - Name: Desktop
+    Value: 7624672
+  Exists: 1
+--- !u!114 &-5210179705881262226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Background music/Intensity
+  m_EditorClassIdentifier: 
+  Name: Intensity
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 2262688161
+    data2: 2362205144
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-2946501421285498459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Background randomn noises
+  m_EditorClassIdentifier: 
+  Path: event:/Background randomn noises
+  Guid:
+    Data1: 1343720844
+    Data2: 1218052330
+    Data3: -323257166
+    Data4: -6040720
+  Banks:
+  - {fileID: -6738821550683406101}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 46400
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: -7737973920812750127}
+  - {fileID: -6738821550683406101}
+  EditorEvents:
+  - {fileID: 6464161862524168319}
+  - {fileID: 3053561236233138878}
+  - {fileID: 7987275899791020150}
+  - {fileID: -2946501421285498459}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: -6738821550683406101}
+  StringsBanks:
+  - {fileID: -7737973920812750127}
+  cacheTime: 638515835277670032
+  cacheVersion: 131617
+--- !u!114 &167345290419201506
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -50,7 +168,7 @@ MonoBehaviour:
   - Open
   - Close
   Exists: 1
---- !u!114 &-5300093886541687817
+--- !u!114 &3053561236233138878
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -59,22 +177,55 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Background music/Intensity
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/HH Footsteps on materials
   m_EditorClassIdentifier: 
-  Name: Intensity
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 2262688161
-    data2: 2362205144
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &-2432792390956199157
+  Path: event:/HH Footsteps on materials
+  Guid:
+    Data1: -2040578875
+    Data2: 1100679903
+    Data3: 2084029884
+    Data4: -580880377
+  Banks:
+  - {fileID: -6738821550683406101}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 7214505900852091370}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 862
+--- !u!114 &6464161862524168319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Background music
+  m_EditorClassIdentifier: 
+  Path: event:/Background music
+  Guid:
+    Data1: 1388724022
+    Data2: 1333402915
+    Data3: -1480654946
+    Data4: 1528953223
+  Banks:
+  - {fileID: -6738821550683406101}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -5210179705881262226}
+  - {fileID: 8261788355079303699}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 120000
+--- !u!114 &7214505900852091370
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -101,31 +252,7 @@ MonoBehaviour:
   - Metal
   - Puddle
   Exists: 1
---- !u!114 &-1962345078002328381
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-<<<<<<< Updated upstream
-  lastModified: 638515326838528630
-=======
-  lastModified: 638515579756836267
->>>>>>> Stashed changes
-  FileSizes:
-  - Name: Desktop
-    Value: 6366816
-  Exists: 1
---- !u!114 &-1098393852449469552
+--- !u!114 &7987275899791020150
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,17 +271,17 @@ MonoBehaviour:
     Data3: 1940757400
     Data4: -1165590045
   Banks:
-  - {fileID: -1962345078002328381}
+  - {fileID: -6738821550683406101}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -7156586954251868964}
-  - {fileID: -8377279604627004063}
+  - {fileID: 167345290419201506}
+  - {fileID: -6756886540871322886}
   MinDistance: 1
   MaxDistance: 20
   Length: 6191
---- !u!114 &11400000
+--- !u!114 &8261788355079303699
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -163,104 +290,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
-  m_Name: FMODStudioCache
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Background music/Dialogs_ON_OFF
   m_EditorClassIdentifier: 
-  EditorBanks:
-  - {fileID: 4516577583775730784}
-  - {fileID: -1962345078002328381}
-  EditorEvents:
-  - {fileID: 497702741550303958}
-  - {fileID: 8181326263909051833}
-  - {fileID: -1098393852449469552}
-  EditorParameters: []
-  MasterBanks:
-  - {fileID: -1962345078002328381}
-  StringsBanks:
-  - {fileID: 4516577583775730784}
-<<<<<<< Updated upstream
-  cacheTime: 638515326838528630
-=======
-  cacheTime: 638515579756901274
->>>>>>> Stashed changes
-  cacheVersion: 131617
---- !u!114 &497702741550303958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Background music
-  m_EditorClassIdentifier: 
-  Path: event:/Background music
-  Guid:
-    Data1: 1388724022
-    Data2: 1333402915
-    Data3: -1480654946
-    Data4: 1528953223
-  Banks:
-  - {fileID: -1962345078002328381}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -5300093886541687817}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 120000
---- !u!114 &4516577583775730784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-<<<<<<< Updated upstream
-  lastModified: 638515326838528630
-=======
-  lastModified: 638515579756901274
->>>>>>> Stashed changes
-  FileSizes:
-  - Name: Desktop
-    Value: 1072
+  Name: Dialogs_ON_OFF
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 4066432893
+    data2: 4159430637
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Dialogs_on
+  - Dialogs_off
   Exists: 1
---- !u!114 &8181326263909051833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/HH Footsteps on materials
-  m_EditorClassIdentifier: 
-  Path: event:/HH Footsteps on materials
-  Guid:
-    Data1: -2040578875
-    Data2: 1100679903
-    Data3: 2084029884
-    Data4: -580880377
-  Banks:
-  - {fileID: -1962345078002328381}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -2432792390956199157}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 862

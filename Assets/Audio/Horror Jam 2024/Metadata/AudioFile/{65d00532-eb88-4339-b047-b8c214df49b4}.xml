@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{65d00532-eb88-4339-b047-b8c214df49b4}">
+		<property name="assetPath">
+			<value>METLMvmt_Laundry Rack Subtle Hit with Creaks 04.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>192</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>9.8014583333333327</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{c1ad0b6f-4f83-40c9-9894-1c44a6b26a69}</destination>
+		</relationship>
+	</object>
+</objects>

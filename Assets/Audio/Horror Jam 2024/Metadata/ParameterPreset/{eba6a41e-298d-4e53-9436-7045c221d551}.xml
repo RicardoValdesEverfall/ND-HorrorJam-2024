@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{eba6a41e-298d-4e53-9436-7045c221d551}">
+		<property name="name">
+			<value>Dialogs_ON_OFF</value>
+		</property>
+		<relationship name="folder">
+			<destination>{da96ab70-2a5c-4c4b-949c-3b6cf6c7f7d1}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{6a044ce4-8e62-4665-b234-2e117dbf0e1c}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{6a044ce4-8e62-4665-b234-2e117dbf0e1c}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Dialogs_on</value>
+			<value>Dialogs_off</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
