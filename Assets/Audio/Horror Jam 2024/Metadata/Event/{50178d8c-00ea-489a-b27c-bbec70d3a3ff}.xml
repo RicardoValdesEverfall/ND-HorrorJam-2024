@@ -24,6 +24,7 @@
 		</relationship>
 		<relationship name="markerTracks">
 			<destination>{ff5db43a-39f9-4357-af50-00afc26c2e9b}</destination>
+			<destination>{37367d90-8216-41c2-b672-587544e0657d}</destination>
 		</relationship>
 		<relationship name="groupTracks">
 			<destination>{6fe7f6ea-a02b-4934-86f6-68e08af0039d}</destination>
@@ -58,6 +59,7 @@
 	</object>
 	<object class="EventAutomatableProperties" id="{e611ce35-d8b7-4d19-96ef-8aac7c9dcbef}" />
 	<object class="MarkerTrack" id="{ff5db43a-39f9-4357-af50-00afc26c2e9b}" />
+	<object class="MarkerTrack" id="{37367d90-8216-41c2-b672-587544e0657d}" />
 	<object class="GroupTrack" id="{6fe7f6ea-a02b-4934-86f6-68e08af0039d}">
 		<relationship name="modules">
 			<destination>{eec349fc-9da9-41de-b334-8450bda22a86}</destination>
@@ -99,6 +101,9 @@
 	</object>
 	<object class="MixerBusPanner" id="{6af5aab6-7a32-4af0-81bb-71c1d544baf8}" />
 	<object class="MultiSound" id="{eec349fc-9da9-41de-b334-8450bda22a86}">
+		<property name="start">
+			<value>8.7999999999999972</value>
+		</property>
 		<property name="length">
 			<value>15.64146875</value>
 		</property>
@@ -138,7 +143,7 @@
 	</object>
 	<object class="NamedMarker" id="{ae1695d0-cfdb-4c3e-95b9-1e3c2c565a74}">
 		<property name="position">
-			<value>0</value>
+			<value>8.7999999999999972</value>
 		</property>
 		<property name="name">
 			<value>Monster noise</value>
@@ -152,7 +157,7 @@
 	</object>
 	<object class="TransitionRegion" id="{836cfd53-8088-4f8a-bf88-6ffcfee2a144}">
 		<property name="position">
-			<value>15.600000000000001</value>
+			<value>0</value>
 		</property>
 		<property name="length">
 			<value>4.3999999999999986</value>
@@ -167,7 +172,7 @@
 			<destination>{3d4574a2-969a-4f7d-b334-614a5e54014e}</destination>
 		</relationship>
 		<relationship name="markerTrack">
-			<destination>{ff5db43a-39f9-4357-af50-00afc26c2e9b}</destination>
+			<destination>{37367d90-8216-41c2-b672-587544e0657d}</destination>
 		</relationship>
 		<relationship name="destination">
 			<destination>{ae1695d0-cfdb-4c3e-95b9-1e3c2c565a74}</destination>
@@ -195,7 +200,7 @@
 	</object>
 	<object class="TransitionRegion" id="{ea30ca82-f246-4228-af42-91b60b2ee165}">
 		<property name="position">
-			<value>20</value>
+			<value>4.3999999999999986</value>
 		</property>
 		<property name="length">
 			<value>4.3999999999999986</value>
@@ -210,7 +215,7 @@
 			<destination>{3d4574a2-969a-4f7d-b334-614a5e54014e}</destination>
 		</relationship>
 		<relationship name="markerTrack">
-			<destination>{ff5db43a-39f9-4357-af50-00afc26c2e9b}</destination>
+			<destination>{37367d90-8216-41c2-b672-587544e0657d}</destination>
 		</relationship>
 		<relationship name="destination">
 			<destination>{ae1695d0-cfdb-4c3e-95b9-1e3c2c565a74}</destination>
@@ -310,6 +315,7 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{071079ee-2726-4182-9ef8-939e345fb7fe}">
 		<relationship name="effects">
+			<destination>{7aabb165-e8ba-4e76-ae69-e170519283e7}</destination>
 			<destination>{22454130-e13c-4c7e-a2f7-a6697664a3c1}</destination>
 		</relationship>
 	</object>
@@ -402,6 +408,17 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{70367e55-f846-4802-b34e-472220238809}" />
+	<object class="SFXReverbEffect" id="{7aabb165-e8ba-4e76-ae69-e170519283e7}">
+		<property name="decayTime">
+			<value>10000</value>
+		</property>
+		<property name="wetLevel">
+			<value>-2.5</value>
+		</property>
+		<property name="dryLevel">
+			<value>-3.5</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{22454130-e13c-4c7e-a2f7-a6697664a3c1}" />
 	<object class="MixerBusFader" id="{43e90706-490a-475c-b6a0-83f054f0811f}" />
 </objects>
