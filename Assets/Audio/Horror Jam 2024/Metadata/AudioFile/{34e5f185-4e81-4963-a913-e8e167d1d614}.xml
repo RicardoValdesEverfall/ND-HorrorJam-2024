@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{34e5f185-4e81-4963-a913-e8e167d1d614}">
+		<property name="assetPath">
+			<value>Day1Dialog04.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>57.947499999999998</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{c1ad0b6f-4f83-40c9-9894-1c44a6b26a69}</destination>
+		</relationship>
+	</object>
+</objects>

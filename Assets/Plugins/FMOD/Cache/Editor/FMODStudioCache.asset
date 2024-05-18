@@ -15,10 +15,10 @@ MonoBehaviour:
   Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638516246035891183
+  lastModified: 638516777678809158
   FileSizes:
   - Name: Desktop
-    Value: 1368
+    Value: 1602
   Exists: 1
 --- !u!114 &-7681046385743514071
 MonoBehaviour:
@@ -86,10 +86,10 @@ MonoBehaviour:
   Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638516246035862255
+  lastModified: 638516777678697142
   FileSizes:
   - Name: Desktop
-    Value: 7841664
+    Value: 8705664
   Exists: 1
 --- !u!114 &-6397896854602006632
 MonoBehaviour:
@@ -120,6 +120,54 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 120000
+--- !u!114 &-6368458262806950491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/UI mouseover and click
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/UI mouseover and click
+  Guid:
+    Data1: -167317852
+    Data2: 1297716419
+    Data3: 437968300
+    Data4: 1679859894
+  Banks:
+  - {fileID: -6738821550683406101}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -276267721230977835}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1551
+--- !u!114 &-2558183980701137387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Dialogs Eng.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Dialogs Eng.bank
+  Name: Dialogs Eng
+  StudioPath: bank:/Dialogs Eng
+  lastModified: 638516777678862315
+  FileSizes:
+  - Name: Desktop
+    Value: 494
+  Exists: 1
 --- !u!114 &-2510649094885974753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,6 +218,33 @@ MonoBehaviour:
   - Open
   - Close
   Exists: 1
+--- !u!114 &-276267721230977835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/UI mouseover and click/Menu action
+  m_EditorClassIdentifier: 
+  Name: Menu action
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 4005642843
+    data2: 3697148916
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Mouseover
+  - Click
+  - TBC
+  Exists: 1
 --- !u!114 &-251357165213787557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,10 +292,12 @@ MonoBehaviour:
     Data4: 1935565406
   Banks:
   - {fileID: -6738821550683406101}
-  IsStream: 0
+  IsStream: 1
   Is3D: 0
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 8574987654605061825}
+  - {fileID: 5654548654323851155}
   MinDistance: 1
   MaxDistance: 20
   Length: 7000
@@ -239,18 +316,20 @@ MonoBehaviour:
   EditorBanks:
   - {fileID: -7737973920812750127}
   - {fileID: -6738821550683406101}
+  - {fileID: -2558183980701137387}
   EditorEvents:
   - {fileID: -6397896854602006632}
   - {fileID: -30464657951284264}
   - {fileID: -251357165213787557}
   - {fileID: 8081087211798877195}
   - {fileID: 8594232459420206533}
+  - {fileID: -6368458262806950491}
   EditorParameters: []
   MasterBanks:
   - {fileID: -6738821550683406101}
   StringsBanks:
   - {fileID: -7737973920812750127}
-  cacheTime: 638516246035891183
+  cacheTime: 638516777678862315
   cacheVersion: 131617
 --- !u!114 &489172097080838678
 MonoBehaviour:
@@ -277,6 +356,30 @@ MonoBehaviour:
   Labels:
   - Dialogs_on
   - Dialogs_off
+  Exists: 1
+--- !u!114 &5654548654323851155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Dialogs tests/Dialog ID
+  m_EditorClassIdentifier: 
+  Name: Dialog ID
+  StudioPath: 
+  Min: 1
+  Max: 100
+  Default: 1
+  ID:
+    data1: 138503275
+    data2: 2690395445
+  Type: 1
+  IsGlobal: 0
+  Labels: []
   Exists: 1
 --- !u!114 &8081087211798877195
 MonoBehaviour:
@@ -306,6 +409,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 862
+--- !u!114 &8574987654605061825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Dialogs tests/Day 1 to 5
+  m_EditorClassIdentifier: 
+  Name: Day 1 to 5
+  StudioPath: 
+  Min: 1
+  Max: 5
+  Default: 1
+  ID:
+    data1: 2288054532
+    data2: 4007593905
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &8594232459420206533
 MonoBehaviour:
   m_ObjectHideFlags: 0
