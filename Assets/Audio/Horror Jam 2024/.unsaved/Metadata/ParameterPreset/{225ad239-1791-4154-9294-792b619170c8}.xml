@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{225ad239-1791-4154-9294-792b619170c8}">
+		<property name="name">
+			<value>Dialog ID</value>
+		</property>
+		<relationship name="folder">
+			<destination>{da96ab70-2a5c-4c4b-949c-3b6cf6c7f7d1}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{451b39a9-633e-4923-894b-a0ded87af942}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{451b39a9-633e-4923-894b-a0ded87af942}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="minimum">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>101</value>
+		</property>
+		<property name="initialValue">
+			<value>1</value>
+		</property>
+	</object>
+</objects>
