@@ -139,6 +139,10 @@ public class DialogueSystem : MonoBehaviour
 
 
     //#################################################### DAY SCENES SCRIPTING ###############################################
+    public void SetCurrentDialogueID(string dialogueID)
+    {
+
+    }
 
     public void DayOne_Main(string dialogueChoiceID)
     {
