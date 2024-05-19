@@ -41,7 +41,7 @@ public class DialogueSystem : MonoBehaviour
         director.Play("IntroCinematic", 0);
         skippable = true;
 
-        timeToFirstInteraction = Random.Range(20f, 120f);
+        timeToFirstInteraction = Random.Range(5f, 15f);
     }
 
     private void Update()
@@ -70,8 +70,6 @@ public class DialogueSystem : MonoBehaviour
                 director.Play("OptionD", 0);
             }
         }
-
-
     }
 
     private void LateUpdate()
@@ -96,9 +94,10 @@ public class DialogueSystem : MonoBehaviour
             }
         }
 
-        if (!day_one_started)
+        if (!day_one_started && !skippable)
         {
             timeToFirstInteraction -= Time.deltaTime;
+            Debug.Log(timeToFirstInteraction);
 
             if (timeToFirstInteraction <= 0)
             {
@@ -146,10 +145,12 @@ public class DialogueSystem : MonoBehaviour
         switch (dialogueChoiceID)
         {
             case "main":
-                choicesArray[2].alpha = 0; // OPTION C
                 choicesArray[3].alpha = 0; // OPTION D
 
-                textBoxes[0].text = "";
+                textBoxes[0].text = "He's Awake! Guys, he's awake! ... Cuan? can you hear me? Are you okay in there?";
+                textBoxes[1].text = "Very groggy. What's going on?";
+                textBoxes[2].text = "I saw- I saw- What did I see?";
+                textBoxes[3].text = "Why aren’t we in the sub?";
                 break;
         }
     }
