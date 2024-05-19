@@ -995,8 +995,8 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.33333334
-    functionName: fmodDialogueChoice
-    data: 
+    functionName: fmodTriggerDialogue
+    data: A
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 1
