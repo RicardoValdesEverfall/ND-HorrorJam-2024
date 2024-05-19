@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{88688e1f-9e78-4ef3-84b2-5c163bb38e70}">
+		<property name="name">
+			<value>DialogSeq</value>
+		</property>
+		<relationship name="folder">
+			<destination>{da96ab70-2a5c-4c4b-949c-3b6cf6c7f7d1}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{d91f51c9-7676-4ca4-94f0-4818fd7e4e4a}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{d91f51c9-7676-4ca4-94f0-4818fd7e4e4a}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="minimum">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>11</value>
+		</property>
+		<property name="initialValue">
+			<value>1</value>
+		</property>
+	</object>
+</objects>
