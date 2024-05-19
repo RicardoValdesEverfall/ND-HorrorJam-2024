@@ -1,6 +1,65 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8529372180217349923
+--- !u!114 &-8599172360413777432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/CuanDialogueEvent/DialogPath
+  m_EditorClassIdentifier: 
+  Name: DialogPath
+  StudioPath: 
+  Min: 0
+  Max: 6
+  Default: 1
+  ID:
+    data1: 3434656728
+    data2: 1205295953
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - 0
+  - A
+  - B
+  - C
+  - D
+  - E
+  - 0
+  Exists: 1
+--- !u!114 &-6604090736812102159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/UI mouseover and click
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/UI mouseover and click
+  Guid:
+    Data1: -167317852
+    Data2: 1297716419
+    Data3: 437968300
+    Data4: 1679859894
+  Banks:
+  - {fileID: -1540975714723700239}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -504045121372085702}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1551
+--- !u!114 &-4717651719471733608
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -19,7 +78,7 @@ MonoBehaviour:
     Data3: -323257166
     Data4: -6040720
   Banks:
-  - {fileID: 2474393581047338076}
+  - {fileID: -1540975714723700239}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -27,7 +86,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 46400
---- !u!114 &-7737973920812750127
+--- !u!114 &-4038967937232392733
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -36,18 +95,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogs/SallyDialogueEvent
   m_EditorClassIdentifier: 
-  Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638516777678809158
-  FileSizes:
-  - Name: Desktop
-    Value: 1602
-  Exists: 1
---- !u!114 &-7681046385743514071
+  Path: event:/Dialogs/SallyDialogueEvent
+  Guid:
+    Data1: -1327095709
+    Data2: 1335853117
+    Data3: 2019376769
+    Data4: -2109107532
+  Banks:
+  - {fileID: -1540975714723700239}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 1360370404464646579}
+  - {fileID: 1328380106371486460}
+  - {fileID: 1261740142169884199}
+  - {fileID: -2147172979818339067}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3906502825949260457
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -74,7 +144,150 @@ MonoBehaviour:
   - Metal
   - Puddle
   Exists: 1
---- !u!114 &-7522125874322988780
+--- !u!114 &-3332531842651755527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/CuanDialogueEvent/DialogSeq
+  m_EditorClassIdentifier: 
+  Name: DialogSeq
+  StudioPath: 
+  Min: 1
+  Max: 10
+  Default: 1
+  ID:
+    data1: 3194751750
+    data2: 2760168786
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-3314382845305263927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Doors open close
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Doors open close
+  Guid:
+    Data1: 291065343
+    Data2: 1149754959
+    Data3: 1940757400
+    Data4: -1165590045
+  Banks:
+  - {fileID: -1540975714723700239}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 2646810161712629019}
+  - {fileID: 7800406964627200525}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6191
+--- !u!114 &-2147172979818339067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SallyDialogueEvent/Dialog ID
+  m_EditorClassIdentifier: 
+  Name: Dialog ID
+  StudioPath: 
+  Min: 1
+  Max: 100
+  Default: 1
+  ID:
+    data1: 138503275
+    data2: 2690395445
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-1540975714723700239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638517371185330148
+  FileSizes:
+  - Name: Desktop
+    Value: 9324704
+  Exists: 1
+--- !u!114 &-1456041133241899549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Background music/Dialogs_ON_OFF
+  m_EditorClassIdentifier: 
+  Name: Dialogs_ON_OFF
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 4066432893
+    data2: 4159430637
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Dialogs_on
+  - Dialogs_off
+  Exists: 1
+--- !u!114 &-1021755848617190690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638517371185426723
+  FileSizes:
+  - Name: Desktop
+    Value: 1748
+  Exists: 1
+--- !u!114 &-692381339665051370
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,138 +311,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-6803255802502963012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Doors open close/OpenClose
-  m_EditorClassIdentifier: 
-  Name: OpenClose
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 1096349250
-    data2: 1553148318
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - Open
-  - Close
-  Exists: 1
---- !u!114 &-6738821550683406101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 638516777678697142
-  FileSizes:
-  - Name: Desktop
-    Value: 8705664
-  Exists: 1
---- !u!114 &-6397896854602006632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Background music
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Background music
-  Guid:
-    Data1: 1388724022
-    Data2: 1333402915
-    Data3: -1480654946
-    Data4: 1528953223
-  Banks:
-  - {fileID: -6738821550683406101}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -7522125874322988780}
-  - {fileID: 489172097080838678}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 120000
---- !u!114 &-6368458262806950491
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/UI mouseover and click
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/UI mouseover and click
-  Guid:
-    Data1: -167317852
-    Data2: 1297716419
-    Data3: 437968300
-    Data4: 1679859894
-  Banks:
-  - {fileID: -6738821550683406101}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -276267721230977835}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1551
---- !u!114 &-5467189401015248213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/HH Footsteps on materials
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/HH Footsteps on materials
-  Guid:
-    Data1: -2040578875
-    Data2: 1100679903
-    Data3: 2084029884
-    Data4: -580880377
-  Banks:
-  - {fileID: 2474393581047338076}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -304373327850753953}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 862
---- !u!114 &-4663838622157665779
+--- !u!114 &-504045121372085702
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -256,7 +338,7 @@ MonoBehaviour:
   - Click
   - TBC
   Exists: 1
---- !u!114 &-3595212735447818840
+--- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -265,51 +347,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Dialogs tests/Day 1 to 5
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
-  Name: Day 1 to 5
-  StudioPath: 
-  Min: 1
-  Max: 5
-  Default: 1
-  ID:
-    data1: 2288054532
-    data2: 4007593905
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &-3434706906367195711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Doors open close
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Doors open close
-  Guid:
-    Data1: 291065343
-    Data2: 1149754959
-    Data3: 1940757400
-    Data4: -1165590045
-  Banks:
-  - {fileID: 2474393581047338076}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -6803255802502963012}
-  - {fileID: 7425215070406257910}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 6191
---- !u!114 &-2558183980701137387
+  EditorBanks:
+  - {fileID: -1021755848617190690}
+  - {fileID: 406675229068445387}
+  - {fileID: -1540975714723700239}
+  EditorEvents:
+  - {fileID: 2693393126267455848}
+  - {fileID: -4038967937232392733}
+  - {fileID: -4717651719471733608}
+  - {fileID: -6604090736812102159}
+  - {fileID: 6012619126668100641}
+  - {fileID: 8855747372951907719}
+  - {fileID: -3314382845305263927}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: -1540975714723700239}
+  StringsBanks:
+  - {fileID: -1021755848617190690}
+  cacheTime: 638517371185426723
+  cacheVersion: 131617
+--- !u!114 &406675229068445387
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -329,7 +389,7 @@ MonoBehaviour:
   - Name: Desktop
     Value: 494
   Exists: 1
---- !u!114 &-2510649094885974753
+--- !u!114 &1158152154061814947
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -339,21 +399,100 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Doors open close/Door Number
+  m_Name: parameter:/CuanDialogueEvent/Day 1 to 5
   m_EditorClassIdentifier: 
-  Name: Door Number
+  Name: Day 1 to 5
   StudioPath: 
-  Min: 0
-  Max: 10
-  Default: 0
+  Min: 1
+  Max: 5
+  Default: 1
   ID:
-    data1: 3563324352
-    data2: 2410510040
+    data1: 2288054532
+    data2: 4007593905
   Type: 1
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-1062074661509269934
+--- !u!114 &1261740142169884199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SallyDialogueEvent/Day 1 to 5
+  m_EditorClassIdentifier: 
+  Name: Day 1 to 5
+  StudioPath: 
+  Min: 1
+  Max: 5
+  Default: 1
+  ID:
+    data1: 2288054532
+    data2: 4007593905
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &1328380106371486460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SallyDialogueEvent/DialogSeq
+  m_EditorClassIdentifier: 
+  Name: DialogSeq
+  StudioPath: 
+  Min: 1
+  Max: 10
+  Default: 1
+  ID:
+    data1: 3194751750
+    data2: 2760168786
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &1360370404464646579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SallyDialogueEvent/DialogPath
+  m_EditorClassIdentifier: 
+  Name: DialogPath
+  StudioPath: 
+  Min: 0
+  Max: 6
+  Default: 1
+  ID:
+    data1: 3434656728
+    data2: 1205295953
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - 0
+  - A
+  - B
+  - C
+  - D
+  - E
+  - 0
+  Exists: 1
+--- !u!114 &2646810161712629019
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -379,213 +518,7 @@ MonoBehaviour:
   - Open
   - Close
   Exists: 1
---- !u!114 &-304373327850753953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/HH Footsteps on materials/Walking Material
-  m_EditorClassIdentifier: 
-  Name: Walking Material
-  StudioPath: 
-  Min: 0
-  Max: 2
-  Default: 0
-  ID:
-    data1: 3359854330
-    data2: 1598953865
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - Wood
-  - Metal
-  - Puddle
-  Exists: 1
---- !u!114 &-276267721230977835
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/UI mouseover and click/Menu action
-  m_EditorClassIdentifier: 
-  Name: Menu action
-  StudioPath: 
-  Min: 0
-  Max: 2
-  Default: 0
-  ID:
-    data1: 4005642843
-    data2: 3697148916
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - Mouseover
-  - Click
-  - TBC
-  Exists: 1
---- !u!114 &-251357165213787557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Background randomn noises
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Background randomn noises
-  Guid:
-    Data1: 1343720844
-    Data2: 1218052330
-    Data3: -323257166
-    Data4: -6040720
-  Banks:
-  - {fileID: -6738821550683406101}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 46400
---- !u!114 &-30464657951284264
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Dialogs/Dialogs tests
-  m_EditorClassIdentifier: 
-  Path: event:/Dialogs/Dialogs tests
-  Guid:
-    Data1: -849690516
-    Data2: 1145834155
-    Data3: -2108268644
-    Data4: 1935565406
-  Banks:
-  - {fileID: -6738821550683406101}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 8574987654605061825}
-  - {fileID: 5654548654323851155}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 7000
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
-  m_Name: FMODStudioCache
-  m_EditorClassIdentifier: 
-  EditorBanks:
-  - {fileID: 8060494928531191271}
-  - {fileID: 4365232079010812595}
-  - {fileID: 2474393581047338076}
-  EditorEvents:
-  - {fileID: 4726288784563738978}
-  - {fileID: 8606494832497761559}
-  - {fileID: -8529372180217349923}
-  - {fileID: 6684252448913015383}
-  - {fileID: -5467189401015248213}
-  - {fileID: -3434706906367195711}
-  EditorParameters: []
-  MasterBanks:
-  - {fileID: 2474393581047338076}
-  StringsBanks:
-  - {fileID: 8060494928531191271}
-  cacheTime: 638516997536778877
-  cacheVersion: 131617
---- !u!114 &489172097080838678
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Background music/Dialogs_ON_OFF
-  m_EditorClassIdentifier: 
-  Name: Dialogs_ON_OFF
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 4066432893
-    data2: 4159430637
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - Dialogs_on
-  - Dialogs_off
-  Exists: 1
---- !u!114 &2474393581047338076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 638516997536768878
-  FileSizes:
-  - Name: Desktop
-    Value: 8633568
-  Exists: 1
---- !u!114 &4365232079010812595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Dialogs Eng.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Dialogs Eng.bank
-  Name: Dialogs Eng
-  StudioPath: bank:/Dialogs Eng
-  lastModified: 638516997536258765
-  FileSizes:
-  - Name: Desktop
-    Value: 494
-  Exists: 1
---- !u!114 &4726288784563738978
+--- !u!114 &2693393126267455848
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -604,17 +537,17 @@ MonoBehaviour:
     Data3: -1480654946
     Data4: 1528953223
   Banks:
-  - {fileID: 2474393581047338076}
+  - {fileID: -1540975714723700239}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 9044264087390688423}
-  - {fileID: 5276677486919987431}
+  - {fileID: -692381339665051370}
+  - {fileID: -1456041133241899549}
   MinDistance: 1
   MaxDistance: 20
   Length: 120000
---- !u!114 &5276677486919987431
+--- !u!114 &3999760986127115596
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -624,33 +557,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Background music/Dialogs_ON_OFF
-  m_EditorClassIdentifier: 
-  Name: Dialogs_ON_OFF
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 4066432893
-    data2: 4159430637
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - Dialogs_on
-  - Dialogs_off
-  Exists: 1
---- !u!114 &5654548654323851155
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Dialogs tests/Dialog ID
+  m_Name: parameter:/CuanDialogueEvent/Dialog ID
   m_EditorClassIdentifier: 
   Name: Dialog ID
   StudioPath: 
@@ -664,7 +571,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &6684252448913015383
+--- !u!114 &6012619126668100641
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -674,25 +581,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/UI mouseover and click
+  m_Name: event:/Dialogs/CuanDialogueEvent
   m_EditorClassIdentifier: 
-  Path: event:/SFX/UI mouseover and click
+  Path: event:/Dialogs/CuanDialogueEvent
   Guid:
-    Data1: -167317852
-    Data2: 1297716419
-    Data3: 437968300
-    Data4: 1679859894
+    Data1: 1402556089
+    Data2: 1136595256
+    Data3: 1663237560
+    Data4: 1021404598
   Banks:
-  - {fileID: 2474393581047338076}
-  IsStream: 0
+  - {fileID: -1540975714723700239}
+  IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -4663838622157665779}
+  - {fileID: 3999760986127115596}
+  - {fileID: -3332531842651755527}
+  - {fileID: 1158152154061814947}
+  - {fileID: -8599172360413777432}
   MinDistance: 1
   MaxDistance: 20
-  Length: 1551
---- !u!114 &7425215070406257910
+  Length: 0
+--- !u!114 &7800406964627200525
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -716,51 +626,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &7493816366497848794
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Dialogs tests/Dialog ID
-  m_EditorClassIdentifier: 
-  Name: Dialog ID
-  StudioPath: 
-  Min: 1
-  Max: 100
-  Default: 1
-  ID:
-    data1: 138503275
-    data2: 2690395445
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &8060494928531191271
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638516997536778877
-  FileSizes:
-  - Name: Desktop
-    Value: 1602
-  Exists: 1
---- !u!114 &8081087211798877195
+--- !u!114 &8855747372951907719
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -779,118 +645,12 @@ MonoBehaviour:
     Data3: 2084029884
     Data4: -580880377
   Banks:
-  - {fileID: -6738821550683406101}
+  - {fileID: -1540975714723700239}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -7681046385743514071}
+  - {fileID: -3906502825949260457}
   MinDistance: 1
   MaxDistance: 20
   Length: 862
---- !u!114 &8574987654605061825
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Dialogs tests/Day 1 to 5
-  m_EditorClassIdentifier: 
-  Name: Day 1 to 5
-  StudioPath: 
-  Min: 1
-  Max: 5
-  Default: 1
-  ID:
-    data1: 2288054532
-    data2: 4007593905
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &8594232459420206533
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Doors open close
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Doors open close
-  Guid:
-    Data1: 291065343
-    Data2: 1149754959
-    Data3: 1940757400
-    Data4: -1165590045
-  Banks:
-  - {fileID: -6738821550683406101}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -1062074661509269934}
-  - {fileID: -2510649094885974753}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 6191
---- !u!114 &8606494832497761559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Dialogs/Dialogs tests
-  m_EditorClassIdentifier: 
-  Path: event:/Dialogs/Dialogs tests
-  Guid:
-    Data1: -849690516
-    Data2: 1145834155
-    Data3: -2108268644
-    Data4: 1935565406
-  Banks:
-  - {fileID: 2474393581047338076}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -3595212735447818840}
-  - {fileID: 7493816366497848794}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &9044264087390688423
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Background music/Intensity
-  m_EditorClassIdentifier: 
-  Name: Intensity
-  StudioPath: 
-  Min: 0
-  Max: 3
-  Default: 0
-  ID:
-    data1: 2262688161
-    data2: 2362205144
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
