@@ -85,7 +85,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 46400
+  Length: 42000
 --- !u!114 &-4038967937232392733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,7 +107,7 @@ MonoBehaviour:
   Banks:
   - {fileID: -1540975714723700239}
   IsStream: 1
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters:
   - {fileID: 1360370404464646579}
@@ -236,10 +236,10 @@ MonoBehaviour:
   Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638517300243774378
+  lastModified: 638517544110022532
   FileSizes:
   - Name: Desktop
-    Value: 9307872
+    Value: 9473280
   Exists: 1
 --- !u!114 &-1456041133241899549
 MonoBehaviour:
@@ -282,10 +282,10 @@ MonoBehaviour:
   Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638517300243791735
+  lastModified: 638517544110062777
   FileSizes:
   - Name: Desktop
-    Value: 1748
+    Value: 1784
   Exists: 1
 --- !u!114 &-692381339665051370
 MonoBehaviour:
@@ -362,12 +362,13 @@ MonoBehaviour:
   - {fileID: 6012619126668100641}
   - {fileID: 8855747372951907719}
   - {fileID: -3314382845305263927}
+  - {fileID: 6990668308033460000}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1540975714723700239}
   StringsBanks:
   - {fileID: -1021755848617190690}
-  cacheTime: 638517300243791735
+  cacheTime: 638517544110062777
   cacheVersion: 131617
 --- !u!114 &406675229068445387
 MonoBehaviour:
@@ -384,7 +385,7 @@ MonoBehaviour:
   Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Dialogs Eng.bank
   Name: Dialogs Eng
   StudioPath: bank:/Dialogs Eng
-  lastModified: 638516997536258765
+  lastModified: 638516777678862315
   FileSizes:
   - Name: Desktop
     Value: 494
@@ -602,6 +603,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &6990668308033460000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Clock
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Clock
+  Guid:
+    Data1: 2012517409
+    Data2: 1140281954
+    Data3: 639786370
+    Data4: 242004716
+  Banks:
+  - {fileID: -1540975714723700239}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6000
 --- !u!114 &7800406964627200525
 MonoBehaviour:
   m_ObjectHideFlags: 0
