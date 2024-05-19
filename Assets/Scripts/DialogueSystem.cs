@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEditor.Profiling.RawFrameDataView;
 
 public class DialogueSystem : MonoBehaviour
 {
+    private FMOD.Studio.EventInstance instance;
+    public FMODUnity.EventReference dialogueEvent;
+
     [SerializeField] Animator Camille;
     [SerializeField] GameObject PlayerCamera;
     [SerializeField] Image SkipIcon;
@@ -18,12 +22,16 @@ public class DialogueSystem : MonoBehaviour
     public string currentDialogueID;
     public bool acceptInput = false;
     public bool skippable = false;
+    public int triggerIndex = 0;
 
     private float skipTimer = 0;
     private bool day_one_started = false;
 
     private void Awake()
     {
+        instance = FMODUnity.RuntimeManager.CreateInstance(dialogueEvent);
+        instance.setParameterByName("Day 1 to 5", 1);
+
         if (Camille == null)
         {
             Camille = GameObject.FindGameObjectWithTag("Camille").GetComponent<Animator>();
@@ -33,7 +41,7 @@ public class DialogueSystem : MonoBehaviour
         director.Play("IntroCinematic", 0);
         skippable = true;
 
-        timeToFirstInteraction = Random.Range(20f, 120f);
+        timeToFirstInteraction = Random.Range(5f, 15f);
     }
 
     private void Update()
@@ -62,8 +70,6 @@ public class DialogueSystem : MonoBehaviour
                 director.Play("OptionD", 0);
             }
         }
-
-
     }
 
     private void LateUpdate()
@@ -88,9 +94,10 @@ public class DialogueSystem : MonoBehaviour
             }
         }
 
-        if (!day_one_started)
+        if (!day_one_started && !skippable)
         {
             timeToFirstInteraction -= Time.deltaTime;
+            Debug.Log(timeToFirstInteraction);
 
             if (timeToFirstInteraction <= 0)
             {
@@ -115,18 +122,39 @@ public class DialogueSystem : MonoBehaviour
         PlayerCamera.SetActive(true);
         skippable = false;
     }
+    //###################################################### FMOD SCRIPTING ###################################################
+    public void fmodDialogueChoice(int choice)
+    {
+        instance.setParameterByName("DialogID", choice);
+    }
+
+
+    public void fmodTriggerDialogue(string eventName)
+    {
+        instance.setParameterByName("Dialog ID", triggerIndex);
+        instance.start();
+
+        triggerIndex++;
+    }
+
 
     //#################################################### DAY SCENES SCRIPTING ###############################################
+    public void SetCurrentDialogueID(string dialogueID)
+    {
+
+    }
 
     public void DayOne_Main(string dialogueChoiceID)
     {
         switch (dialogueChoiceID)
         {
             case "main":
-                choicesArray[2].alpha = 0; // OPTION C
                 choicesArray[3].alpha = 0; // OPTION D
 
-
+                textBoxes[0].text = "He's Awake! Guys, he's awake! ... Cuan? can you hear me? Are you okay in there?";
+                textBoxes[1].text = "Very groggy. What's going on?";
+                textBoxes[2].text = "I saw- I saw- What did I see?";
+                textBoxes[3].text = "Why aren’t we in the sub?";
                 break;
         }
     }
