@@ -86,6 +86,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 9712
+--- !u!114 &-5570198286389603029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Marine Monster
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Marine Monster
+  Guid:
+    Data1: -895313828
+    Data2: 1195091798
+    Data3: 534798233
+    Data4: -907896377
+  Banks:
+  - {fileID: 406675229068445387}
+  - {fileID: -1540975714723700239}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 8000
 --- !u!114 &-4717651719471733608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,10 +291,10 @@ MonoBehaviour:
   Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638518221249292122
+  lastModified: 638518320706150819
   FileSizes:
   - Name: Desktop
-    Value: 9546816
+    Value: 10100224
   Exists: 1
 --- !u!114 &-1456041133241899549
 MonoBehaviour:
@@ -309,10 +337,10 @@ MonoBehaviour:
   Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638518221249320703
+  lastModified: 638518320706202283
   FileSizes:
   - Name: Desktop
-    Value: 1828
+    Value: 1872
   Exists: 1
 --- !u!114 &-692381339665051370
 MonoBehaviour:
@@ -391,12 +419,13 @@ MonoBehaviour:
   - {fileID: -3314382845305263927}
   - {fileID: 6990668308033460000}
   - {fileID: -6180965441788627602}
+  - {fileID: -5570198286389603029}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1540975714723700239}
   StringsBanks:
   - {fileID: -1021755848617190690}
-  cacheTime: 638518221249320703
+  cacheTime: 638518320706202283
   cacheVersion: 131617
 --- !u!114 &406675229068445387
 MonoBehaviour:
@@ -413,10 +442,10 @@ MonoBehaviour:
   Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Dialogs Eng.bank
   Name: Dialogs Eng
   StudioPath: bank:/Dialogs Eng
-  lastModified: 638517825797945341
+  lastModified: 638518320705195617
   FileSizes:
   - Name: Desktop
-    Value: 494
+    Value: 554144
   Exists: 1
 --- !u!114 &1158152154061814947
 MonoBehaviour:
