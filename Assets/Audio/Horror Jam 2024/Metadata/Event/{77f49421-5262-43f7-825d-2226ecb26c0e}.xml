@@ -5,7 +5,7 @@
 			<value>Clock</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{802160bf-bbea-4e5b-b9b7-852d5d635c2f}</destination>
@@ -130,6 +130,7 @@
 	<object class="MixerBusEffectChain" id="{cfc614da-33ce-469a-9bde-60dc09f8e266}">
 		<relationship name="effects">
 			<destination>{182617c0-8bd9-48cd-8c28-ba34268e0ca4}</destination>
+			<destination>{9e2fa481-005a-461e-9dca-3f49d4c4a20d}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{707dcdd8-2cc5-4406-a851-436a50ae2e26}" />
@@ -154,5 +155,6 @@
 	</object>
 	<object class="MixerBusPanner" id="{0ab362c0-43eb-4a5e-87ef-2d428c62fde0}" />
 	<object class="MixerBusFader" id="{182617c0-8bd9-48cd-8c28-ba34268e0ca4}" />
+	<object class="SpatialiserEffect" id="{9e2fa481-005a-461e-9dca-3f49d4c4a20d}" />
 	<object class="MixerBusFader" id="{6baa7908-d8ce-4676-8cd9-733e13292919}" />
 </objects>
