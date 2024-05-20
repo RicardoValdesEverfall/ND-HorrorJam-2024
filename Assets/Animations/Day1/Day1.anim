@@ -175,7 +175,7 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 2.3333333
+  - time: 0
     functionName: fmodTriggerSallyDialogue
     data: 
     objectReferenceParameter: {fileID: 0}

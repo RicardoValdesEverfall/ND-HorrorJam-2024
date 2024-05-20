@@ -37,6 +37,9 @@ public class DialogueSystem : MonoBehaviour
 
     private float skipTimer = 0;
     private bool day_one_started = false;
+    private bool hasProgressed = false;
+
+    private float timer = 1f;
 
     private void Awake()
     {
@@ -44,7 +47,12 @@ public class DialogueSystem : MonoBehaviour
         sallyInstance = FMODUnity.RuntimeManager.CreateInstance(sallyEvent);
 
         instance.setParameterByName("Day 1 to 5", 1);
+        instance.setParameterByName("DialogPath", 1);
+        instance.setParameterByName("DialogSeq", 1);
+
         sallyInstance.setParameterByName("Day 1 to 5", 1);
+        sallyInstance.setParameterByName("DialogPath", 1);
+        sallyInstance.setParameterByName("DialogSeq", 1);
 
         if (Camille == null)
         {
@@ -89,6 +97,42 @@ public class DialogueSystem : MonoBehaviour
 
         instance.getPlaybackState(out state);
         sallyInstance.getPlaybackState(out sallyState);
+
+        if (sallyIndex == 3 && sallyState == FMOD.Studio.PLAYBACK_STATE.STOPPED && finishedTalking && showingDialogueUI == false)
+        {
+            StartFadeIn();
+        }
+
+        if (hasProgressed)
+        {
+            timer -= Time.deltaTime;
+            if (timer <= 0f)
+            {
+                if (sallyIndex == 3 && sallyState == FMOD.Studio.PLAYBACK_STATE.STOPPED && state == FMOD.Studio.PLAYBACK_STATE.STOPPED)
+                {
+                    sallyIndex++;
+                    fmodTriggerSallyDialogue();
+                    hasProgressed = false;
+                    timer = 1f;
+                }
+            }
+        }
+
+        if (!hasProgressed && sallyIndex == 5)
+        {
+            timer -= Time.deltaTime;
+            if (timer <= 0f)
+            {
+                if (sallyIndex == 5 && sallyState == FMOD.Studio.PLAYBACK_STATE.STOPPED && state == FMOD.Studio.PLAYBACK_STATE.STOPPED)
+                {
+                    sallyIndex++;
+                    fmodTriggerDialogue("empty");
+                    hasProgressed = true;
+                    timer = 1.5f;
+                }
+            }
+        }
+
     }
 
     private void LateUpdate()
@@ -126,11 +170,6 @@ public class DialogueSystem : MonoBehaviour
                 director.Play("Day1", 0);
             }
         }
-
-        if (sallyIndex == 3 && finishedTalking && showingDialogueUI == false)
-        {
-            StartFadeIn();
-        }
     }
 
     public void StartFadeIn()
@@ -142,6 +181,11 @@ public class DialogueSystem : MonoBehaviour
     public void EnableInput()
     {
         acceptInput = true;
+    }
+
+    public void EnableProgression()
+    {
+        hasProgressed = true;
     }
 
     public void FinishedTalking()
@@ -161,30 +205,32 @@ public class DialogueSystem : MonoBehaviour
         sallyInstance.setParameterByName("Dialog ID", sallyIndex);
         sallyInstance.start();
         sallyIndex++;
+        triggerIndex++;
     }
 
     public void fmodTriggerDialogue(string eventName)
     {
-        if (eventName !=  "empty")
+        switch (eventName)
         {
-            switch (eventName)
-            { 
-                case "A":
-                    instance.setParameterByName("DialogPath", 1);
-                    break;
-                case "B":
-                    instance.setParameterByName("DialogPath", 2);
-                    break;
-                case "C":
-                    instance.setParameterByName("DialogPath", 3);
-                    break;
-                case "D":
-                    instance.setParameterByName("DialogPath", 4);
-                    break;
-            }
+            case "empty":
+                instance.setParameterByName("DialogPath", 0);
+                break;
+            case "A":
+                instance.setParameterByName("DialogPath", 1);
+              
+                break;
+            case "B":
+                instance.setParameterByName("DialogPath", 2);
+               
+                break;
+            case "C":
+                instance.setParameterByName("DialogPath", 3);
+               
+                break;
+            case "D":
+                instance.setParameterByName("DialogPath", 4);
+                break;
         }
-
-        else { instance.setParameterByName("DialogPath", 0); }
 
         if (triggerIndex == 4)
         {
@@ -208,8 +254,7 @@ public class DialogueSystem : MonoBehaviour
     }
 
 
-    //#################################################### DAY SCENES SCRIPTING ###############################################
-
+    //#################################################### DAY SCENES SCRIPTING ##############################################
     public void DayOne_Main(string dialogueChoiceID)
     {
         switch (dialogueChoiceID)

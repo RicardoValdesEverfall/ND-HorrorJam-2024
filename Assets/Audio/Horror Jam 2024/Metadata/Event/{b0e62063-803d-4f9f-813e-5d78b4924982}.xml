@@ -5,7 +5,7 @@
 			<value>SallyDialogueEvent</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{ae5da8df-d8e0-4968-bd8f-e6eac6071814}</destination>
@@ -425,7 +425,6 @@
 	<object class="MixerBusEffectChain" id="{e35eb94a-c17c-40ad-b636-f88723cc748b}">
 		<relationship name="effects">
 			<destination>{7195bbea-c32f-4bff-8b0a-5fbfd945806d}</destination>
-			<destination>{dde2cf86-3b65-43cd-bd40-1615cc646f7a}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{ea5f6c43-43fb-4ff1-a036-cf0e6e80167c}" />
@@ -521,7 +520,6 @@
 	</object>
 	<object class="MixerBusPanner" id="{7d51e19f-26b8-4fe1-bbc8-6936551a5ebc}" />
 	<object class="MixerBusFader" id="{7195bbea-c32f-4bff-8b0a-5fbfd945806d}" />
-	<object class="SpatialiserEffect" id="{dde2cf86-3b65-43cd-bd40-1615cc646f7a}" />
 	<object class="AutomationCurve" id="{8bd93163-dbe5-4b93-ae20-e3f1c3fa61c4}">
 		<relationship name="parameter">
 			<destination>{451b39a9-633e-4923-894b-a0ded87af942}</destination>
