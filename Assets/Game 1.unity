@@ -3850,7 +3850,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7531205429368792023, guid: c7a3a9bb926ca514bac61e25859bc875, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 849623320}
   m_SourcePrefab: {fileID: 100100000, guid: c7a3a9bb926ca514bac61e25859bc875, type: 3}
 --- !u!4 &164530798 stripped
 Transform:
@@ -20812,6 +20815,42 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6529706877082007309, guid: f3614379d06e6e2408acd7ea781dd5df, type: 3}
   m_PrefabInstance: {fileID: 848990005}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &849623319 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7531205429368792023, guid: c7a3a9bb926ca514bac61e25859bc875, type: 3}
+  m_PrefabInstance: {fileID: 164530797}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &849623320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849623319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -895313828
+      Data2: 1195091798
+      Data3: 534798233
+      Data4: -907896377
+    Path: event:/SFX/Marine Monster
+  Event: 
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &856826631
 PrefabInstance:
   m_ObjectHideFlags: 0
