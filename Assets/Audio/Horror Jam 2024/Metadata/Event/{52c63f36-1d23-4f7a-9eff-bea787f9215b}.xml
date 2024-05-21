@@ -451,6 +451,7 @@
 			<destination>{38ad9f16-d306-48c6-bdac-038eee98f1fd}</destination>
 			<destination>{e6b73ef9-489c-4ac1-b257-74aa415b9724}</destination>
 			<destination>{1b8475a5-6af2-406e-90a5-1d48c592f75c}</destination>
+			<destination>{60cb575c-2e49-4397-ba91-3d0588a283ca}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{c4f2cd5a-f0ec-466d-8723-e70e093b39c6}" />
@@ -569,10 +570,10 @@
 	<object class="MixerBusPanner" id="{9fd4bf22-dd0b-48b4-a73b-b90fd0e42e36}" />
 	<object class="SFXReverbEffect" id="{38ad9f16-d306-48c6-bdac-038eee98f1fd}">
 		<property name="decayTime">
-			<value>5000</value>
+			<value>4000</value>
 		</property>
 		<property name="earlyDelay">
-			<value>32</value>
+			<value>44</value>
 		</property>
 		<property name="lateDelay">
 			<value>49</value>
@@ -600,6 +601,23 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{1b8475a5-6af2-406e-90a5-1d48c592f75c}" />
+	<object class="CompressorEffect" id="{60cb575c-2e49-4397-ba91-3d0588a283ca}">
+		<property name="threshold">
+			<value>-23</value>
+		</property>
+		<property name="ratio">
+			<value>3.5</value>
+		</property>
+		<property name="attackTime">
+			<value>4.5999999</value>
+		</property>
+		<property name="releaseTime">
+			<value>400</value>
+		</property>
+		<relationship name="sidechains">
+			<destination>{b93b4a0a-3af1-4734-b441-99c1373aa2c1}</destination>
+		</relationship>
+	</object>
 	<object class="AutomationCurve" id="{27bbd015-3680-4529-a910-86e61a2e2f6b}">
 		<relationship name="parameter">
 			<destination>{78fcbd08-f6e3-4cf3-8f78-84809ebdf498}</destination>
@@ -640,7 +658,6 @@
 		</relationship>
 		<relationship name="automationPoints">
 			<destination>{82b00131-6018-4f6b-8ba0-d08c8cbf0c42}</destination>
-			<destination>{6aede33b-1b64-46b2-9c0f-5daa19515f91}</destination>
 			<destination>{dc5b87e1-ba61-4f4e-ad93-c8108d1aaa17}</destination>
 			<destination>{12521ea5-a2e4-4806-93b9-0220fba96e52}</destination>
 			<destination>{efdc3eb6-6754-4d94-bfb4-b3bcd50fb35d}</destination>
@@ -904,17 +921,9 @@
 			<value>-80</value>
 		</property>
 	</object>
-	<object class="AutomationPoint" id="{6aede33b-1b64-46b2-9c0f-5daa19515f91}">
-		<property name="position">
-			<value>1.8940677966101696</value>
-		</property>
-		<property name="value">
-			<value>-80</value>
-		</property>
-	</object>
 	<object class="AutomationPoint" id="{dc5b87e1-ba61-4f4e-ad93-c8108d1aaa17}">
 		<property name="position">
-			<value>1.9000000000000001</value>
+			<value>1.8</value>
 		</property>
 		<property name="value">
 			<value>-80</value>
