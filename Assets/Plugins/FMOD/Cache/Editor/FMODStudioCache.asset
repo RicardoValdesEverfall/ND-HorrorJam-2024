@@ -50,61 +50,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-8338712815409130255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/SallyDialogueEvent Copy for test 3D/Day 1 to 5
-  m_EditorClassIdentifier: 
-  Name: Day 1 to 5
-  StudioPath: 
-  Min: 1
-  Max: 5
-  Default: 1
-  ID:
-    data1: 2288054532
-    data2: 4007593905
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &-6252605366842803031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Dialogs/SallyDialogueEvent Copy for test 3D
-  m_EditorClassIdentifier: 
-  Path: event:/Dialogs/SallyDialogueEvent Copy for test 3D
-  Guid:
-    Data1: -1432191985
-    Data2: 1118094206
-    Data3: -32247680
-    Data4: -563718366
-  Banks:
-  - {fileID: -1540975714723700239}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -1376326883127305956}
-  - {fileID: -5046655157363707988}
-  - {fileID: -8338712815409130255}
-  - {fileID: -1069912257801410269}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-5570198286389603029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,30 +78,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 8000
---- !u!114 &-5046655157363707988
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/SallyDialogueEvent Copy for test 3D/Dialog ID
-  m_EditorClassIdentifier: 
-  Name: Dialog ID
-  StudioPath: 
-  Min: 1
-  Max: 100
-  Default: 1
-  ID:
-    data1: 138503275
-    data2: 2690395445
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &-4596029992732314950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -399,17 +320,10 @@ MonoBehaviour:
   Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-<<<<<<< Updated upstream
-  lastModified: 638520212116634058
+  lastModified: 638520229830937695
   FileSizes:
   - Name: Desktop
-    Value: 17908832
-=======
-  lastModified: 638520009538626269
-  FileSizes:
-  - Name: Desktop
-    Value: 17528320
->>>>>>> Stashed changes
+    Value: 17781696
   Exists: 1
 --- !u!114 &-1403544739324443859
 MonoBehaviour:
@@ -434,37 +348,6 @@ MonoBehaviour:
   Type: 1
   IsGlobal: 0
   Labels: []
-  Exists: 1
---- !u!114 &-1376326883127305956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/SallyDialogueEvent Copy for test 3D/DialogPath
-  m_EditorClassIdentifier: 
-  Name: DialogPath
-  StudioPath: 
-  Min: 0
-  Max: 6
-  Default: 1
-  ID:
-    data1: 3434656728
-    data2: 1205295953
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - 0
-  - A
-  - B
-  - C
-  - D
-  - E
-  - 0
   Exists: 1
 --- !u!114 &-1281607352490356713
 MonoBehaviour:
@@ -524,30 +407,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 28421
---- !u!114 &-1069912257801410269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/SallyDialogueEvent Copy for test 3D/DialogSeq
-  m_EditorClassIdentifier: 
-  Name: DialogSeq
-  StudioPath: 
-  Min: 1
-  Max: 10
-  Default: 1
-  ID:
-    data1: 3194751750
-    data2: 2760168786
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &-1021755848617190690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -563,14 +422,10 @@ MonoBehaviour:
   Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-<<<<<<< Updated upstream
-  lastModified: 638520212116674999
-=======
-  lastModified: 638520009538656276
->>>>>>> Stashed changes
+  lastModified: 638520229831034690
   FileSizes:
   - Name: Desktop
-    Value: 2096
+    Value: 2036
   Exists: 1
 --- !u!114 &-411109068350793921
 MonoBehaviour:
@@ -648,7 +503,6 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: -5570198286389603029}
   - {fileID: -2019789457768249109}
-  - {fileID: -6252605366842803031}
   - {fileID: 262335827870374666}
   - {fileID: -277771418104032785}
   - {fileID: -1281607352490356713}
@@ -665,11 +519,7 @@ MonoBehaviour:
   - {fileID: -1540975714723700239}
   StringsBanks:
   - {fileID: -1021755848617190690}
-<<<<<<< Updated upstream
-  cacheTime: 638520212116674999
-=======
-  cacheTime: 638520009538656276
->>>>>>> Stashed changes
+  cacheTime: 638520229831034690
   cacheVersion: 131617
 --- !u!114 &262335827870374666
 MonoBehaviour:
@@ -713,10 +563,10 @@ MonoBehaviour:
   Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Dialogs Eng.bank
   Name: Dialogs Eng
   StudioPath: bank:/Dialogs Eng
-  lastModified: 638520009532334581
+  lastModified: 638520229829548650
   FileSizes:
   - Name: Desktop
-    Value: 554368
+    Value: 554336
   Exists: 1
 --- !u!114 &1242467722054433125
 MonoBehaviour:
