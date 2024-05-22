@@ -271,6 +271,9 @@
 		<property name="start">
 			<value>1</value>
 		</property>
+		<property name="delayType">
+			<value>0</value>
+		</property>
 		<relationship name="triggerConditions">
 			<destination>{a31c01c1-eaf4-4b21-9f32-92ffcd040693}</destination>
 			<destination>{f2cb33ab-7299-4d1a-a4df-8da29a6c2844}</destination>
