@@ -399,10 +399,17 @@ MonoBehaviour:
   Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
+<<<<<<< Updated upstream
   lastModified: 638520212116634058
   FileSizes:
   - Name: Desktop
     Value: 17908832
+=======
+  lastModified: 638520009538626269
+  FileSizes:
+  - Name: Desktop
+    Value: 17528320
+>>>>>>> Stashed changes
   Exists: 1
 --- !u!114 &-1403544739324443859
 MonoBehaviour:
@@ -556,7 +563,11 @@ MonoBehaviour:
   Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
+<<<<<<< Updated upstream
   lastModified: 638520212116674999
+=======
+  lastModified: 638520009538656276
+>>>>>>> Stashed changes
   FileSizes:
   - Name: Desktop
     Value: 2096
@@ -654,7 +665,11 @@ MonoBehaviour:
   - {fileID: -1540975714723700239}
   StringsBanks:
   - {fileID: -1021755848617190690}
+<<<<<<< Updated upstream
   cacheTime: 638520212116674999
+=======
+  cacheTime: 638520009538656276
+>>>>>>> Stashed changes
   cacheVersion: 131617
 --- !u!114 &262335827870374666
 MonoBehaviour:
@@ -698,10 +713,10 @@ MonoBehaviour:
   Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Dialogs Eng.bank
   Name: Dialogs Eng
   StudioPath: bank:/Dialogs Eng
-  lastModified: 638519996263859660
+  lastModified: 638520009532334581
   FileSizes:
   - Name: Desktop
-    Value: 554336
+    Value: 554368
   Exists: 1
 --- !u!114 &1242467722054433125
 MonoBehaviour:
