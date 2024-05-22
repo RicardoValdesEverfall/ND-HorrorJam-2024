@@ -399,10 +399,10 @@ MonoBehaviour:
   Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638520181241369733
+  lastModified: 638520212116634058
   FileSizes:
   - Name: Desktop
-    Value: 17532480
+    Value: 17908832
   Exists: 1
 --- !u!114 &-1403544739324443859
 MonoBehaviour:
@@ -490,6 +490,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-1165230760548861144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Enceladus menu music
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Enceladus menu music
+  Guid:
+    Data1: 1190286260
+    Data2: 1167299811
+    Data3: -953639259
+    Data4: 198425757
+  Banks:
+  - {fileID: -1540975714723700239}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 28421
 --- !u!114 &-1069912257801410269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -529,10 +556,10 @@ MonoBehaviour:
   Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638520181241453092
+  lastModified: 638520212116674999
   FileSizes:
   - Name: Desktop
-    Value: 2032
+    Value: 2096
   Exists: 1
 --- !u!114 &-411109068350793921
 MonoBehaviour:
@@ -621,12 +648,13 @@ MonoBehaviour:
   - {fileID: 3847481187239686688}
   - {fileID: -3432016098995700114}
   - {fileID: -4310820407116274721}
+  - {fileID: -1165230760548861144}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1540975714723700239}
   StringsBanks:
   - {fileID: -1021755848617190690}
-  cacheTime: 638520181241453092
+  cacheTime: 638520212116674999
   cacheVersion: 131617
 --- !u!114 &262335827870374666
 MonoBehaviour:

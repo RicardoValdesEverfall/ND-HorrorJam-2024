@@ -9846,10 +9846,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44542acef9435884cb20497f8dc77a46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resolutionOption: {fileID: 1261800379712049682}
-  screenmodeOption: {fileID: 1869988065}
-  qualityLevelOption: {fileID: 1481904917}
-  keyboardApplySettingsKey: 13
 --- !u!114 &651699526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9862,8 +9858,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20c469b2b1c274743bee9fa314ba88bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  filePath: D:/EnceladusGame/
-  fileName: EnceladusSettings.xml
 --- !u!1 &658427617
 GameObject:
   m_ObjectHideFlags: 0
@@ -13737,6 +13731,7 @@ GameObject:
   - component: {fileID: 956343248}
   - component: {fileID: 956343247}
   - component: {fileID: 956343249}
+  - component: {fileID: 956343250}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -13820,6 +13815,37 @@ MonoBehaviour:
   Params:
   - Name: Intensity
     Value: 0.8
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &956343250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956343246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1190286260
+      Data2: 1167299811
+      Data3: -953639259
+      Data4: 198425757
+    Path: event:/Music/Enceladus menu music
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
@@ -21158,21 +21184,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeb7796ee6abc844d97aef1cb914e4e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  subOptionText: {fileID: 1937460283}
-  subOptionList: []
-  currentSubOption:
-    name: 
-    integerValue: 0
-    indexInList: 0
-    vector2Value: {x: 0, y: 0}
-    boolVal: 0
-  currentSubOptionIndex: 0
-  fallBackOption:
-    name: Low
-    integerValue: 0
-    indexInList: 0
-    vector2Value: {x: 0, y: 0}
-    boolVal: 0
 --- !u!114 &1481904918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21185,7 +21196,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 353fee244d6e5954586c648561a12ca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  optionMarker: {fileID: 1299305182}
 --- !u!114 &1481904919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27763,41 +27773,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0a03a7e9347c804789b4606be167f92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  subOptionText: {fileID: 1524362365}
-  subOptionList:
-  - name: ExclusiveFullScreen
-    integerValue: 0
-    indexInList: 0
-    vector2Value: {x: 0, y: 0}
-    boolVal: 0
-  - name: FullScreenWindow
-    integerValue: 1
-    indexInList: 1
-    vector2Value: {x: 0, y: 0}
-    boolVal: 0
-  - name: MaximizedWindow
-    integerValue: 2
-    indexInList: 2
-    vector2Value: {x: 0, y: 0}
-    boolVal: 0
-  - name: Windowed
-    integerValue: 3
-    indexInList: 3
-    vector2Value: {x: 0, y: 0}
-    boolVal: 0
-  currentSubOption:
-    name: 
-    integerValue: 0
-    indexInList: 0
-    vector2Value: {x: 0, y: 0}
-    boolVal: 0
-  currentSubOptionIndex: 0
-  fallBackOption:
-    name: Windowed
-    integerValue: 3
-    indexInList: 0
-    vector2Value: {x: 0, y: 0}
-    boolVal: 0
 --- !u!114 &1869988066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27810,7 +27785,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 353fee244d6e5954586c648561a12ca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  optionMarker: {fileID: 1508074706}
 --- !u!114 &1869988067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31096,21 +31070,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2c3ad6b7fc83204ebc75c4dae139aa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  subOptionText: {fileID: 984727346}
-  subOptionList: []
-  currentSubOption:
-    name: 1024x768
-    integerValue: 0
-    indexInList: 0
-    vector2Value: {x: 1024, y: 768}
-    boolVal: 0
-  currentSubOptionIndex: 0
-  fallBackOption:
-    name: 1024x768
-    integerValue: 0
-    indexInList: 0
-    vector2Value: {x: 1024, y: 768}
-    boolVal: 0
 --- !u!1 &1261800380040067136
 GameObject:
   m_ObjectHideFlags: 0
@@ -31781,7 +31740,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 353fee244d6e5954586c648561a12ca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  optionMarker: {fileID: 272743398}
 --- !u!23 &4686504761629955517
 MeshRenderer:
   m_ObjectHideFlags: 0

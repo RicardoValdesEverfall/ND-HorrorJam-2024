@@ -622,9 +622,6 @@
 		<property name="delayType">
 			<value>0</value>
 		</property>
-		<property name="maximumTimeDelay">
-			<value>4000</value>
-		</property>
 		<relationship name="triggerConditions">
 			<destination>{593a4ea5-100d-4c84-a5f5-4e3873bb7250}</destination>
 			<destination>{e819e4c6-e97c-427a-a21b-2c57a2cc1757}</destination>
