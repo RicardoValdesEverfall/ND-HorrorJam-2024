@@ -140,6 +140,9 @@
 		<relationship name="modulators">
 			<destination>{f35c2c8d-b1d6-4ec2-b056-a1d46f9f4bae}</destination>
 		</relationship>
+		<relationship name="triggerConditions">
+			<destination>{f48945a5-2060-4b1c-9798-323f8d37fcf9}</destination>
+		</relationship>
 		<relationship name="audioFile">
 			<destination>{4c2a7822-a260-4185-b0da-4f040c8fecaf}</destination>
 		</relationship>
@@ -176,6 +179,9 @@
 		<relationship name="modulators">
 			<destination>{9ccab154-c50c-4fc3-8837-31d7679a578d}</destination>
 		</relationship>
+		<relationship name="triggerConditions">
+			<destination>{ae3b4fcd-996e-4d95-b070-3df2ec3c3919}</destination>
+		</relationship>
 		<relationship name="audioFile">
 			<destination>{d1834846-533f-42ff-ae0c-3af14a419aec}</destination>
 		</relationship>
@@ -202,7 +208,7 @@
 			<value>4.4885104166666663</value>
 		</property>
 		<relationship name="triggerConditions">
-			<destination>{f670b548-dd5a-4839-a298-20ba2914c45c}</destination>
+			<destination>{4bdda3a9-03d8-4efb-8612-f1806644d55d}</destination>
 		</relationship>
 		<relationship name="audioFile">
 			<destination>{7a1530ed-5199-4100-a276-f587192c395d}</destination>
@@ -237,6 +243,17 @@
 			<value>21</value>
 		</property>
 	</object>
+	<object class="ParameterCondition" id="{f48945a5-2060-4b1c-9798-323f8d37fcf9}">
+		<property name="minimum">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>1</value>
+		</property>
+		<relationship name="parameter">
+			<destination>{ceace1f8-aa29-4503-90b0-6f8de853682a}</destination>
+		</relationship>
+	</object>
 	<object class="Automator" id="{cc4ade01-379a-40cd-80a6-0f65766652ff}">
 		<property name="nameOfPropertyBeingAutomated">
 			<value>volume</value>
@@ -259,6 +276,17 @@
 			<value>19</value>
 		</property>
 	</object>
+	<object class="ParameterCondition" id="{ae3b4fcd-996e-4d95-b070-3df2ec3c3919}">
+		<property name="minimum">
+			<value>0</value>
+		</property>
+		<property name="maximum">
+			<value>0</value>
+		</property>
+		<relationship name="parameter">
+			<destination>{ceace1f8-aa29-4503-90b0-6f8de853682a}</destination>
+		</relationship>
+	</object>
 	<object class="Automator" id="{cf6940eb-d03f-43cd-8ed6-0d4852712d7a}">
 		<property name="nameOfPropertyBeingAutomated">
 			<value>volume</value>
@@ -273,12 +301,12 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{b8030a72-e858-46f8-8dd8-697c14719be3}" />
-	<object class="ParameterCondition" id="{f670b548-dd5a-4839-a298-20ba2914c45c}">
+	<object class="ParameterCondition" id="{4bdda3a9-03d8-4efb-8612-f1806644d55d}">
 		<property name="minimum">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<property name="maximum">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="parameter">
 			<destination>{ceace1f8-aa29-4503-90b0-6f8de853682a}</destination>
