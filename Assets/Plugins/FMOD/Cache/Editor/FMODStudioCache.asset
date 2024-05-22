@@ -50,6 +50,276 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-8969317562138458037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Electric buzz
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Electric buzz
+  Guid:
+    Data1: 2065685494
+    Data2: 1205682732
+    Data3: 475542926
+    Data4: -1237383433
+  Banks:
+  - {fileID: 703218913787813207}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 28106
+--- !u!114 &-8478466065950152766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Marine Monster
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Marine Monster
+  Guid:
+    Data1: -895313828
+    Data2: 1195091798
+    Data3: 534798233
+    Data4: -907896377
+  Banks:
+  - {fileID: -2699037725332093134}
+  - {fileID: 703218913787813207}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 8000
+--- !u!114 &-7776821441413506483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/CuanDialogueEvent/DialogPath
+  m_EditorClassIdentifier: 
+  Name: DialogPath
+  StudioPath: 
+  Min: 0
+  Max: 6
+  Default: 1
+  ID:
+    data1: 3434656728
+    data2: 1205295953
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - 0
+  - A
+  - B
+  - C
+  - D
+  - E
+  - 0
+  Exists: 1
+--- !u!114 &-7636004196497183863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SallyDialogueEvent/DialogPath
+  m_EditorClassIdentifier: 
+  Name: DialogPath
+  StudioPath: 
+  Min: 0
+  Max: 6
+  Default: 1
+  ID:
+    data1: 3434656728
+    data2: 1205295953
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - 0
+  - A
+  - B
+  - C
+  - D
+  - E
+  - 0
+  Exists: 1
+--- !u!114 &-7141463720863002016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Background music/Intensity
+  m_EditorClassIdentifier: 
+  Name: Intensity
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 2262688161
+    data2: 2362205144
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-7118659670986154955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Doors open close/Door Number
+  m_EditorClassIdentifier: 
+  Name: Door Number
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 3563324352
+    data2: 2410510040
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-7014389091701077133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SallyDialogueEvent/Dialog ID
+  m_EditorClassIdentifier: 
+  Name: Dialog ID
+  StudioPath: 
+  Min: 1
+  Max: 100
+  Default: 1
+  ID:
+    data1: 138503275
+    data2: 2690395445
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-6781852830613168738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Doors open close/OpenClose
+  m_EditorClassIdentifier: 
+  Name: OpenClose
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1096349250
+    data2: 1553148318
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Open
+  - Close
+  Exists: 1
+--- !u!114 &-6060007261770673346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogs/CuanDialogtest
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogs/CuanDialogtest
+  Guid:
+    Data1: -84521726
+    Data2: 1321885405
+    Data3: 1532389296
+    Data4: 544009270
+  Banks:
+  - {fileID: 703218913787813207}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 12683
+--- !u!114 &-5835981320026445994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/HH Footsteps on materials
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/HH Footsteps on materials
+  Guid:
+    Data1: -2040578875
+    Data2: 1100679903
+    Data3: 2084029884
+    Data4: -580880377
+  Banks:
+  - {fileID: 703218913787813207}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 3622062566815702836}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 862
 --- !u!114 &-5570198286389603029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,6 +348,64 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 8000
+--- !u!114 &-5495479755709589271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Background randomn noises
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Background randomn noises
+  Guid:
+    Data1: 1343720844
+    Data2: 1218052330
+    Data3: -323257166
+    Data4: -6040720
+  Banks:
+  - {fileID: 703218913787813207}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 42000
+--- !u!114 &-4981674653286920563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogs/SallyDialogueEvent
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogs/SallyDialogueEvent
+  Guid:
+    Data1: -1327095709
+    Data2: 1335853117
+    Data3: 2019376769
+    Data4: -2109107532
+  Banks:
+  - {fileID: 703218913787813207}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -7636004196497183863}
+  - {fileID: 5720643243659369293}
+  - {fileID: 7576945082649412732}
+  - {fileID: -7014389091701077133}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-4596029992732314950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,6 +517,53 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 28106
+--- !u!114 &-3069270025397372862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/UI mouseover and click/Menu action
+  m_EditorClassIdentifier: 
+  Name: Menu action
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 4005642843
+    data2: 3697148916
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Mouseover
+  - Click
+  - TBC
+  Exists: 1
+--- !u!114 &-2699037725332093134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Dialogs Eng.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Dialogs Eng.bank
+  Name: Dialogs Eng
+  StudioPath: bank:/Dialogs Eng
+  lastModified: 638520018444902841
+  FileSizes:
+  - Name: Desktop
+    Value: 554368
+  Exists: 1
 --- !u!114 &-2569609229382391654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -484,6 +859,55 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 120000
+--- !u!114 &-208487699966565556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Doors open close
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Doors open close
+  Guid:
+    Data1: 291065343
+    Data2: 1149754959
+    Data3: 1940757400
+    Data4: -1165590045
+  Banks:
+  - {fileID: 703218913787813207}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -6781852830613168738}
+  - {fileID: -7118659670986154955}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6191
+--- !u!114 &-95638023566868229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638520018447351518
+  FileSizes:
+  - Name: Desktop
+    Value: 2036
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -497,29 +921,29 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -1021755848617190690}
-  - {fileID: 406675229068445387}
-  - {fileID: -1540975714723700239}
+  - {fileID: -95638023566868229}
+  - {fileID: -2699037725332093134}
+  - {fileID: 703218913787813207}
   EditorEvents:
-  - {fileID: -5570198286389603029}
-  - {fileID: -2019789457768249109}
-  - {fileID: 262335827870374666}
-  - {fileID: -277771418104032785}
-  - {fileID: -1281607352490356713}
-  - {fileID: 8180459277409787951}
-  - {fileID: 7283124873328421454}
-  - {fileID: -1662928639979931582}
-  - {fileID: -411109068350793921}
-  - {fileID: 3847481187239686688}
-  - {fileID: -3432016098995700114}
-  - {fileID: -4310820407116274721}
-  - {fileID: -1165230760548861144}
+  - {fileID: -8478466065950152766}
+  - {fileID: -6060007261770673346}
+  - {fileID: 2411681587693747226}
+  - {fileID: 7350330714709347955}
+  - {fileID: -4981674653286920563}
+  - {fileID: -5495479755709589271}
+  - {fileID: 3620433449522857107}
+  - {fileID: 7484535688725762368}
+  - {fileID: 3323214714249385995}
+  - {fileID: -5835981320026445994}
+  - {fileID: 3208075609408961333}
+  - {fileID: -8969317562138458037}
+  - {fileID: -208487699966565556}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -1540975714723700239}
+  - {fileID: 703218913787813207}
   StringsBanks:
-  - {fileID: -1021755848617190690}
-  cacheTime: 638520229831034690
+  - {fileID: -95638023566868229}
+  cacheTime: 638520018447351518
   cacheVersion: 131617
 --- !u!114 &262335827870374666
 MonoBehaviour:
@@ -568,6 +992,50 @@ MonoBehaviour:
   - Name: Desktop
     Value: 554336
   Exists: 1
+--- !u!114 &703218913787813207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638520018447323728
+  FileSizes:
+  - Name: Desktop
+    Value: 17781728
+  Exists: 1
+--- !u!114 &1233600210235266786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/CuanDialogueEvent/Day 1 to 5
+  m_EditorClassIdentifier: 
+  Name: Day 1 to 5
+  StudioPath: 
+  Min: 1
+  Max: 5
+  Default: 1
+  ID:
+    data1: 2288054532
+    data2: 4007593905
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &1242467722054433125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -589,6 +1057,30 @@ MonoBehaviour:
     data1: 2262688161
     data2: 2362205144
   Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &1787384427029022826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/CuanDialogueEvent/DialogSeq
+  m_EditorClassIdentifier: 
+  Name: DialogSeq
+  StudioPath: 
+  Min: 1
+  Max: 10
+  Default: 1
+  ID:
+    data1: 3194751750
+    data2: 2760168786
+  Type: 1
   IsGlobal: 0
   Labels: []
   Exists: 1
@@ -643,6 +1135,30 @@ MonoBehaviour:
   - Click
   - TBC
   Exists: 1
+--- !u!114 &2053787047122547150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/CuanDialogueMarkersDay2/Dialog ID
+  m_EditorClassIdentifier: 
+  Name: Dialog ID
+  StudioPath: 
+  Min: 1
+  Max: 100
+  Default: 1
+  ID:
+    data1: 138503275
+    data2: 2690395445
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &2326702660747000188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -667,6 +1183,93 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &2411681587693747226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Clock
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Clock
+  Guid:
+    Data1: 2012517409
+    Data2: 1140281954
+    Data3: 639786370
+    Data4: 242004716
+  Banks:
+  - {fileID: 703218913787813207}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 5.05
+  MaxDistance: 75
+  Length: 6000
+--- !u!114 &3208075609408961333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogs/CuanDialogueMarkersDay2
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogs/CuanDialogueMarkersDay2
+  Guid:
+    Data1: -33598766
+    Data2: 1221771781
+    Data3: -1454147444
+    Data4: 1090517137
+  Banks:
+  - {fileID: 703218913787813207}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 2053787047122547150}
+  - {fileID: 8475134609123232607}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 205453
+--- !u!114 &3323214714249385995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogs/CuanDialogueEvent
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogs/CuanDialogueEvent
+  Guid:
+    Data1: 1402556089
+    Data2: 1136595256
+    Data3: 1663237560
+    Data4: 1021404598
+  Banks:
+  - {fileID: 703218913787813207}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 5324675932102646873}
+  - {fileID: 1787384427029022826}
+  - {fileID: 1233600210235266786}
+  - {fileID: -7776821441413506483}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &3589963556603785901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -692,6 +1295,61 @@ MonoBehaviour:
   Labels:
   - Dialogs_on
   - Dialogs_off
+  Exists: 1
+--- !u!114 &3620433449522857107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/UI mouseover and click
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/UI mouseover and click
+  Guid:
+    Data1: -167317852
+    Data2: 1297716419
+    Data3: 437968300
+    Data4: 1679859894
+  Banks:
+  - {fileID: 703218913787813207}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -3069270025397372862}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4488
+--- !u!114 &3622062566815702836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/HH Footsteps on materials/Walking Material
+  m_EditorClassIdentifier: 
+  Name: Walking Material
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 3359854330
+    data2: 1598953865
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Wood
+  - Metal
+  - Puddle
   Exists: 1
 --- !u!114 &3847481187239686688
 MonoBehaviour:
@@ -742,6 +1400,54 @@ MonoBehaviour:
   ID:
     data1: 138503275
     data2: 2690395445
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &5324675932102646873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/CuanDialogueEvent/Dialog ID
+  m_EditorClassIdentifier: 
+  Name: Dialog ID
+  StudioPath: 
+  Min: 1
+  Max: 100
+  Default: 1
+  ID:
+    data1: 138503275
+    data2: 2690395445
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &5720643243659369293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SallyDialogueEvent/DialogSeq
+  m_EditorClassIdentifier: 
+  Name: DialogSeq
+  StudioPath: 
+  Min: 1
+  Max: 10
+  Default: 1
+  ID:
+    data1: 3194751750
+    data2: 2760168786
   Type: 1
   IsGlobal: 0
   Labels: []
@@ -829,6 +1535,112 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 4488
+--- !u!114 &7315935145296620513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Background music/Dialogs_ON_OFF
+  m_EditorClassIdentifier: 
+  Name: Dialogs_ON_OFF
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 4066432893
+    data2: 4159430637
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Dialogs_on
+  - Dialogs_off
+  Exists: 1
+--- !u!114 &7350330714709347955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Background music
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Background music
+  Guid:
+    Data1: 1388724022
+    Data2: 1333402915
+    Data3: -1480654946
+    Data4: 1528953223
+  Banks:
+  - {fileID: 703218913787813207}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -7141463720863002016}
+  - {fileID: 7315935145296620513}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 120000
+--- !u!114 &7484535688725762368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Enceladus menu music
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Enceladus menu music
+  Guid:
+    Data1: 1190286260
+    Data2: 1167299811
+    Data3: -953639259
+    Data4: 198425757
+  Banks:
+  - {fileID: 703218913787813207}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 28421
+--- !u!114 &7576945082649412732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SallyDialogueEvent/Day 1 to 5
+  m_EditorClassIdentifier: 
+  Name: Day 1 to 5
+  StudioPath: 
+  Min: 1
+  Max: 5
+  Default: 1
+  ID:
+    data1: 2288054532
+    data2: 4007593905
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &8180459277409787951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -856,6 +1668,37 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 42000
+--- !u!114 &8475134609123232607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/CuanDialogueMarkersDay2/DialogPath
+  m_EditorClassIdentifier: 
+  Name: DialogPath
+  StudioPath: 
+  Min: 0
+  Max: 6
+  Default: 1
+  ID:
+    data1: 3434656728
+    data2: 1205295953
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - 0
+  - A
+  - B
+  - C
+  - D
+  - E
+  - 0
+  Exists: 1
 --- !u!114 &8600067901691263177
 MonoBehaviour:
   m_ObjectHideFlags: 0
