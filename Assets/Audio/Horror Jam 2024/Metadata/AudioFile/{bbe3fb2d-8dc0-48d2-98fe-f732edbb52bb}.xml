@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{bbe3fb2d-8dc0-48d2-98fe-f732edbb52bb}">
+		<property name="assetPath">
+			<value>Cuan Day2 12 A.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>7.8050208333333337</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{c1ad0b6f-4f83-40c9-9894-1c44a6b26a69}</destination>
+		</relationship>
+	</object>
+</objects>
