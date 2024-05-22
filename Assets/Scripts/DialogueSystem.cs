@@ -41,6 +41,7 @@ public class DialogueSystem : MonoBehaviour
     private float timer = 0.5f;
     private float skipTimer = 0;
     private bool day_one_started = false;
+    private bool day_one_ended = false;
     private bool hasProgressed = false;
     private bool completedSeq = false;
     private int day = 1;
@@ -105,8 +106,18 @@ public class DialogueSystem : MonoBehaviour
         if (day == 1)
         {
             DayOne_Triggers();
+
+            if (day_one_ended)
+            {
+                timer -= Time.deltaTime;
+                if (timer <= 0)
+                {
+                    Camille.Play("end", 0);
+                    timer = 0.5f;
+                    day = 2;
+                }
+            }
         }
-       
     }
 
     private void LateUpdate()
@@ -409,7 +420,8 @@ public class DialogueSystem : MonoBehaviour
                 sallyInstance.setParameterByName("DialogSeq", dialogSeqIndex);
                 sallyInstance.setParameterByName("DialogPath", 1);
                 sallyInstance.start();
-                timer = 5.5f;
+                timer = 3.5f;
+                day_one_ended = true;
                 day = 2;
             }
         }
