@@ -140,10 +140,13 @@
 			<value>7.8936354166666662</value>
 		</property>
 		<property name="length">
-			<value>0.60636458333333465</value>
+			<value>7.3063645833333339</value>
+		</property>
+		<property name="triggerProbabilityEnabled">
+			<value>true</value>
 		</property>
 		<property name="triggerProbability">
-			<value>40</value>
+			<value>25</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{86620fdf-77be-4e1c-aad8-51e388f0bbf4}</destination>
@@ -157,10 +160,10 @@
 	</object>
 	<object class="TransitionRegion" id="{4db93b06-a6f3-4dd6-b1b8-c30f22aadb31}">
 		<property name="position">
-			<value>8.5</value>
+			<value>15.200000000000001</value>
 		</property>
 		<property name="length">
-			<value>0.60636458333333465</value>
+			<value>12.300000000000001</value>
 		</property>
 		<property name="triggerProbabilityEnabled">
 			<value>true</value>
@@ -180,7 +183,7 @@
 	</object>
 	<object class="TransitionRegion" id="{b0fb1385-030d-4c82-9062-627d34c1a548}">
 		<property name="position">
-			<value>9.1063645833333347</value>
+			<value>27.5</value>
 		</property>
 		<property name="length">
 			<value>0.60636458333333465</value>

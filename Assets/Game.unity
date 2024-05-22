@@ -47609,6 +47609,7 @@ GameObject:
   - component: {fileID: 1556296053}
   - component: {fileID: 1556296055}
   - component: {fileID: 1556296054}
+  - component: {fileID: 1556296056}
   m_Layer: 0
   m_Name: Point Light (10)
   m_TagString: Untagged
@@ -47815,6 +47816,37 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1556296056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556296052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 2065685494
+      Data2: 1205682732
+      Data3: 475542926
+      Data4: -1237383433
+    Path: event:/SFX/Electric buzz
+  Event: 
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &1562371796
 PrefabInstance:
   m_ObjectHideFlags: 0
