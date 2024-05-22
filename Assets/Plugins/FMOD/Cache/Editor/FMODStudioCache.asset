@@ -220,6 +220,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 42000
+--- !u!114 &-4056056207073520313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogs/CuanDialogtest
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogs/CuanDialogtest
+  Guid:
+    Data1: -84521726
+    Data2: 1321885405
+    Data3: 1532389296
+    Data4: 544009270
+  Banks:
+  - {fileID: -1540975714723700239}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 12683
 --- !u!114 &-4038967937232392733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,6 +278,37 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-3959304398966789337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/CuanDialogueMarkersDay2/DialogPath
+  m_EditorClassIdentifier: 
+  Name: DialogPath
+  StudioPath: 
+  Min: 0
+  Max: 6
+  Default: 1
+  ID:
+    data1: 3434656728
+    data2: 1205295953
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - 0
+  - A
+  - B
+  - C
+  - D
+  - E
+  - 0
+  Exists: 1
 --- !u!114 &-3906502825949260457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -362,6 +420,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-2168802157407454852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/CuanDialogueMarkersDay2/Dialog ID
+  m_EditorClassIdentifier: 
+  Name: Dialog ID
+  StudioPath: 
+  Min: 1
+  Max: 100
+  Default: 1
+  ID:
+    data1: 138503275
+    data2: 2690395445
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-2147172979818339067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -401,10 +483,10 @@ MonoBehaviour:
   Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638519407411720328
+  lastModified: 638519710576310803
   FileSizes:
   - Name: Desktop
-    Value: 13798624
+    Value: 15511104
   Exists: 1
 --- !u!114 &-1456041133241899549
 MonoBehaviour:
@@ -447,10 +529,10 @@ MonoBehaviour:
   Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638519407411776279
+  lastModified: 638519710576349708
   FileSizes:
   - Name: Desktop
-    Value: 1932
+    Value: 2032
   Exists: 1
 --- !u!114 &-692381339665051370
 MonoBehaviour:
@@ -531,12 +613,14 @@ MonoBehaviour:
   - {fileID: -6180965441788627602}
   - {fileID: -5570198286389603029}
   - {fileID: -2347654342526184113}
+  - {fileID: -4056056207073520313}
+  - {fileID: 7954597691366708393}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1540975714723700239}
   StringsBanks:
   - {fileID: -1021755848617190690}
-  cacheTime: 638519407411776279
+  cacheTime: 638519710576349708
   cacheVersion: 131617
 --- !u!114 &406675229068445387
 MonoBehaviour:
@@ -846,6 +930,35 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &7954597691366708393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogs/CuanDialogueMarkersDay2
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogs/CuanDialogueMarkersDay2
+  Guid:
+    Data1: -33598766
+    Data2: 1221771781
+    Data3: -1454147444
+    Data4: 1090517137
+  Banks:
+  - {fileID: -1540975714723700239}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -2168802157407454852}
+  - {fileID: -3959304398966789337}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 205453
 --- !u!114 &8855747372951907719
 MonoBehaviour:
   m_ObjectHideFlags: 0
