@@ -298,6 +298,10 @@
 		<property name="start">
 			<value>5</value>
 		</property>
+		<relationship name="triggerConditions">
+			<destination>{acde3b2f-b9bb-4e77-bb4b-3d80f6ca6ca8}</destination>
+			<destination>{28b7cb42-2265-46e6-892a-59aa6612d80a}</destination>
+		</relationship>
 		<relationship name="audioFile">
 			<destination>{a80d03e5-f985-4848-a6f8-be3ad55b8f49}</destination>
 		</relationship>
@@ -503,6 +507,28 @@
 		</relationship>
 	</object>
 	<object class="ParameterCondition" id="{66eac4bf-f57b-4f63-ab7c-aa5460c147a5}">
+		<property name="minimum">
+			<value>4</value>
+		</property>
+		<property name="maximum">
+			<value>4</value>
+		</property>
+		<relationship name="parameter">
+			<destination>{451b39a9-633e-4923-894b-a0ded87af942}</destination>
+		</relationship>
+	</object>
+	<object class="ParameterCondition" id="{acde3b2f-b9bb-4e77-bb4b-3d80f6ca6ca8}">
+		<property name="minimum">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>1</value>
+		</property>
+		<relationship name="parameter">
+			<destination>{22fe6bcf-596e-41f2-8416-5ce83d610fd4}</destination>
+		</relationship>
+	</object>
+	<object class="ParameterCondition" id="{28b7cb42-2265-46e6-892a-59aa6612d80a}">
 		<property name="minimum">
 			<value>4</value>
 		</property>

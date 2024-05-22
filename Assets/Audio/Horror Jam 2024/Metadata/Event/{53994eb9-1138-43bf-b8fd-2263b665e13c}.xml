@@ -1717,6 +1717,8 @@
 	<object class="MixerBusEffectChain" id="{9066b735-ef79-448e-9b7f-3f3ad9d07433}">
 		<relationship name="effects">
 			<destination>{ec8cd910-fe8e-4606-872a-65208b9529df}</destination>
+			<destination>{ef930220-00a9-4871-86fa-8bec553acd57}</destination>
+			<destination>{de95fc35-b612-4f4f-b18a-2dce43d32126}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{491be1b5-f80e-4bbe-adc6-ad73ebedea5a}" />
@@ -3296,6 +3298,31 @@
 	</object>
 	<object class="MixerBusPanner" id="{bab4b33c-cfc0-4d59-bbf9-68694e44e4db}" />
 	<object class="MixerBusFader" id="{ec8cd910-fe8e-4606-872a-65208b9529df}" />
+	<object class="SFXReverbEffect" id="{ef930220-00a9-4871-86fa-8bec553acd57}">
+		<property name="decayTime">
+			<value>800</value>
+		</property>
+		<property name="earlyDelay">
+			<value>25.5</value>
+		</property>
+		<property name="lowShelfGain">
+			<value>-5</value>
+		</property>
+		<property name="highCut">
+			<value>2600</value>
+		</property>
+		<property name="earlyLateMix">
+			<value>0</value>
+		</property>
+		<property name="wetLevel">
+			<value>-10</value>
+		</property>
+	</object>
+	<object class="LimiterEffect" id="{de95fc35-b612-4f4f-b18a-2dce43d32126}">
+		<property name="ceiling">
+			<value>-1</value>
+		</property>
+	</object>
 	<object class="AutomationCurve" id="{2b658c52-da7f-4dd1-ad0e-f12fbb1bae9f}">
 		<relationship name="parameter">
 			<destination>{451b39a9-633e-4923-894b-a0ded87af942}</destination>
