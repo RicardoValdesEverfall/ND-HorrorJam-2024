@@ -39,7 +39,7 @@ public class DialogueSystem : MonoBehaviour
     private bool day_one_started = false;
     private bool hasProgressed = false;
 
-    private float timer = 1f;
+    private float timer = 0.5f;
 
     private void Awake()
     {
@@ -128,7 +128,7 @@ public class DialogueSystem : MonoBehaviour
                     sallyIndex++;
                     fmodTriggerDialogue("empty");
                     hasProgressed = true;
-                    timer = 1.5f;
+                    timer = 0.5f;
                 }
             }
         }

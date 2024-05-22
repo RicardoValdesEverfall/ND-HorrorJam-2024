@@ -401,7 +401,7 @@ MonoBehaviour:
   Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638519407411720328
+  lastModified: 638519245032247907
   FileSizes:
   - Name: Desktop
     Value: 13798624
@@ -447,7 +447,7 @@ MonoBehaviour:
   Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638519407411776279
+  lastModified: 638518936273224394
   FileSizes:
   - Name: Desktop
     Value: 1932
@@ -536,7 +536,7 @@ MonoBehaviour:
   - {fileID: -1540975714723700239}
   StringsBanks:
   - {fileID: -1021755848617190690}
-  cacheTime: 638519407411776279
+  cacheTime: 638519245032247907
   cacheVersion: 131617
 --- !u!114 &406675229068445387
 MonoBehaviour:
@@ -553,7 +553,7 @@ MonoBehaviour:
   Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Dialogs Eng.bank
   Name: Dialogs Eng
   StudioPath: bank:/Dialogs Eng
-  lastModified: 638518323327042772
+  lastModified: 638518936272944329
   FileSizes:
   - Name: Desktop
     Value: 554336
