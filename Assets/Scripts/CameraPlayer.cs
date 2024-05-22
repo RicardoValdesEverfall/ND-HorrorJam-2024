@@ -37,6 +37,7 @@ public class CameraController : MonoBehaviour
 
         // Accumulate horizontal rotation
         currentRotationY += mouseX;
+        currentRotationY = Mathf.Clamp(currentRotationY, minYAngle, maxYAngle);
 
         Quaternion targetRotation = Quaternion.Euler(rotationX, currentRotationY, 0);
         transform.localRotation = Quaternion.Lerp(transform.localRotation, targetRotation, smoothSpeed * Time.deltaTime);

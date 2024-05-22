@@ -9107,7 +9107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 1.3
   minYAngle: -38
-  maxYAngle: 60
+  maxYAngle: 72.5
   smoothSpeed: 5
   breathingStrength: 0.0025
   breathingSpeed: 0.8

@@ -35,11 +35,11 @@ public class DialogueSystem : MonoBehaviour
     public int sallySeqIndex = 0;
     public int dialogSeqIndex = 0;
 
+    private float timer = 0.5f;
     private float skipTimer = 0;
+    private float vol = 0;
     private bool day_one_started = false;
     private bool hasProgressed = false;
-
-    private float timer = 0.5f;
 
     private void Awake()
     {
@@ -68,6 +68,10 @@ public class DialogueSystem : MonoBehaviour
 
     private void Update()
     {
+        ///DEBUG`````````````
+        instance.getVolume(out vol);
+        Debug.Log(vol);
+
         if (acceptInput)
         {
             if (Input.GetKeyDown(KeyCode.Q)) // OPTION A
