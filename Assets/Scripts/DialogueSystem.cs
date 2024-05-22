@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.SymbolStore;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -37,7 +38,6 @@ public class DialogueSystem : MonoBehaviour
 
     private float timer = 0.5f;
     private float skipTimer = 0;
-    private float vol = 0;
     private bool day_one_started = false;
     private bool hasProgressed = false;
 
@@ -68,10 +68,6 @@ public class DialogueSystem : MonoBehaviour
 
     private void Update()
     {
-        ///DEBUG`````````````
-        instance.getVolume(out vol);
-        Debug.Log(vol);
-
         if (acceptInput)
         {
             if (Input.GetKeyDown(KeyCode.Q)) // OPTION A
@@ -117,7 +113,7 @@ public class DialogueSystem : MonoBehaviour
                     sallyIndex++;
                     fmodTriggerSallyDialogue();
                     hasProgressed = false;
-                    timer = 1f;
+                    timer = 1.5f;
                 }
             }
         }
@@ -132,8 +128,31 @@ public class DialogueSystem : MonoBehaviour
                     sallyIndex++;
                     fmodTriggerDialogue("empty");
                     hasProgressed = true;
-                    timer = 0.5f;
+                    timer = 1f;
                 }
+            }
+        }
+
+        if (triggerIndex == 4 && sallyIndex == 6 && dialogSeqIndex == 2 && state == FMOD.Studio.PLAYBACK_STATE.STOPPED && sallyState == FMOD.Studio.PLAYBACK_STATE.STOPPED)
+        {
+            timer -= Time.deltaTime;
+            if (timer <= 0f)
+            {
+                dialogSeqIndex++;
+                sallyInstance.setParameterByName("Dialog ID", 4);
+                sallyInstance.setParameterByName("DialogSeq", dialogSeqIndex);
+                sallyInstance.start();
+                timer = 0.5f;
+            }
+        }
+
+        if (triggerIndex == 4 && sallyIndex == 6 && dialogSeqIndex == 3 && sallyState == FMOD.Studio.PLAYBACK_STATE.STOPPED)
+        {
+            timer -= Time.deltaTime;
+            if (timer < 0f)
+            {
+                fmodTriggerDialogue("empty");
+                timer = 0.5f;
             }
         }
 
