@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics.SymbolStore;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Experimental.XR.Interaction;
 using UnityEngine.UI;
 using static UnityEditor.Profiling.RawFrameDataView;
 
@@ -32,14 +33,17 @@ public class DialogueSystem : MonoBehaviour
     public bool showingDialogueUI = false;
     public bool finishedTalking = false;
     public int triggerIndex = 0;
+    public int dialogSeqIndex = 0;
+    public int dialogPath = 1;
     public int sallyIndex = 2;
     public int sallySeqIndex = 0;
-    public int dialogSeqIndex = 0;
 
     private float timer = 0.5f;
     private float skipTimer = 0;
     private bool day_one_started = false;
     private bool hasProgressed = false;
+    private bool completedSeq = false;
+    private int day = 1;
 
     private void Awake()
     {
@@ -98,10 +102,171 @@ public class DialogueSystem : MonoBehaviour
         instance.getPlaybackState(out state);
         sallyInstance.getPlaybackState(out sallyState);
 
+        if (day == 1)
+        {
+            DayOne_Triggers();
+        }
+       
+    }
+
+    private void LateUpdate()
+    {
+        if (day == 1)
+        {
+            DayOne_Main(currentDialogueID);
+        }
+
+        if (skippable)
+        {
+            if (Input.GetKey(KeyCode.Space))
+            {
+                skipTimer += Time.deltaTime;
+                SkipIcon.fillAmount = skipTimer;
+
+                if (SkipIcon.fillAmount >= 0.99f)
+                {
+                    director.Play("IntroFinish", 0);
+                }
+            }
+
+            else
+            {
+                skipTimer = -Time.deltaTime * 1.4f;
+                SkipIcon.fillAmount = skipTimer;
+            }
+        }
+
+        if (!day_one_started && !skippable)
+        {
+            timeToFirstInteraction -= Time.deltaTime;
+            if (timeToFirstInteraction <= 0)
+            {
+                day_one_started = true;
+                director.Play("Day1", 0);
+            }
+        }
+    }
+
+    public void StartFadeIn()
+    {
+        director.Play("ShowDialogueUI", 0);
+        showingDialogueUI = true;
+    }
+
+    public void EnableInput()
+    {
+        acceptInput = true;
+    }
+
+    public void EnableProgression()
+    {
+        hasProgressed = true;
+    }
+
+    public void FinishedTalking()
+    {
+        finishedTalking = true;
+    }
+
+    public void FinishedIntroCinematic()
+    {
+        PlayerCamera.SetActive(true);
+        skippable = false;
+    }
+    //###################################################### FMOD SCRIPTING ###################################################
+
+    public void fmodTriggerSallyDialogue()
+    {
+        sallyInstance.setParameterByName("Dialog ID", sallyIndex);
+        sallyInstance.start();
+        sallyIndex++;
+        triggerIndex++;
+    }
+
+    public void fmodTriggerDialogue(string eventName)
+    {
+        switch (eventName)
+        {
+            case "empty":
+                dialogPath = 0;
+                instance.setParameterByName("DialogPath", dialogPath);
+                break;
+            case "A":
+                dialogPath = 1;
+                instance.setParameterByName("DialogPath", dialogPath);
+              
+                break;
+            case "B":
+                dialogPath = 2;
+                instance.setParameterByName("DialogPath", dialogPath);
+               
+                break;
+            case "C":
+                dialogPath = 3;
+                instance.setParameterByName("DialogPath", dialogPath);
+               
+                break;
+            case "D":
+                dialogPath = 4;
+                instance.setParameterByName("DialogPath", dialogPath);
+                break;
+        }
+
+        if (triggerIndex == 4 && completedSeq == false)
+        {
+            dialogSeqIndex++;
+            instance.setParameterByName("DialogSeq", dialogSeqIndex);
+            currentDialogueID = "01-04";
+
+            if (dialogSeqIndex == 5)
+            {
+                triggerIndex++;
+            }
+        }
+
+        else
+        {
+            triggerIndex++;
+        }
+
+        instance.setParameterByName("Dialog ID", triggerIndex);
+        instance.start();
+    }
+
+
+    //#################################################### DAY SCENES SCRIPTING ##############################################
+    public void DayOne_Main(string dialogueChoiceID)
+    {
+        switch (dialogueChoiceID)
+        {
+            case "main":
+                choicesArray[3].alpha = 0; // OPTION D
+
+                textBoxes[0].text = "He's Awake! Guys, he's awake! ... Cuan? can you hear me? Are you okay in there?";
+                textBoxes[1].text = "Very groggy. What's going on?";
+                textBoxes[2].text = "I saw- I saw- What did I see?";
+                textBoxes[3].text = "Why aren’t we in the sub?";
+                break;
+            case "01-04":
+                choicesArray[2].alpha = 0;
+                choicesArray[3].alpha = 0;
+
+                textBoxes[0].text = "uh...You drove the sub into the station, dude. Missed the nacelle. Hit the wall. " +
+                                    "We barely made it out. No-one's going anywhere until the surface can source a new sub.";
+
+                textBoxes[1].text = "I told you! I said I shouldn't have been driving!";
+                textBoxes[2].text = "Heh. No doing anything about it now! And we're alive.";
+                break;
+        }
+    }
+
+    public void DayOne_Triggers()
+    {
         if (sallyIndex == 3 && sallyState == FMOD.Studio.PLAYBACK_STATE.STOPPED && finishedTalking && showingDialogueUI == false)
         {
             StartFadeIn();
         }
+
 
         if (hasProgressed)
         {
@@ -169,150 +334,84 @@ public class DialogueSystem : MonoBehaviour
             }
         }
 
-    }
-
-    private void LateUpdate()
-    {
-        DayOne_Main(currentDialogueID);
-
-        if (skippable)
+        if (triggerIndex == 4 && sallyIndex == 6 && dialogSeqIndex == 5 && sallyState == FMOD.Studio.PLAYBACK_STATE.STOPPED)
         {
-            if (Input.GetKey(KeyCode.Space))
+            timer -= Time.deltaTime;
+            if (timer < 0f)
             {
-                skipTimer += Time.deltaTime;
-                SkipIcon.fillAmount = skipTimer;
-
-                if (SkipIcon.fillAmount >= 0.99f)
-                {
-                    director.Play("IntroFinish", 0);
-                }
-            }
-
-            else
-            {
-                skipTimer = -Time.deltaTime * 1.4f;
-                SkipIcon.fillAmount = skipTimer;
+                StartFadeIn();
+                dialogSeqIndex = 1;
+                completedSeq = true;
+                timer = 0.5f;
             }
         }
 
-        if (!day_one_started && !skippable)
+        if (completedSeq == true && triggerIndex == 5 && dialogSeqIndex == 1 && state == FMOD.Studio.PLAYBACK_STATE.STOPPED)
         {
-            timeToFirstInteraction -= Time.deltaTime;
-            Debug.Log(timeToFirstInteraction);
-
-            if (timeToFirstInteraction <= 0)
+            timer -= Time.deltaTime;
+            if (timer < 0f)
             {
-                day_one_started = true;
-                director.Play("Day1", 0);
-            }
-        }
-    }
-
-    public void StartFadeIn()
-    {
-        director.Play("ShowDialogueUI", 0);
-        showingDialogueUI = true;
-    }
-
-    public void EnableInput()
-    {
-        acceptInput = true;
-    }
-
-    public void EnableProgression()
-    {
-        hasProgressed = true;
-    }
-
-    public void FinishedTalking()
-    {
-        finishedTalking = true;
-    }
-
-    public void FinishedIntroCinematic()
-    {
-        PlayerCamera.SetActive(true);
-        skippable = false;
-    }
-    //###################################################### FMOD SCRIPTING ###################################################
-
-    public void fmodTriggerSallyDialogue()
-    {
-        sallyInstance.setParameterByName("Dialog ID", sallyIndex);
-        sallyInstance.start();
-        sallyIndex++;
-        triggerIndex++;
-    }
-
-    public void fmodTriggerDialogue(string eventName)
-    {
-        switch (eventName)
-        {
-            case "empty":
-                instance.setParameterByName("DialogPath", 0);
-                break;
-            case "A":
-                instance.setParameterByName("DialogPath", 1);
-              
-                break;
-            case "B":
-                instance.setParameterByName("DialogPath", 2);
-               
-                break;
-            case "C":
-                instance.setParameterByName("DialogPath", 3);
-               
-                break;
-            case "D":
-                instance.setParameterByName("DialogPath", 4);
-                break;
-        }
-
-        if (triggerIndex == 4)
-        {
-            dialogSeqIndex++;
-            instance.setParameterByName("DialogSeq", dialogSeqIndex);
-            currentDialogueID = "01-04";
-
-            if (dialogSeqIndex == 5)
-            {
-                triggerIndex++;
+                sallyInstance.setParameterByName("Dialog ID", 5);
+                sallyInstance.setParameterByName("DialogSeq", dialogSeqIndex);
+                sallyInstance.setParameterByName("DialogPath", dialogPath);
+                sallyInstance.start();
+                timer = 0.5f;
+                completedSeq = false;
             }
         }
 
-        else
+        if (completedSeq == false && triggerIndex == 5 && dialogSeqIndex == 1 && state == FMOD.Studio.PLAYBACK_STATE.STOPPED && sallyState == FMOD.Studio.PLAYBACK_STATE.STOPPED)
         {
-            triggerIndex++;
+            timer -= Time.deltaTime;
+            if (timer < 0f)
+            {
+                instance.setParameterByName("DialogSeq", 1);
+                fmodTriggerDialogue("empty");
+                timer = 0.5f;
+                dialogSeqIndex++;
+            }
         }
 
-        instance.setParameterByName("Dialog ID", triggerIndex);
-        instance.start();
-    }
-
-
-    //#################################################### DAY SCENES SCRIPTING ##############################################
-    public void DayOne_Main(string dialogueChoiceID)
-    {
-        switch (dialogueChoiceID)
+        if (completedSeq == false && triggerIndex == 6 && dialogSeqIndex == 2 && state == FMOD.Studio.PLAYBACK_STATE.STOPPED)
         {
-            case "main":
-                choicesArray[3].alpha = 0; // OPTION D
+            timer -= Time.deltaTime;
+            if (timer < 0f)
+            {
+                sallyInstance.setParameterByName("Dialog ID", sallyIndex);
+                sallyInstance.setParameterByName("DialogSeq", dialogSeqIndex);
+                sallyInstance.setParameterByName("DialogPath", 1);
+                sallyInstance.start();
+                timer = 0.5f;
+                dialogSeqIndex++;
+            }
+        }
 
-                textBoxes[0].text = "He's Awake! Guys, he's awake! ... Cuan? can you hear me? Are you okay in there?";
-                textBoxes[1].text = "Very groggy. What's going on?";
-                textBoxes[2].text = "I saw- I saw- What did I see?";
-                textBoxes[3].text = "Why aren’t we in the sub?";
-                break;
-            case "01-04":
-                choicesArray[2].alpha = 0;
-                choicesArray[3].alpha = 0;
+        if (completedSeq == false && triggerIndex == 6 && dialogSeqIndex == 3 && state == FMOD.Studio.PLAYBACK_STATE.STOPPED && sallyState == FMOD.Studio.PLAYBACK_STATE.STOPPED)
+        {
+            timer -= Time.deltaTime;
+            if (timer < 0f)
+            {
+                instance.setParameterByName("Dialog ID", 6);
+                instance.setParameterByName("DialogSeq", dialogSeqIndex);
+                instance.start();
+                dialogSeqIndex++;
+                timer = 0.5f;
+                completedSeq = true;
+            }
+        }
 
-                textBoxes[0].text = "You- you don't remember? We were coming up from the white smoker and- uh..." +
-                                    "You drove the sub into the station, dude. Missed the nacelle. Hit the wall. " +
-                                    "She's a write-off, mate. We barely made it out. No-one's going anywhere until they can get";
-                textBoxes[1].text = "I told you! I said I shouldn't have been driving!";
-                textBoxes[2].text = "Heh. No doing anything about it now! And we're alive.";
-                break;
+        if (completedSeq == true && triggerIndex == 6 && dialogSeqIndex == 4 && state == FMOD.Studio.PLAYBACK_STATE.STOPPED && sallyState == FMOD.Studio.PLAYBACK_STATE.STOPPED)
+        {
+            timer -= Time.deltaTime;
+            if (timer < 0f)
+            {
+                sallyInstance.setParameterByName("Dialog ID", 6);
+                sallyInstance.setParameterByName("DialogSeq", dialogSeqIndex);
+                sallyInstance.setParameterByName("DialogPath", 1);
+                sallyInstance.start();
+                timer = 5.5f;
+                day = 2;
+            }
         }
     }
 }
