@@ -623,7 +623,7 @@
 			<value>0</value>
 		</property>
 		<property name="maximumTimeDelay">
-			<value>1000</value>
+			<value>4000</value>
 		</property>
 		<relationship name="triggerConditions">
 			<destination>{593a4ea5-100d-4c84-a5f5-4e3873bb7250}</destination>
