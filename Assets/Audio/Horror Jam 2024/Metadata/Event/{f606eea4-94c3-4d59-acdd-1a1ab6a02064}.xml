@@ -96,6 +96,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{b959a694-5454-4883-9031-1fdebbd11962}">
+		<property name="volume">
+			<value>1.5</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{858add51-ee62-4bce-b4f6-d58a7b2c672a}</destination>
 		</relationship>
@@ -120,6 +123,9 @@
 	<object class="SingleSound" id="{c508c2eb-ffb3-4278-8b9c-f87ecdfcadd3}">
 		<property name="length">
 			<value>1.5510416666666667</value>
+		</property>
+		<property name="pitch">
+			<value>-10.5</value>
 		</property>
 		<relationship name="modulators">
 			<destination>{f35c2c8d-b1d6-4ec2-b056-a1d46f9f4bae}</destination>
@@ -153,6 +159,9 @@
 	<object class="SingleSound" id="{259b80e4-e78e-4861-8ecf-71c124604672}">
 		<property name="length">
 			<value>0.40000000000000002</value>
+		</property>
+		<property name="pitch">
+			<value>-0.600000024</value>
 		</property>
 		<relationship name="modulators">
 			<destination>{9ccab154-c50c-4fc3-8837-31d7679a578d}</destination>

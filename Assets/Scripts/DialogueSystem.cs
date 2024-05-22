@@ -156,6 +156,19 @@ public class DialogueSystem : MonoBehaviour
             }
         }
 
+        if (triggerIndex == 4 && sallyIndex == 6 && dialogSeqIndex == 4 && state == FMOD.Studio.PLAYBACK_STATE.STOPPED)
+        {
+            timer -= Time.deltaTime;
+            if (timer < 0f)
+            {
+                dialogSeqIndex++;
+                sallyInstance.setParameterByName("Dialog ID", 4);
+                sallyInstance.setParameterByName("DialogSeq", dialogSeqIndex);
+                sallyInstance.start();
+                timer = 0.5f;
+            }
+        }
+
     }
 
     private void LateUpdate()
