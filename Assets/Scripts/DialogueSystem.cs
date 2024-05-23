@@ -101,6 +101,14 @@ public class DialogueSystem : MonoBehaviour
                 director.Play("OptionD", 0);
                 acceptInput = false;
             }
+
+            if (day_one_ended)
+            {
+                if (Input.GetKeyDown(KeyCode.Z))
+                {
+                    director.Play("Sleep", 0);
+                }
+            }
         }
 
         instance.getPlaybackState(out state);
@@ -116,6 +124,8 @@ public class DialogueSystem : MonoBehaviour
                 if (timer <= 0)
                 {
                     Camille.Play("end", 0);
+                    director.Play("ShowSleepOption", 0);
+                    day_one_ended = true;
                     timer = 0.5f;
                     day = 2;
                 }
