@@ -56,7 +56,6 @@ ExportedObj/
 #FMod
 .cache/
 .unsaved/
-FMOD/Cache/
 
 # Unity3D generated file on crash reports
 sysinfo.txt

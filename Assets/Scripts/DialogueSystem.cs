@@ -42,9 +42,12 @@ public class DialogueSystem : MonoBehaviour
     private float skipTimer = 0;
     private bool day_one_started = false;
     private bool day_one_ended = false;
+    private bool day_two_ended = false;
     private bool hasProgressed = false;
     private bool completedSeq = false;
     private int day = 1;
+
+    private const float SHORT_DELAY = 0.1f;
 
     private void Awake()
     {
@@ -68,7 +71,7 @@ public class DialogueSystem : MonoBehaviour
         director.Play("IntroCinematic", 0);
         skippable = true;
 
-        timeToFirstInteraction = Random.Range(8f, 15f);
+        timeToFirstInteraction = 0.5f;	// Just long enough to let Cuan's first line begin
     }
 
     private void Update()
@@ -107,7 +110,7 @@ public class DialogueSystem : MonoBehaviour
         {
             DayOne_Triggers();
 
-            if (day_one_ended)
+            if (sallyState == FMOD.Studio.PLAYBACK_STATE.STOPPED && day_one_ended)
             {
                 timer -= Time.deltaTime;
                 if (timer <= 0)
@@ -118,6 +121,23 @@ public class DialogueSystem : MonoBehaviour
                 }
             }
         }
+        /*
+        else if (day == 2)
+        {
+            DayTwo_Triggers();
+
+            if (sallyState == FMOD.Studio.PLAYBACK_STATE.STOPPED && day_two_ended)
+            {
+                timer -= Time.deltaTime;
+                if (timer <= 0)
+                {
+                    //Camille.Play("end", 0);
+                    timer = 0.5f;
+                    day = 3;
+                }
+            }
+        }
+        */
     }
 
     private void LateUpdate()
@@ -125,6 +145,10 @@ public class DialogueSystem : MonoBehaviour
         if (day == 1)
         {
             DayOne_Main(currentDialogueID);
+        }
+        else if (day == 2)
+        {
+            DayTwo_Main(currentDialogueID);
         }
 
         if (skippable)
@@ -150,7 +174,7 @@ public class DialogueSystem : MonoBehaviour
         if (!day_one_started && !skippable)
         {
             timeToFirstInteraction -= Time.deltaTime;
-            if (timeToFirstInteraction <= 0)
+            if (timeToFirstInteraction <= 0 && state == FMOD.Studio.PLAYBACK_STATE.STOPPED)	// Wait until Cuan opening line has finished so Sally interrupts
             {
                 day_one_started = true;
                 director.Play("Day1", 0);
@@ -273,6 +297,8 @@ public class DialogueSystem : MonoBehaviour
 
     public void DayOne_Triggers()
     {
+        if (day_one_ended) return;
+
         if (sallyIndex == 3 && sallyState == FMOD.Studio.PLAYBACK_STATE.STOPPED && finishedTalking && showingDialogueUI == false)
         {
             StartFadeIn();
@@ -289,7 +315,8 @@ public class DialogueSystem : MonoBehaviour
                     sallyIndex++;
                     fmodTriggerSallyDialogue();
                     hasProgressed = false;
-                    timer = 1.5f;
+                    timer = SHORT_DELAY;
+                    //timer = 1.5f;
                 }
             }
         }
@@ -304,7 +331,8 @@ public class DialogueSystem : MonoBehaviour
                     sallyIndex++;
                     fmodTriggerDialogue("empty");
                     hasProgressed = true;
-                    timer = 1f;
+                    timer = SHORT_DELAY;
+                    //timer = 1f;
                 }
             }
         }
@@ -318,7 +346,7 @@ public class DialogueSystem : MonoBehaviour
                 sallyInstance.setParameterByName("Dialog ID", 4);
                 sallyInstance.setParameterByName("DialogSeq", dialogSeqIndex);
                 sallyInstance.start();
-                timer = 0.5f;
+                timer = SHORT_DELAY;
             }
         }
 
@@ -328,7 +356,7 @@ public class DialogueSystem : MonoBehaviour
             if (timer < 0f)
             {
                 fmodTriggerDialogue("empty");
-                timer = 0.5f;
+                timer = SHORT_DELAY;
             }
         }
 
@@ -341,7 +369,7 @@ public class DialogueSystem : MonoBehaviour
                 sallyInstance.setParameterByName("Dialog ID", 4);
                 sallyInstance.setParameterByName("DialogSeq", dialogSeqIndex);
                 sallyInstance.start();
-                timer = 0.5f;
+                timer = SHORT_DELAY;
             }
         }
 
@@ -353,7 +381,7 @@ public class DialogueSystem : MonoBehaviour
                 StartFadeIn();
                 dialogSeqIndex = 1;
                 completedSeq = true;
-                timer = 0.5f;
+                timer = SHORT_DELAY;
             }
         }
 
@@ -366,7 +394,7 @@ public class DialogueSystem : MonoBehaviour
                 sallyInstance.setParameterByName("DialogSeq", dialogSeqIndex);
                 sallyInstance.setParameterByName("DialogPath", dialogPath);
                 sallyInstance.start();
-                timer = 0.5f;
+                timer = SHORT_DELAY;
                 completedSeq = false;
             }
         }
@@ -378,7 +406,7 @@ public class DialogueSystem : MonoBehaviour
             {
                 instance.setParameterByName("DialogSeq", 1);
                 fmodTriggerDialogue("empty");
-                timer = 0.5f;
+                timer = SHORT_DELAY;
                 dialogSeqIndex++;
             }
         }
@@ -392,7 +420,7 @@ public class DialogueSystem : MonoBehaviour
                 sallyInstance.setParameterByName("DialogSeq", dialogSeqIndex);
                 sallyInstance.setParameterByName("DialogPath", 1);
                 sallyInstance.start();
-                timer = 0.5f;
+                timer = SHORT_DELAY;
                 dialogSeqIndex++;
             }
         }
@@ -406,7 +434,7 @@ public class DialogueSystem : MonoBehaviour
                 instance.setParameterByName("DialogSeq", dialogSeqIndex);
                 instance.start();
                 dialogSeqIndex++;
-                timer = 0.5f;
+                timer = SHORT_DELAY;
                 completedSeq = true;
             }
         }
@@ -422,8 +450,93 @@ public class DialogueSystem : MonoBehaviour
                 sallyInstance.start();
                 timer = 3.5f;
                 day_one_ended = true;
-                day = 2;
             }
         }
     }
+
+    public void DayTwo_Main(string dialogueChoiceID)
+    {
+        switch (dialogueChoiceID)
+        {
+            case "02-02":
+                choicesArray[3].alpha = 0; // OPTION D
+
+                textBoxes[0].text = "Hey, you're awake! How are you feeling today?";
+
+                textBoxes[1].text = "Fine.";
+                textBoxes[2].text = "Good.";
+                textBoxes[3].text = "I've crashed a submarine.";
+                break;
+            case "02-05":
+                choicesArray[3].alpha = 0;
+
+                textBoxes[0].text = "Dariyanov has agreed to loan his personal minisub. For evacuation. So we’ll get out of here soon.";
+
+                textBoxes[1].text = "What have I got to go back for?";
+                textBoxes[2].text = "Glad to be done with this place.";
+                textBoxes[3].text = "Ooh, fancy. Minisub chauffeur.";
+                break;
+            case "02-07":
+                choicesArray[3].alpha = 0;
+
+                textBoxes[0].text = "Gotta ask some questions. You up to it?";
+
+                textBoxes[1].text = "Bloody hate reports. No.";
+                textBoxes[2].text = "Bloody hate reports...go on then.";
+                textBoxes[3].text = "Bloody hate reports. What choice do I have?";
+                break;
+            case "02-09":
+                textBoxes[0].text = "First question: what can you recall of the dive dated 01/04/51?";
+
+                textBoxes[1].text = "Nothing. Just... nothing.";
+                textBoxes[2].text = "I drove my sub into the station wall.";
+                textBoxes[3].text = "I swear... I swear I saw something...";
+                textBoxes[4].text = "I got the bends, lost control of the sub.";
+                break;
+            case "02-11":
+                choicesArray[3].alpha = 0;	// Hide option 4 until first three are followed
+
+                textBoxes[0].text = "Now. What do you remember before the crash?";
+
+                textBoxes[1].text = "The mission was to the trench.";
+                textBoxes[2].text = "Not a biologist. But...";
+                textBoxes[3].text = "We got down to the first vent, sampled the water...";
+                textBoxes[4].text = "- wait. Wasn’t there? Uhhh...";
+                break;
+
+        }
+    }
+
+    public void DayTwo_Triggers()
+    {
+        if (day_two_ended) return;
+
+        if (sallyIndex == 6 && sallyState == FMOD.Studio.PLAYBACK_STATE.STOPPED && finishedTalking)
+        {
+            //StartFadeIn();
+        }
+
+		// Not worked out how these work yet
+
+		/*
+        if (hasProgressed)
+        {
+            timer -= Time.deltaTime;
+            if (timer <= 0f)
+            {
+                if (sallyIndex == 3 && sallyState == FMOD.Studio.PLAYBACK_STATE.STOPPED && state == FMOD.Studio.PLAYBACK_STATE.STOPPED)
+                {
+                    sallyIndex++;
+                    fmodTriggerSallyDialogue();
+                    hasProgressed = false;
+                    timer = SHORT_DELAY;
+                    //timer = 1.5f;
+                }
+            }
+        }
+		*/
+
+    }
+
+
 }
