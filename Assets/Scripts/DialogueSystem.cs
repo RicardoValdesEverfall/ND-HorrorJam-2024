@@ -5,7 +5,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Experimental.XR.Interaction;
 using UnityEngine.UI;
-using static UnityEditor.Profiling.RawFrameDataView;
 
 public class DialogueSystem : MonoBehaviour
 {
