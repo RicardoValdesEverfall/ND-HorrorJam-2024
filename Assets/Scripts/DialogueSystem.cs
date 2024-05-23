@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class DialogueSystem : MonoBehaviour
 {
-    private FMOD.Studio.EventInstance instance;
+    private FMOD.Studio.EventInstance cuanInstance;
     private FMOD.Studio.EventInstance sallyInstance;
 
     public FMODUnity.EventReference dialogueEvent;
@@ -53,12 +53,12 @@ public class DialogueSystem : MonoBehaviour
 
     private void Awake()
     {
-        instance = FMODUnity.RuntimeManager.CreateInstance(dialogueEvent);
+        cuanInstance = FMODUnity.RuntimeManager.CreateInstance(dialogueEvent);
         sallyInstance = FMODUnity.RuntimeManager.CreateInstance(sallyEvent);
 
-        instance.setParameterByName("Day 1 to 5", 1);
-        instance.setParameterByName("DialogPath", 1);
-        instance.setParameterByName("DialogSeq", 1);
+        cuanInstance.setParameterByName("Day 1 to 5", 1);
+        cuanInstance.setParameterByName("DialogPath", 1);
+        cuanInstance.setParameterByName("DialogSeq", 1);
 
         sallyInstance.setParameterByName("Day 1 to 5", 1);
         sallyInstance.setParameterByName("DialogPath", 1);
@@ -106,14 +106,29 @@ public class DialogueSystem : MonoBehaviour
 
     private void Update()
     {
+#if UNITY_EDITOR
+		if (Input.GetKeyDown(KeyCode.F2)) // DEBUG F2 -> Day 2
+		{
+			day_one_ended = true;
+			DayTwo_Init();
+			if (skippable)
+				director.Play("IntroFinish", 0);
+		}
+		else if (Input.GetKeyDown(KeyCode.F3)) // DEBUG F3 -> Day 3
+		{
+			day_two_ended = true;
+		}
+#endif
+
         if (acceptInput)
         {
-            if (day_one_ended)
+            if (day==1 && day_one_ended)
             {
                 // Listen for Z only otherwise the dialogue UI can reappear
                 if (Input.GetKeyDown(KeyCode.Z))
                 {
                     director.Play("Sleep", 0);
+					DayTwo_Init();
                 }
             }
             else
@@ -144,14 +159,14 @@ public class DialogueSystem : MonoBehaviour
             }
         }
 
-        instance.getPlaybackState(out cuanState);
+        cuanInstance.getPlaybackState(out cuanState);
         sallyInstance.getPlaybackState(out sallyState);
 
         if (day == 1)
         {
             DayOne_Triggers();
 
-            if (sallyState == FMOD.Studio.PLAYBACK_STATE.STOPPED && day_one_ended)
+            if (IsSallyFinished() && day_one_ended)
             {
                 timer -= Time.deltaTime;
                 if (timer <= 0)
@@ -160,7 +175,6 @@ public class DialogueSystem : MonoBehaviour
                     director.Play("ShowSleepOption", 0);
                     day_one_ended = true;
                     timer = 0.5f;
-					DayTwo_Init();
                 }
             }
         }
@@ -168,7 +182,7 @@ public class DialogueSystem : MonoBehaviour
         {
             DayTwo_Triggers();
 
-            if (sallyState == FMOD.Studio.PLAYBACK_STATE.STOPPED && day_two_ended)
+            if (IsSallyFinished() && day_two_ended)
             {
                 timer -= Time.deltaTime;
                 if (timer <= 0)
@@ -225,8 +239,12 @@ public class DialogueSystem : MonoBehaviour
 
     public void StartFadeIn()
     {
-        director.Play("ShowDialogueUI", 0);
-        showingDialogueUI = true;
+		if (!showingDialogueUI)
+		{
+			Debug.Log("StartFadeIn");
+			director.Play("ShowDialogueUI", 0);
+			showingDialogueUI = true;
+		}
     }
 
     public void EnableInput()
@@ -253,6 +271,8 @@ public class DialogueSystem : MonoBehaviour
 
     public void fmodTriggerSallyDialogue()
     {
+		Debug.Log("Trigger Sally day " + day + "  line " + sallyIndex + "  seq " + dialogSeqIndex );
+
         sallyInstance.setParameterByName("Dialog ID", sallyIndex);
         sallyInstance.start();
         sallyIndex++;
@@ -266,33 +286,33 @@ public class DialogueSystem : MonoBehaviour
         {
             case "empty":
                 dialogPath = 0;
-                instance.setParameterByName("DialogPath", dialogPath);
+                cuanInstance.setParameterByName("DialogPath", dialogPath);
                 break;
             case "A":
                 dialogPath = 1;
-                instance.setParameterByName("DialogPath", dialogPath);
+                cuanInstance.setParameterByName("DialogPath", dialogPath);
               
                 break;
             case "B":
                 dialogPath = 2;
-                instance.setParameterByName("DialogPath", dialogPath);
+                cuanInstance.setParameterByName("DialogPath", dialogPath);
                
                 break;
             case "C":
                 dialogPath = 3;
-                instance.setParameterByName("DialogPath", dialogPath);
+                cuanInstance.setParameterByName("DialogPath", dialogPath);
                
                 break;
             case "D":
                 dialogPath = 4;
-                instance.setParameterByName("DialogPath", dialogPath);
+                cuanInstance.setParameterByName("DialogPath", dialogPath);
                 break;
         }
 
         if (triggerIndex == 4 && completedSeq == false)
         {
             dialogSeqIndex++;
-            instance.setParameterByName("DialogSeq", dialogSeqIndex);
+            cuanInstance.setParameterByName("DialogSeq", dialogSeqIndex);
             currentDialogueID = "01-04";
 
             if (dialogSeqIndex == 5)
@@ -306,8 +326,8 @@ public class DialogueSystem : MonoBehaviour
             triggerIndex++;
         }
 
-        instance.setParameterByName("Dialog ID", triggerIndex);
-        instance.start();
+        cuanInstance.setParameterByName("Dialog ID", triggerIndex);
+        cuanInstance.start();
         cuanCued = true;
     }
 
@@ -447,7 +467,7 @@ public class DialogueSystem : MonoBehaviour
             timer -= Time.deltaTime;
             if (timer < 0f)
             {
-                instance.setParameterByName("DialogSeq", 1);
+                cuanInstance.setParameterByName("DialogSeq", 1);
                 fmodTriggerDialogue("empty");
                 timer = SHORT_DELAY;
                 dialogSeqIndex++;
@@ -473,9 +493,9 @@ public class DialogueSystem : MonoBehaviour
             timer -= Time.deltaTime;
             if (timer < 0f)
             {
-                instance.setParameterByName("Dialog ID", 6);
-                instance.setParameterByName("DialogSeq", dialogSeqIndex);
-                instance.start();
+                cuanInstance.setParameterByName("Dialog ID", 6);
+                cuanInstance.setParameterByName("DialogSeq", dialogSeqIndex);
+                cuanInstance.start();
                 dialogSeqIndex++;
                 timer = SHORT_DELAY;
                 completedSeq = true;
@@ -501,7 +521,7 @@ public class DialogueSystem : MonoBehaviour
     {
         switch (dialogueChoiceID)
         {
-            case "02-02":
+            case "02-03":
                 choicesArray[3].alpha = 0; // OPTION D
 
                 textBoxes[0].text = "Hey, you're awake! How are you feeling today?";
@@ -510,7 +530,7 @@ public class DialogueSystem : MonoBehaviour
                 textBoxes[2].text = "Good.";
                 textBoxes[3].text = "I've crashed a submarine.";
                 break;
-            case "02-05":
+            case "02-06":
                 choicesArray[3].alpha = 0;
 
                 textBoxes[0].text = "Dariyanov has agreed to loan his personal minisub. For evacuation. So we’ll get out of here soon.";
@@ -519,7 +539,7 @@ public class DialogueSystem : MonoBehaviour
                 textBoxes[2].text = "Glad to be done with this place.";
                 textBoxes[3].text = "Ooh, fancy. Minisub chauffeur.";
                 break;
-            case "02-07":
+            case "02-08":
                 choicesArray[3].alpha = 0;
 
                 textBoxes[0].text = "Gotta ask some questions. You up to it?";
@@ -528,7 +548,7 @@ public class DialogueSystem : MonoBehaviour
                 textBoxes[2].text = "Bloody hate reports...go on then.";
                 textBoxes[3].text = "Bloody hate reports. What choice do I have?";
                 break;
-            case "02-09":
+            case "02-10":
                 textBoxes[0].text = "First question: what can you recall of the dive dated 01/04/51?";
 
                 textBoxes[1].text = "Nothing. Just... nothing.";
@@ -536,7 +556,7 @@ public class DialogueSystem : MonoBehaviour
                 textBoxes[3].text = "I swear... I swear I saw something...";
                 textBoxes[4].text = "I got the bends, lost control of the sub.";
                 break;
-            case "02-11":
+            case "02-12":
                 choicesArray[3].alpha = 0;	// Hide option 4 until first three are followed
 
                 textBoxes[0].text = "Now. What do you remember before the crash?";
@@ -553,24 +573,43 @@ public class DialogueSystem : MonoBehaviour
 
 	private void DayTwo_Init()
 	{
+		Debug.Log("DAY 2 INIT!");
+		
 		day = 2;
-		sallyIndex = 1;
+		sallyIndex = 2;
 		triggerIndex = 1;
+
+		cuanInstance.setParameterByName("Day 1 to 5", day);
+		sallyInstance.setParameterByName("Day 1 to 5", day);
 	}
 
     public void DayTwo_Triggers()
     {
         if (day_two_ended) return;
+		if (skippable) return;
 
 		// OK trying a different layout for Day 2 in the hope it's simpler ;)
 
-		if (IsSallyFinished() && IsCuanFinished())
+		if (IsSallyFinished() && IsCuanFinished())	// Do nothing while either character is speaking
 		{
-			if (sallyIndex == 0)
+			switch (sallyIndex)
 			{
+			case 3:		// Cuan branching options!
+				currentDialogueID = "02-03";
+				StartFadeIn();
+				break;
+
+			case 6:
+			case 8:
+			case 10:
+
+				break;
+
+			default:	// Default case: Sally reads her next line and progresses
 				fmodTriggerSallyDialogue();
 				hasProgressed = false;
 				timer = SHORT_DELAY;
+				break;
 			}
 
 
