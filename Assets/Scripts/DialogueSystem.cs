@@ -78,35 +78,38 @@ public class DialogueSystem : MonoBehaviour
     {
         if (acceptInput)
         {
-            if (Input.GetKeyDown(KeyCode.Q)) // OPTION A
-            {
-                director.Play("OptionA", 0);
-                acceptInput = false;
-            }
-
-            if (Input.GetKeyDown(KeyCode.W)) // OPTION B
-            {
-                director.Play("OptionB", 0);
-                acceptInput = false;
-            }
-
-            if (Input.GetKeyDown(KeyCode.E)) // OPTION C
-            {
-                director.Play("OptionC", 0);
-                acceptInput = false;
-            }
-
-            if (Input.GetKeyDown(KeyCode.R)) // OPTION D
-            {
-                director.Play("OptionD", 0);
-                acceptInput = false;
-            }
-
             if (day_one_ended)
             {
+                // Listen for Z only otherwise the dialogue UI can reappear
                 if (Input.GetKeyDown(KeyCode.Z))
                 {
                     director.Play("Sleep", 0);
+                }
+            }
+            else
+            {
+                if (Input.GetKeyDown(KeyCode.Q)) // OPTION A
+                {
+                    director.Play("OptionA", 0);
+                    acceptInput = false;
+                }
+
+                if (Input.GetKeyDown(KeyCode.W)) // OPTION B
+                {
+                    director.Play("OptionB", 0);
+                    acceptInput = false;
+                }
+
+                if (Input.GetKeyDown(KeyCode.E)) // OPTION C
+                {
+                    director.Play("OptionC", 0);
+                    acceptInput = false;
+                }
+
+                if (Input.GetKeyDown(KeyCode.R)) // OPTION D
+                {
+                    director.Play("OptionD", 0);
+                    acceptInput = false;
                 }
             }
         }
@@ -526,9 +529,9 @@ public class DialogueSystem : MonoBehaviour
             //StartFadeIn();
         }
 
-		// Not worked out how these work yet
+        // Not worked out how these work yet
 
-		/*
+        /*
         if (hasProgressed)
         {
             timer -= Time.deltaTime;
@@ -544,7 +547,7 @@ public class DialogueSystem : MonoBehaviour
                 }
             }
         }
-		*/
+        */
 
     }
 
