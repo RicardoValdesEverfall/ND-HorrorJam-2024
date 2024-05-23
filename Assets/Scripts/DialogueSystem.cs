@@ -22,8 +22,11 @@ public class DialogueSystem : MonoBehaviour
     [SerializeField] CanvasGroup[] choicesArray;
     [SerializeField] TextMeshProUGUI[] textBoxes; //0 = dialogue, 1 = A, 2 = B, 3 = C, 4 = D
 
-    public FMOD.Studio.PLAYBACK_STATE state;
+    public FMOD.Studio.PLAYBACK_STATE cuanState;
     public FMOD.Studio.PLAYBACK_STATE sallyState;
+
+    private bool cuanCued = false;
+    private bool sallyCued = false;
 
     private Animator director;
 
@@ -74,6 +77,34 @@ public class DialogueSystem : MonoBehaviour
         timeToFirstInteraction = 0.5f;	// Just long enough to let Cuan's first line begin
     }
 
+    private bool IsCuanFinished()
+    {
+        if (cuanState != FMOD.Studio.PLAYBACK_STATE.STOPPED)
+        {
+            cuanCued = false;	// clear this whenever sally has started speaking
+            return false;
+        }
+        if (cuanCued)	// Not currently speaking but we already asked her to...
+        {
+            return false;
+        }
+        return true;
+    }
+
+    private bool IsSallyFinished()
+    {
+        if (sallyState != FMOD.Studio.PLAYBACK_STATE.STOPPED)
+        {
+            sallyCued = false;	// clear this whenever sally has started speaking
+            return false;
+        }
+        if (sallyCued)	// Not currently speaking but we already asked her to...
+        {
+            return false;
+        }
+        return true;
+    }
+
     private void Update()
     {
         if (acceptInput)
@@ -114,7 +145,7 @@ public class DialogueSystem : MonoBehaviour
             }
         }
 
-        instance.getPlaybackState(out state);
+        instance.getPlaybackState(out cuanState);
         sallyInstance.getPlaybackState(out sallyState);
 
         if (day == 1)
@@ -130,11 +161,10 @@ public class DialogueSystem : MonoBehaviour
                     director.Play("ShowSleepOption", 0);
                     day_one_ended = true;
                     timer = 0.5f;
-                    day = 2;
+					DayTwo_Init();
                 }
             }
         }
-        /*
         else if (day == 2)
         {
             DayTwo_Triggers();
@@ -150,7 +180,6 @@ public class DialogueSystem : MonoBehaviour
                 }
             }
         }
-        */
     }
 
     private void LateUpdate()
@@ -187,7 +216,7 @@ public class DialogueSystem : MonoBehaviour
         if (!day_one_started && !skippable)
         {
             timeToFirstInteraction -= Time.deltaTime;
-            if (timeToFirstInteraction <= 0 && state == FMOD.Studio.PLAYBACK_STATE.STOPPED)	// Wait until Cuan opening line has finished so Sally interrupts
+            if (timeToFirstInteraction <= 0 && IsCuanFinished())	// Wait until Cuan opening line has finished so Sally interrupts
             {
                 day_one_started = true;
                 director.Play("Day1", 0);
@@ -229,6 +258,7 @@ public class DialogueSystem : MonoBehaviour
         sallyInstance.start();
         sallyIndex++;
         triggerIndex++;
+        sallyCued = true;
     }
 
     public void fmodTriggerDialogue(string eventName)
@@ -279,6 +309,7 @@ public class DialogueSystem : MonoBehaviour
 
         instance.setParameterByName("Dialog ID", triggerIndex);
         instance.start();
+        cuanCued = true;
     }
 
 
@@ -312,7 +343,7 @@ public class DialogueSystem : MonoBehaviour
     {
         if (day_one_ended) return;
 
-        if (sallyIndex == 3 && sallyState == FMOD.Studio.PLAYBACK_STATE.STOPPED && finishedTalking && showingDialogueUI == false)
+        if (sallyIndex == 3 && IsSallyFinished() && finishedTalking && showingDialogueUI == false)
         {
             StartFadeIn();
         }
@@ -323,7 +354,7 @@ public class DialogueSystem : MonoBehaviour
             timer -= Time.deltaTime;
             if (timer <= 0f)
             {
-                if (sallyIndex == 3 && sallyState == FMOD.Studio.PLAYBACK_STATE.STOPPED && state == FMOD.Studio.PLAYBACK_STATE.STOPPED)
+                if (sallyIndex == 3 && IsSallyFinished() && IsCuanFinished())
                 {
                     sallyIndex++;
                     fmodTriggerSallyDialogue();
@@ -339,7 +370,7 @@ public class DialogueSystem : MonoBehaviour
             timer -= Time.deltaTime;
             if (timer <= 0f)
             {
-                if (sallyIndex == 5 && sallyState == FMOD.Studio.PLAYBACK_STATE.STOPPED && state == FMOD.Studio.PLAYBACK_STATE.STOPPED)
+                if (sallyIndex == 5 && IsSallyFinished() && IsCuanFinished())
                 {
                     sallyIndex++;
                     fmodTriggerDialogue("empty");
@@ -350,7 +381,7 @@ public class DialogueSystem : MonoBehaviour
             }
         }
 
-        if (triggerIndex == 4 && sallyIndex == 6 && dialogSeqIndex == 2 && state == FMOD.Studio.PLAYBACK_STATE.STOPPED && sallyState == FMOD.Studio.PLAYBACK_STATE.STOPPED)
+        if (triggerIndex == 4 && sallyIndex == 6 && dialogSeqIndex == 2 && IsCuanFinished() && IsSallyFinished())
         {
             timer -= Time.deltaTime;
             if (timer <= 0f)
@@ -363,7 +394,7 @@ public class DialogueSystem : MonoBehaviour
             }
         }
 
-        if (triggerIndex == 4 && sallyIndex == 6 && dialogSeqIndex == 3 && sallyState == FMOD.Studio.PLAYBACK_STATE.STOPPED)
+        if (triggerIndex == 4 && sallyIndex == 6 && dialogSeqIndex == 3 && IsSallyFinished())
         {
             timer -= Time.deltaTime;
             if (timer < 0f)
@@ -373,7 +404,7 @@ public class DialogueSystem : MonoBehaviour
             }
         }
 
-        if (triggerIndex == 4 && sallyIndex == 6 && dialogSeqIndex == 4 && state == FMOD.Studio.PLAYBACK_STATE.STOPPED)
+        if (triggerIndex == 4 && sallyIndex == 6 && dialogSeqIndex == 4 && IsCuanFinished())
         {
             timer -= Time.deltaTime;
             if (timer < 0f)
@@ -386,7 +417,7 @@ public class DialogueSystem : MonoBehaviour
             }
         }
 
-        if (triggerIndex == 4 && sallyIndex == 6 && dialogSeqIndex == 5 && sallyState == FMOD.Studio.PLAYBACK_STATE.STOPPED)
+        if (triggerIndex == 4 && sallyIndex == 6 && dialogSeqIndex == 5 && IsSallyFinished())
         {
             timer -= Time.deltaTime;
             if (timer < 0f)
@@ -398,7 +429,7 @@ public class DialogueSystem : MonoBehaviour
             }
         }
 
-        if (completedSeq == true && triggerIndex == 5 && dialogSeqIndex == 1 && state == FMOD.Studio.PLAYBACK_STATE.STOPPED)
+        if (completedSeq == true && triggerIndex == 5 && dialogSeqIndex == 1 && IsCuanFinished())
         {
             timer -= Time.deltaTime;
             if (timer < 0f)
@@ -412,7 +443,7 @@ public class DialogueSystem : MonoBehaviour
             }
         }
 
-        if (completedSeq == false && triggerIndex == 5 && dialogSeqIndex == 1 && state == FMOD.Studio.PLAYBACK_STATE.STOPPED && sallyState == FMOD.Studio.PLAYBACK_STATE.STOPPED)
+        if (completedSeq == false && triggerIndex == 5 && dialogSeqIndex == 1 && IsCuanFinished() && IsSallyFinished())
         {
             timer -= Time.deltaTime;
             if (timer < 0f)
@@ -424,7 +455,7 @@ public class DialogueSystem : MonoBehaviour
             }
         }
 
-        if (completedSeq == false && triggerIndex == 6 && dialogSeqIndex == 2 && state == FMOD.Studio.PLAYBACK_STATE.STOPPED)
+        if (completedSeq == false && triggerIndex == 6 && dialogSeqIndex == 2 && IsCuanFinished())
         {
             timer -= Time.deltaTime;
             if (timer < 0f)
@@ -438,7 +469,7 @@ public class DialogueSystem : MonoBehaviour
             }
         }
 
-        if (completedSeq == false && triggerIndex == 6 && dialogSeqIndex == 3 && state == FMOD.Studio.PLAYBACK_STATE.STOPPED && sallyState == FMOD.Studio.PLAYBACK_STATE.STOPPED)
+        if (completedSeq == false && triggerIndex == 6 && dialogSeqIndex == 3 && IsCuanFinished() && IsSallyFinished())
         {
             timer -= Time.deltaTime;
             if (timer < 0f)
@@ -452,7 +483,7 @@ public class DialogueSystem : MonoBehaviour
             }
         }
 
-        if (completedSeq == true && triggerIndex == 6 && dialogSeqIndex == 4 && state == FMOD.Studio.PLAYBACK_STATE.STOPPED && sallyState == FMOD.Studio.PLAYBACK_STATE.STOPPED)
+        if (completedSeq == true && triggerIndex == 6 && dialogSeqIndex == 4 && IsCuanFinished() && IsSallyFinished())
         {
             timer -= Time.deltaTime;
             if (timer < 0f)
@@ -520,34 +551,31 @@ public class DialogueSystem : MonoBehaviour
         }
     }
 
+
+	private void DayTwo_Init()
+	{
+		day = 2;
+		sallyIndex = 1;
+		triggerIndex = 1;
+	}
+
     public void DayTwo_Triggers()
     {
         if (day_two_ended) return;
 
-        if (sallyIndex == 6 && sallyState == FMOD.Studio.PLAYBACK_STATE.STOPPED && finishedTalking)
-        {
-            //StartFadeIn();
-        }
+		// OK trying a different layout for Day 2 in the hope it's simpler ;)
 
-        // Not worked out how these work yet
+		if (IsSallyFinished() && IsCuanFinished())
+		{
+			if (sallyIndex == 0)
+			{
+				fmodTriggerSallyDialogue();
+				hasProgressed = false;
+				timer = SHORT_DELAY;
+			}
 
-        /*
-        if (hasProgressed)
-        {
-            timer -= Time.deltaTime;
-            if (timer <= 0f)
-            {
-                if (sallyIndex == 3 && sallyState == FMOD.Studio.PLAYBACK_STATE.STOPPED && state == FMOD.Studio.PLAYBACK_STATE.STOPPED)
-                {
-                    sallyIndex++;
-                    fmodTriggerSallyDialogue();
-                    hasProgressed = false;
-                    timer = SHORT_DELAY;
-                    //timer = 1.5f;
-                }
-            }
-        }
-        */
+
+		}
 
     }
 
