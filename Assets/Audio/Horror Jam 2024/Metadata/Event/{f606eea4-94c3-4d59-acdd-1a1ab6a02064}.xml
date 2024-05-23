@@ -207,9 +207,12 @@
 		<property name="length">
 			<value>4.4885104166666663</value>
 		</property>
+<<<<<<< Updated upstream
 		<relationship name="triggerConditions">
 			<destination>{4bdda3a9-03d8-4efb-8612-f1806644d55d}</destination>
 		</relationship>
+=======
+>>>>>>> Stashed changes
 		<relationship name="audioFile">
 			<destination>{7a1530ed-5199-4100-a276-f587192c395d}</destination>
 		</relationship>
@@ -301,6 +304,7 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{b8030a72-e858-46f8-8dd8-697c14719be3}" />
+<<<<<<< Updated upstream
 	<object class="ParameterCondition" id="{4bdda3a9-03d8-4efb-8612-f1806644d55d}">
 		<property name="minimum">
 			<value>2</value>
@@ -312,6 +316,8 @@
 			<destination>{ceace1f8-aa29-4503-90b0-6f8de853682a}</destination>
 		</relationship>
 	</object>
+=======
+>>>>>>> Stashed changes
 	<object class="MixerBusEffectChain" id="{246954dd-c312-48f6-9d47-4393f6135a81}">
 		<relationship name="effects">
 			<destination>{3ceb60ae-5511-4435-9435-c61e9d2a5adb}</destination>
