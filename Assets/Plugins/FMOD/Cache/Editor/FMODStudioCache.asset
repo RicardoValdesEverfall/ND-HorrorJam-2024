@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Dialogs Eng.bank
   Name: Dialogs Eng
   StudioPath: bank:/Dialogs Eng
-  lastModified: 638520242652674606
+  lastModified: 638520479812585577
   FileSizes:
   - Name: Desktop
     Value: 554336
@@ -113,65 +113,10 @@ MonoBehaviour:
   Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638520254811953388
+  lastModified: 638520479816314163
   FileSizes:
   - Name: Desktop
-    Value: 2036
-  Exists: 1
---- !u!114 &-6084787209769321773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/UI mouseover and click
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/UI mouseover and click
-  Guid:
-    Data1: -167317852
-    Data2: 1297716419
-    Data3: 437968300
-    Data4: 1679859894
-  Banks:
-  - {fileID: -4279593409741332322}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -5453884425899792505}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 4488
---- !u!114 &-5453884425899792505
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/UI mouseover and click/Menu action
-  m_EditorClassIdentifier: 
-  Name: Menu action
-  StudioPath: 
-  Min: 0
-  Max: 2
-  Default: 0
-  ID:
-    data1: 4005642843
-    data2: 3697148916
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - Mouseover
-  - Click
-  - TBC
+    Value: 1942
   Exists: 1
 --- !u!114 &-5413628903515460660
 MonoBehaviour:
@@ -242,10 +187,10 @@ MonoBehaviour:
   Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638520254811897190
+  lastModified: 638520479816239219
   FileSizes:
   - Name: Desktop
-    Value: 17784768
+    Value: 17640032
   Exists: 1
 --- !u!114 &-4036835456049044836
 MonoBehaviour:
@@ -467,7 +412,6 @@ MonoBehaviour:
   - {fileID: -3246498179531499359}
   - {fileID: 7265376099334909341}
   - {fileID: 7619015022956078450}
-  - {fileID: -6084787209769321773}
   - {fileID: -8530905196329115702}
   - {fileID: 625952528402096741}
   - {fileID: 1827826056619391735}
@@ -479,7 +423,7 @@ MonoBehaviour:
   - {fileID: -4279593409741332322}
   StringsBanks:
   - {fileID: -6186357875256961077}
-  cacheTime: 638520254811953388
+  cacheTime: 638520479816314163
   cacheVersion: 131617
 --- !u!114 &385778863412286216
 MonoBehaviour:
