@@ -113,10 +113,10 @@ MonoBehaviour:
   Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638520755263283540
+  lastModified: 638520840038527261
   FileSizes:
   - Name: Desktop
-    Value: 2036
+    Value: 2126
   Exists: 1
 --- !u!114 &-5413628903515460660
 MonoBehaviour:
@@ -187,10 +187,10 @@ MonoBehaviour:
   Path: Assets/Audio/Horror Jam 2024/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638520755263235900
+  lastModified: 638520840038486713
   FileSizes:
   - Name: Desktop
-    Value: 17868608
+    Value: 18588320
   Exists: 1
 --- !u!114 &-4036835456049044836
 MonoBehaviour:
@@ -419,12 +419,14 @@ MonoBehaviour:
   - {fileID: -5413628903515460660}
   - {fileID: -3934900612602584273}
   - {fileID: 8895323708135951872}
+  - {fileID: 6623659633196498854}
+  - {fileID: 6387775406772615732}
   EditorParameters: []
   MasterBanks:
   - {fileID: -4279593409741332322}
   StringsBanks:
   - {fileID: -6186357875256961077}
-  cacheTime: 638520755263283540
+  cacheTime: 638520840038527261
   cacheVersion: 131617
 --- !u!114 &385778863412286216
 MonoBehaviour:
@@ -661,6 +663,60 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &6387775406772615732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Electric buzz 2
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Electric buzz 2
+  Guid:
+    Data1: -535408220
+    Data2: 1189567111
+    Data3: -1662283856
+    Data4: -260769097
+  Banks:
+  - {fileID: -4279593409741332322}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 28106
+--- !u!114 &6623659633196498854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Intro Cinematic
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Intro Cinematic
+  Guid:
+    Data1: -774545213
+    Data2: 1188311471
+    Data3: -2117115981
+    Data4: -737519707
+  Banks:
+  - {fileID: -4279593409741332322}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 78294
 --- !u!114 &6662518750890931287
 MonoBehaviour:
   m_ObjectHideFlags: 0

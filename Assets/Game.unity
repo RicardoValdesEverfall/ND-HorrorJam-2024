@@ -33551,6 +33551,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1115910987}
+  - component: {fileID: 1115910988}
   m_Layer: 0
   m_Name: Intro
   m_TagString: Untagged
@@ -33576,6 +33577,37 @@ Transform:
   - {fileID: 771493574315498107}
   m_Father: {fileID: 72827894}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1115910988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115910986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -774545213
+      Data2: 1188311471
+      Data3: -2117115981
+      Data4: -737519707
+    Path: event:/Music/Intro Cinematic
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1119460151 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5236617850543775812, guid: 2ca89dec885db4641a59bf64c889bf7c, type: 3}
@@ -40756,6 +40788,7 @@ GameObject:
   - component: {fileID: 1406107033}
   - component: {fileID: 1406107035}
   - component: {fileID: 1406107034}
+  - component: {fileID: 1406107036}
   m_Layer: 0
   m_Name: Area Light (3)
   m_TagString: Untagged
@@ -40962,6 +40995,37 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1406107036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406107032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -535408220
+      Data2: 1189567111
+      Data3: -1662283856
+      Data4: -260769097
+    Path: event:/SFX/Electric buzz 2
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1406687760
 GameObject:
   m_ObjectHideFlags: 0
