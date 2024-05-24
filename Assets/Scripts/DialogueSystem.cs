@@ -128,7 +128,7 @@ public class DialogueSystem : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.Z))
                 {
                     director.Play("Sleep", 0);
-					DayTwo_Init();
+					//DayTwo_Init();	// Need to postpone this and hide behind a fade
                 }
             }
             else
@@ -239,12 +239,9 @@ public class DialogueSystem : MonoBehaviour
 
     public void StartFadeIn()
     {
-		if (!showingDialogueUI)
-		{
-			Debug.Log("StartFadeIn");
-			director.Play("ShowDialogueUI", 0);
-			showingDialogueUI = true;
-		}
+		Debug.Log("StartFadeIn");
+		director.Play("ShowDialogueUI", 0);
+		showingDialogueUI = true;
     }
 
     public void EnableInput()
@@ -521,7 +518,7 @@ public class DialogueSystem : MonoBehaviour
     {
         switch (dialogueChoiceID)
         {
-            case "02-03":
+            case "02-19":
                 choicesArray[3].alpha = 0; // OPTION D
 
                 textBoxes[0].text = "Hey, you're awake! How are you feeling today?";
@@ -530,7 +527,7 @@ public class DialogueSystem : MonoBehaviour
                 textBoxes[2].text = "Good.";
                 textBoxes[3].text = "I've crashed a submarine.";
                 break;
-            case "02-06":
+            case "02-21":
                 choicesArray[3].alpha = 0;
 
                 textBoxes[0].text = "Dariyanov has agreed to loan his personal minisub. For evacuation. So we’ll get out of here soon.";
@@ -539,7 +536,7 @@ public class DialogueSystem : MonoBehaviour
                 textBoxes[2].text = "Glad to be done with this place.";
                 textBoxes[3].text = "Ooh, fancy. Minisub chauffeur.";
                 break;
-            case "02-08":
+            case "02-23":
                 choicesArray[3].alpha = 0;
 
                 textBoxes[0].text = "Gotta ask some questions. You up to it?";
@@ -548,7 +545,7 @@ public class DialogueSystem : MonoBehaviour
                 textBoxes[2].text = "Bloody hate reports...go on then.";
                 textBoxes[3].text = "Bloody hate reports. What choice do I have?";
                 break;
-            case "02-10":
+            case "02-25":
                 textBoxes[0].text = "First question: what can you recall of the dive dated 01/04/51?";
 
                 textBoxes[1].text = "Nothing. Just... nothing.";
@@ -556,7 +553,7 @@ public class DialogueSystem : MonoBehaviour
                 textBoxes[3].text = "I swear... I swear I saw something...";
                 textBoxes[4].text = "I got the bends, lost control of the sub.";
                 break;
-            case "02-12":
+            case "02-27":
                 choicesArray[3].alpha = 0;	// Hide option 4 until first three are followed
 
                 textBoxes[0].text = "Now. What do you remember before the crash?";
@@ -576,8 +573,9 @@ public class DialogueSystem : MonoBehaviour
 		Debug.Log("DAY 2 INIT!");
 		
 		day = 2;
-		sallyIndex = 2;
+		sallyIndex = 18;
 		triggerIndex = 1;
+		showingDialogueUI = false;
 
 		cuanInstance.setParameterByName("Day 1 to 5", day);
 		sallyInstance.setParameterByName("Day 1 to 5", day);
@@ -594,17 +592,26 @@ public class DialogueSystem : MonoBehaviour
 		{
 			switch (sallyIndex)
 			{
-			case 3:		// Cuan branching options!
-				currentDialogueID = "02-03";
+			case 19:		// Cuan branching options!
+				currentDialogueID = "02-19";
 				StartFadeIn();
+				sallyIndex++;
 				break;
-
-			case 6:
-			case 8:
-			case 10:
-
+			case 21:
+				currentDialogueID = "02-21";
+				StartFadeIn();
+				sallyIndex++;
 				break;
-
+			case 23:
+				currentDialogueID = "02-23";
+				StartFadeIn();
+				sallyIndex++;
+				break;
+			case 25:
+				currentDialogueID = "02-25";
+				StartFadeIn();
+				sallyIndex++;
+				break;
 			default:	// Default case: Sally reads her next line and progresses
 				fmodTriggerSallyDialogue();
 				hasProgressed = false;
