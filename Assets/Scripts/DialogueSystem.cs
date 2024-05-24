@@ -16,6 +16,7 @@ public class DialogueSystem : MonoBehaviour
 
     [SerializeField] Animator Camille;
     [SerializeField] GameObject PlayerCamera;
+    [SerializeField] GameObject day2Camille;
     [SerializeField] Image SkipIcon;
     [SerializeField] float timeToFirstInteraction;
     [SerializeField] CanvasGroup[] choicesArray;
@@ -28,6 +29,7 @@ public class DialogueSystem : MonoBehaviour
     private bool sallyCued = false;
 
     private Animator director;
+    private Animator camilleAnimatorDay2;
 
     public string currentDialogueID;
     public bool acceptInput = false;
@@ -40,7 +42,7 @@ public class DialogueSystem : MonoBehaviour
     public int sallyIndex = 2;
     public int sallySeqIndex = 0;
 
-    private float timer = 0.5f;
+    public float timer = 0.5f;
     private float skipTimer = 0;
     private bool day_one_started = false;
     private bool day_one_ended = false;
@@ -68,6 +70,9 @@ public class DialogueSystem : MonoBehaviour
         {
             Camille = GameObject.FindGameObjectWithTag("Camille").GetComponent<Animator>();
         }
+
+        camilleAnimatorDay2 = day2Camille.GetComponentInChildren<Animator>();
+        day2Camille.SetActive(false);
 
         director = GetComponent<Animator>();
         director.Play("IntroCinematic", 0);
@@ -226,7 +231,7 @@ public class DialogueSystem : MonoBehaviour
             }
         }
 
-        if (!day_one_started && !skippable)
+        if (!day_one_started && !skippable && day_one_ended == false)
         {
             timeToFirstInteraction -= Time.deltaTime;
             if (timeToFirstInteraction <= 0 && IsCuanFinished())	// Wait until Cuan opening line has finished so Sally interrupts
@@ -239,7 +244,6 @@ public class DialogueSystem : MonoBehaviour
 
     public void StartFadeIn()
     {
-		Debug.Log("StartFadeIn");
 		director.Play("ShowDialogueUI", 0);
 		showingDialogueUI = true;
     }
@@ -306,7 +310,7 @@ public class DialogueSystem : MonoBehaviour
                 break;
         }
 
-        if (triggerIndex == 4 && completedSeq == false)
+        if (day == 1 && triggerIndex == 4 && completedSeq == false)
         {
             dialogSeqIndex++;
             cuanInstance.setParameterByName("DialogSeq", dialogSeqIndex);
@@ -376,7 +380,6 @@ public class DialogueSystem : MonoBehaviour
                     fmodTriggerSallyDialogue();
                     hasProgressed = false;
                     timer = SHORT_DELAY;
-                    //timer = 1.5f;
                 }
             }
         }
@@ -392,7 +395,6 @@ public class DialogueSystem : MonoBehaviour
                     fmodTriggerDialogue("empty");
                     hasProgressed = true;
                     timer = SHORT_DELAY;
-                    //timer = 1f;
                 }
             }
         }
@@ -567,15 +569,17 @@ public class DialogueSystem : MonoBehaviour
         }
     }
 
-
 	private void DayTwo_Init()
 	{
 		Debug.Log("DAY 2 INIT!");
 		
 		day = 2;
-		sallyIndex = 18;
-		triggerIndex = 1;
+		sallyIndex = 17;
+		triggerIndex = 0;
 		showingDialogueUI = false;
+
+        day2Camille.SetActive(true);
+        camilleAnimatorDay2.Play("Day2", 0);
 
 		cuanInstance.setParameterByName("Day 1 to 5", day);
 		sallyInstance.setParameterByName("Day 1 to 5", day);
@@ -584,45 +588,57 @@ public class DialogueSystem : MonoBehaviour
     public void DayTwo_Triggers()
     {
         if (day_two_ended) return;
-		if (skippable) return;
+        if (skippable) return;
 
-		// OK trying a different layout for Day 2 in the hope it's simpler ;)
+        // OK trying a different layout for Day 2 in the hope it's simpler ;)
 
-		if (IsSallyFinished() && IsCuanFinished())	// Do nothing while either character is speaking
-		{
-			switch (sallyIndex)
-			{
-			case 19:		// Cuan branching options!
-				currentDialogueID = "02-19";
-				StartFadeIn();
-				sallyIndex++;
-				break;
-			case 21:
-				currentDialogueID = "02-21";
-				StartFadeIn();
-				sallyIndex++;
-				break;
-			case 23:
-				currentDialogueID = "02-23";
-				StartFadeIn();
-				sallyIndex++;
-				break;
-			case 25:
-				currentDialogueID = "02-25";
-				StartFadeIn();
-				sallyIndex++;
-				break;
-			default:	// Default case: Sally reads her next line and progresses
-				fmodTriggerSallyDialogue();
-				hasProgressed = false;
-				timer = SHORT_DELAY;
-				break;
-			}
+        if (IsSallyFinished() && IsCuanFinished())  // Do nothing while either character is speaking
+        {
+            if (!acceptInput)
+            {
+                timer -= Time.deltaTime;
+                if (timer <= 0)
+                {
+                    if (sallyIndex == 20)
+                    {
+                        currentDialogueID = "02-21";
+                        fmodTriggerSallyDialogue();
+                        timer = SHORT_DELAY + 14f;
+                        hasProgressed = true;
+                        finishedTalking = false;
+                          
+                    }
 
+                    if (sallyIndex == 19 && triggerIndex == 3)
+                    {
+                        fmodTriggerDialogue("empty");
+                        sallyIndex++;
+                        timer = SHORT_DELAY;
+                    }
 
-		}
+                    if (sallyIndex == 17)
+                    {
+                        currentDialogueID = "02-19";
+                        sallyIndex++;
+                        fmodTriggerSallyDialogue();
+                        hasProgressed = true;
+                        timer = SHORT_DELAY + 2f;
+                    }
+                }
+                
+            }
+        }
 
+        else if (hasProgressed && !acceptInput && !finishedTalking)
+        {
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+            {
+                StartFadeIn();
+                timer = SHORT_DELAY;
+                hasProgressed = false;
+                finishedTalking = true;
+            }
+        }
     }
-
-
 }
