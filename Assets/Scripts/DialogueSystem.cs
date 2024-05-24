@@ -111,7 +111,7 @@ public class DialogueSystem : MonoBehaviour
             if (day_one_ended)
             {
                 // Listen for Z only otherwise the dialogue UI can reappear
-                if (Input.GetKeyDown(KeyCode.Z))
+                if (Input.GetKeyDown(KeyCode.Space))
                 {
                     director.Play("Sleep", 0);
                 }
