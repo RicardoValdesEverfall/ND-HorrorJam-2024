@@ -603,7 +603,8 @@ public class DialogueSystem : MonoBehaviour
                     {
                         currentDialogueID = "02-21";
                         fmodTriggerSallyDialogue();
-                        timer = SHORT_DELAY + 14f;
+                        camilleAnimatorDay2.SetTrigger("TurnAround");
+                        timer = SHORT_DELAY + 24f;
                         hasProgressed = true;
                         finishedTalking = false;
                           
@@ -622,7 +623,7 @@ public class DialogueSystem : MonoBehaviour
                         sallyIndex++;
                         fmodTriggerSallyDialogue();
                         hasProgressed = true;
-                        timer = SHORT_DELAY + 2f;
+                        timer = SHORT_DELAY + 3.2f;
                     }
                 }
                 
