@@ -20,6 +20,8 @@ public class SalsaFmodBridge : MonoBehaviour
     public  EventReference sallyEvent;
     public FMOD.Studio.PLAYBACK_STATE sallyState;
 
+    private float timer = 2f;
+
     private float[] spectrum;
 
     private void Awake()
@@ -66,28 +68,32 @@ public class SalsaFmodBridge : MonoBehaviour
         {
             IntPtr unmanagedData;
             uint length;
-            Debug.Log(0);
-
 
             if (dsp.getParameterData((int)FMOD.DSP_FFT.SPECTRUMDATA, out unmanagedData, out length) == FMOD.RESULT.OK)
             {
-                Debug.Log(1);
+
                 FMOD.DSP_PARAMETER_FFT fftData = (FMOD.DSP_PARAMETER_FFT)Marshal.PtrToStructure(unmanagedData, typeof(FMOD.DSP_PARAMETER_FFT));
                 if (fftData.numchannels > 0)
                 {
-                    Debug.Log(spectrum);
+                    for (int i = 0; i < fftData.numchannels; ++i)
+                    {
+                        spectrum = new float[fftData.length];
+                    }
 
-                 
-                        for (int i = 0; i < fftData.numchannels; ++i)
-                        {
-                            spectrum = new float[fftData.length];
-                        }
 
                     fftData.getSpectrum(0, ref spectrum);
-
                     salsa.analysisValue = spectrum.Average() * averageModifier;
-
                 }
+            }
+        }
+
+        else
+        {
+            timer -= Time.deltaTime;
+            if (timer < 0)
+            {
+                sallyInstance.start();
+                timer = 2f;
             }
         }
     }

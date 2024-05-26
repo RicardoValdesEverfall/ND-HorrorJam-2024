@@ -1312,7 +1312,7 @@ MonoBehaviour:
   audioSourceWaitTarget: {fileID: 0}
   queueProcessor: {fileID: 580689205}
   emoter: {fileID: 580689208}
-  emphasizerTrigger: 0
+  emphasizerTrigger: 0.104
   analysisValue: 0
   sampleSize: 512
   audioUpdateDelay: 0.09552
@@ -1563,8 +1563,8 @@ MonoBehaviour:
   isDebug: 0
   useAudioAnalysis: 1
   needAudioSource: 1
-  inspStateFoldoutProcessing: 0
-  inspStateFoldoutSettings: 0
+  inspStateFoldoutProcessing: 1
+  inspStateFoldoutSettings: 1
   inspStateFoldoutVisemes: 0
   inspCollectionDisplayMode: 0
   inspAnalysisDisplay: 0
@@ -2110,7 +2110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   salsa: {fileID: 580689207}
-  averageModifier: 8
+  averageModifier: 600
   sallyEvent:
     Guid:
       Data1: -1327095709
