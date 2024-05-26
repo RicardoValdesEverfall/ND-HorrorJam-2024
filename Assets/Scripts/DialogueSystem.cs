@@ -599,6 +599,36 @@ public class DialogueSystem : MonoBehaviour
                 timer -= Time.deltaTime;
                 if (timer <= 0)
                 {
+
+
+                    if (triggerIndex == 10 && sallyIndex == 25)
+                    {
+                        sallyIndex++;
+                        sallyInstance.setParameterByName("DialogPath", dialogPath);
+                        fmodTriggerSallyDialogue();
+                        timer = SHORT_DELAY;
+                    }
+
+                    if (triggerIndex == 8 && sallyIndex == 23)
+                    {
+                        sallyIndex++;
+                        currentDialogueID = "02-25";
+                        fmodTriggerSallyDialogue();
+                        timer = SHORT_DELAY + 6.5f;
+                        hasProgressed = true;
+                        finishedTalking = false;
+                    }
+
+                    if (triggerIndex == 6 && sallyIndex == 21)
+                    {
+                        sallyIndex++;
+                        currentDialogueID = "02-23";
+                        fmodTriggerSallyDialogue();
+                        timer = SHORT_DELAY + 3.5f;
+                        hasProgressed = true;
+                        finishedTalking = false;
+                    }
+
                     if (sallyIndex == 20)
                     {
                         currentDialogueID = "02-21";
